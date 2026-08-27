@@ -1,0 +1,316 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 400,
+    "estimated_inference_peak_memory": 125386752,
+    "first_load_time": 98353,
+    "first_load_peak_memory": 140001280,
+    "warm_load_time": 90545,
+    "warm_load_peak_memory": 84557824,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      0,
+      4325840
+    ],
+    "first_load_memory_peak_range": [
+      946176,
+      7897952
+    ],
+    "warm_load_memory_increase_range": [
+      0,
+      2891664
+    ],
+    "warm_load_memory_peak_range": [
+      966656,
+      12343488
+    ],
+    "inference_memory_increase_range": [
+      0,
+      806960
+    ],
+    "inference_memory_peak_range": [
+      802816,
+      10952352
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      98353
+    ],
+    "all_warm_load_times": [
+      90545
+    ],
+    "all_inference_times": [
+      898,
+      468,
+      449,
+      2017,
+      441,
+      406,
+      407,
+      404,
+      405,
+      404,
+      409,
+      642,
+      414,
+      404,
+      405,
+      407,
+      403,
+      407,
+      404,
+      405,
+      408,
+      405,
+      409,
+      404,
+      405,
+      406,
+      404,
+      402,
+      404,
+      405,
+      406,
+      402,
+      406,
+      400,
+      402,
+      406,
+      403,
+      405,
+      403,
+      402,
+      405,
+      401,
+      407,
+      405,
+      402,
+      405,
+      405,
+      406,
+      403,
+      404,
+      406,
+      404,
+      407,
+      404,
+      404,
+      404,
+      404,
+      408,
+      405,
+      404,
+      430,
+      410,
+      406,
+      405,
+      407,
+      404,
+      404,
+      404,
+      405,
+      405,
+      404,
+      404,
+      405,
+      403,
+      407,
+      405,
+      403,
+      405,
+      405,
+      406,
+      403,
+      405,
+      404,
+      405,
+      408,
+      404,
+      405,
+      403,
+      403,
+      406,
+      403,
+      405,
+      404,
+      409,
+      409,
+      406,
+      404,
+      405,
+      404,
+      406
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "Input",
+      "type": "Input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3084
+    },
+    {
+      "name": "input_0231",
+      "type": "input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 337115
+    },
+    {
+      "name": "/inner/net/intro/Conv",
+      "type": "/inner/net/intro/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 82885
+    },
+    {
+      "name": "/inner/net/downs.0/Conv",
+      "type": "/inner/net/downs.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 183806
+    },
+    {
+      "name": "/inner/net/downs.1/Conv",
+      "type": "/inner/net/downs.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 37321
+    },
+    {
+      "name": "/inner/net/downs.2/Conv",
+      "type": "/inner/net/downs.2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24604
+    },
+    {
+      "name": "/inner/net/downs.3/Conv",
+      "type": "/inner/net/downs.3/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18398
+    },
+    {
+      "name": "/inner/net/ups.0/ups.0.0/Conv",
+      "type": "/inner/net/ups.0/ups.0.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10337
+    },
+    {
+      "name": "/inner/net/ups.0/ups.0.1/DepthToSpace",
+      "type": "/inner/net/ups.0/ups.0.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30456
+    },
+    {
+      "name": "/inner/net/Add",
+      "type": "/inner/net/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6141
+    },
+    {
+      "name": "/inner/net/ups.1/ups.1.0/Conv",
+      "type": "/inner/net/ups.1/ups.1.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8109
+    },
+    {
+      "name": "/inner/net/ups.1/ups.1.1/DepthToSpace",
+      "type": "/inner/net/ups.1/ups.1.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 41685
+    },
+    {
+      "name": "/inner/net/Add_1",
+      "type": "/inner/net/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8079
+    },
+    {
+      "name": "/inner/net/ups.2/ups.2.0/Conv",
+      "type": "/inner/net/ups.2/ups.2.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10604
+    },
+    {
+      "name": "/inner/net/ups.2/ups.2.1/DepthToSpace",
+      "type": "/inner/net/ups.2/ups.2.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 76816
+    },
+    {
+      "name": "/inner/net/Add_2",
+      "type": "/inner/net/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11764
+    },
+    {
+      "name": "/inner/net/ups.3/ups.3.0/Conv",
+      "type": "/inner/net/ups.3/ups.3.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 15295
+    },
+    {
+      "name": "/inner/net/ups.3/ups.3.1/DepthToSpace",
+      "type": "/inner/net/ups.3/ups.3.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1056400
+    },
+    {
+      "name": "/inner/net/Add_3",
+      "type": "/inner/net/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 41289
+    },
+    {
+      "name": "/inner/net/ending/Conv",
+      "type": "/inner/net/ending/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 81546
+    },
+    {
+      "name": "/inner/net/Add_4",
+      "type": "/inner/net/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 709080
+    },
+    {
+      "name": "output_0_0231",
+      "type": "output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 116723
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14458
+    }
+  ]
+}

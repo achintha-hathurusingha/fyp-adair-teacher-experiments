@@ -1,0 +1,4 @@
+phase,name,reason_not_run
+12,Frequency_Band_Sensitivity,"Gated on 06-E (Phase 9) showing a non-trivial frequency-path effect. 06-E's primary result (normalized L2=0.000013) did not exceed controls (0.000011-0.000012), so per the task's explicit instruction (""ONLY RUN IF 06-E SHOWS A NON-TRIVIAL FREQUENCY-PATH EFFECT... Do NOT run before the gate""), this phase was correctly skipped."
+13,Degradation_Frequency_Sensitivity,"Gated on 06-E passing (see Phase 12 reason). Not run."
+14,Compact_Frequency_Signature,"Gated on Phase 13 (06-C) producing a clear degradation-specific frequency effect. Since Phase 13 did not run, this phase was correctly skipped."

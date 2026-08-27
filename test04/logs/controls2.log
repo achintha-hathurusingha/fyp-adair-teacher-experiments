@@ -1,0 +1,17 @@
+checkpoint loaded
+  skip-progressive [5/20] scene_005
+  skip-progressive [10/20] scene_010
+  skip-progressive [15/20] scene_015
+  skip-progressive [20/20] scene_020
+wrote /home/minura/teacher-experiments/test04/results/interventions/skip_connection_progressive.csv (360 rows)
+  skipped 18 cross-scene pairs due to orientation/shape mismatch (portrait vs landscape crops -- not a bug, an expected data property)
+wrote /home/minura/teacher-experiments/test04/results/controls/cross_scene_control.csv (39 rows)
+wrote /home/minura/teacher-experiments/test04/results/controls/random_control.csv (20 rows)
+Traceback (most recent call last):
+  File "/home/minura/teacher-experiments/test04/src/run_controls.py", line 201, in <module>
+    main()
+  File "/home/minura/teacher-experiments/test04/src/run_controls.py", line 175, in main
+    latent_sum = lat.clone() if latent_sum is None else latent_sum + lat
+                                                        ~~~~~~~~~~~^~~~~
+RuntimeError: The size of tensor a (60) must match the size of tensor b (40) at non-singleton dimension 3
+DONE_EXIT=1

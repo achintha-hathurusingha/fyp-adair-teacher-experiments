@@ -1,0 +1,31 @@
+# Phase 3 -- AdaIR_ModifiedMask. ONLY the low-frequency mask half-width
+# formula changes, from the released code's (H//k)*alpha to the paper's
+# Eq.(1) order alpha*H/k (see docs/adair_source_audit.md section 3.1).
+# Same checkpoint, same rate_conv weights, same alpha/beta values -- this is
+# a re-ordering of arithmetic on the SAME learned quantities, not a
+# retrained model. No new/removed/resized parameters.
+variant: modified_mask
+checkpoint: ../weights/adair3d.ckpt           # IDENTICAL checkpoint to baseline.yaml
+adair_source: ../AdaIR
+manifest: ../manifest.csv
+device: cuda
+seed: 0
+noise_seed_policy: per_image_hash
+representative_images_per_degradation: 3
+change_from_released: >
+  net/model.py FreModule.fft(): h_ = (h // n * threshold[...,0,:,:]).int()
+  becomes h_ = (threshold[...,0,:,:] * h / n).int(); same for w_/beta.
+  Implemented in scripts/model_variants.py::_fft_modified_mask (one line
+  changed per axis, otherwise byte-identical to _fft_released).
+checkpoint_compatibility: >
+  Verified inference-only: AdaIR(decoder=True) loads adair3d.ckpt with the
+  same strict loader used for RELEASED (0 missing / 0 unexpected keys) --
+  no parameter count/shape changes, so no retraining is required or
+  performed. See Phase 4 discussion in docs/adair_ablation_report.md for
+  the caveat that alpha/beta THEMSELVES were learned under gradients that
+  flowed through the ORIGINAL (floor-then-multiply) formula, so this tests
+  "same learned alpha/beta, decoded via the paper's formula" rather than a
+  fully independent model.
+outputs:
+  comparison_rows: results/comparison.csv  (model=='modified_mask')
+  diff_vs_released: csv_export/26_Released_vs_Modified.csv

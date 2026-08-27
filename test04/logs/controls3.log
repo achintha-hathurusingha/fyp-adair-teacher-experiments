@@ -1,0 +1,12 @@
+checkpoint loaded
+  skip-progressive [5/20] scene_005
+  skip-progressive [10/20] scene_010
+  skip-progressive [15/20] scene_015
+  skip-progressive [20/20] scene_020
+wrote /home/minura/teacher-experiments/test04/results/interventions/skip_connection_progressive.csv (360 rows)
+  skipped 18 cross-scene pairs due to orientation/shape mismatch (portrait vs landscape crops -- not a bug, an expected data property)
+wrote /home/minura/teacher-experiments/test04/results/controls/cross_scene_control.csv (39 rows)
+wrote /home/minura/teacher-experiments/test04/results/controls/random_control.csv (20 rows)
+computed dataset-mean Rain latent_pre over 66 scenes sharing the majority shape (1, 384, 40, 60) (out of 100 total scenes)
+wrote /home/minura/teacher-experiments/test04/results/controls/zero_mean_control.csv (36 rows); skipped dataset_mean for 4 scenes with non-majority orientation
+DONE_EXIT=0

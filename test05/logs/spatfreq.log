@@ -1,0 +1,42 @@
+15 representative scenes available
+wrote /home/minura/teacher-experiments/test05/results/spatial_analysis/spatial_importance.csv (75 rows)
+wrote /home/minura/teacher-experiments/test05/results/frequency_analysis/frequency_profile.csv (225 rows)
+
+Spatial importance summary (is degradation-signal centered or spread out?):
+feature
+AFLB1_aflb_out      1.121657
+AFLB1_mined_high    1.097213
+AFLB1_mined_low     1.301342
+AFLB3_aflb_out      1.152823
+latent_pre          1.066604
+(center_frac ~1.0 = uniform; >1.3 = center-concentrated; <0.7 = edge/border-concentrated)
+
+Frequency profile summary (mean % energy per band, by feature x degradation):
+                              low_freq_pct  mid_freq_pct  high_freq_pct
+feature          degradation                                           
+AFLB1_aflb_out   haze            69.131719     25.223729       5.644552
+                 noise           89.982115      8.093218       1.924667
+                 rain            70.591827     23.904400       5.503773
+AFLB1_mined_high haze            69.636649     26.340927       4.022424
+                 noise           94.856829      4.341919       0.801252
+                 rain            72.351145     23.693857       3.954998
+AFLB1_mined_low  haze            92.125339      7.122212       0.752449
+                 noise           99.328590      0.590473       0.080937
+                 rain            93.262344      5.996317       0.741340
+AFLB3_aflb_out   haze            90.175203      6.205217       3.619579
+                 noise           73.119950     22.308679       4.571370
+                 rain            89.248761      7.946350       2.804889
+latent_pre       haze            88.002796     10.138279       1.858924
+                 noise           89.879610      8.385582       1.734808
+                 rain            85.973347     11.924585       2.102068
+
+wrote /home/minura/teacher-experiments/test05/results/visualizations/frequency_spectrum_by_degradation.png
+
+wrote /home/minura/teacher-experiments/test05/results/frequency_analysis/frequency_channel_ranking.csv (250 rows)
+feature
+AFLB1_aflb_out       6.436326
+AFLB1_mined_high     3.477412
+AFLB1_mined_low      0.049407
+AFLB3_aflb_out      14.225452
+latent_pre           6.918464
+DONE_EXIT=0

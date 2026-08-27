@@ -1,0 +1,18 @@
+checkpoint OK: 28,784,824 params
+[60/600] scene_010 elapsed=14s
+[120/600] scene_020 elapsed=26s
+[180/600] scene_030 elapsed=39s
+[240/600] scene_040 elapsed=52s
+[300/600] scene_050 elapsed=72s
+[360/600] scene_060 elapsed=93s
+[420/600] scene_070 elapsed=106s
+[480/600] scene_080 elapsed=118s
+[540/600] scene_090 elapsed=129s
+[600/600] scene_100 elapsed=141s
+saved input.npz: (600, 6)
+saved latent_pre.npz: (600, 768)
+saved AFLB1_aflb_out.npz: (600, 768)
+saved AFLB2_aflb_out.npz: (600, 384)
+saved AFLB3_aflb_out.npz: (600, 192)
+total elapsed: 141s
+DONE_EXIT_0

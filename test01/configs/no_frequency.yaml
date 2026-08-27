@@ -1,0 +1,36 @@
+# Phase 5 -- AdaIR_NoFrequency. The AFLB, FMiM cross-attention, and FMoM
+# (H-L/L-H) stay fully active (per task instructions: do not remove the
+# entire AFLB or arbitrary Transformer components). ONLY the FFT/mask
+# computation inside FreModule.fft() is disabled:
+#   high_feature <- conv_feat directly (identity, unfiltered)
+#   low_feature  <- torch.zeros_like(conv_feat)
+# This is exactly what the released mask already evaluates to at every
+# tested benchmark resolution (mask == 0 everywhere -> high = ifft(fft*1),
+# low = ifft(fft*0)) -- so this variant answers "does the FFT/IFFT
+# computation itself contribute anything beyond a hardcoded identity+zero
+# split", separately from "does the AFLB/FMoM machinery downstream
+# contribute" (which is answered by comparing RELEASED/MODIFIED_MASK
+# against a hypothetical AFLB-skipping variant, not implemented here per
+# the task's explicit instruction not to remove the whole AFLB).
+variant: no_frequency
+checkpoint: ../weights/adair3d.ckpt           # IDENTICAL checkpoint to baseline.yaml
+adair_source: ../AdaIR
+manifest: ../manifest.csv
+device: cuda
+seed: 0
+noise_seed_policy: per_image_hash
+representative_images_per_degradation: 3
+change_from_released: >
+  net/model.py FreModule.fft() body replaced by: conv_feat = self.conv1(x);
+  high = conv_feat; low = zeros_like(conv_feat) -- no torch.fft.fft2/ifft2
+  call at all. Implemented in scripts/model_variants.py::_fft_no_frequency.
+checkpoint_compatibility: >
+  Verified inference-only: same strict loader, same 28,784,824-parameter
+  state dict, 0 missing / 0 unexpected keys. No retraining performed.
+  rate_conv/self.conv/self.score_gen weights are loaded but their outputs
+  are unused by this variant's forward pass (rate_conv already unused
+  results are simply not computed at all here, since threshold/alpha/beta
+  are not needed to build the mask in this variant).
+outputs:
+  comparison_rows: results/comparison.csv  (model=='no_frequency')
+  diff_vs_released: csv_export/27_Released_vs_NoFrequency.csv

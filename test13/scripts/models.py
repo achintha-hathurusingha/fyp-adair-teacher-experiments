@@ -1,0 +1,210 @@
+"""TEST13: Models A (baseline), F2 (= TEST12's validated T12 operator:
+fixed rank-2 basis U0/V0, coefficients a=G([e_D; phi(F)])), T13 (adaptive
+basis: U(e_D)=U0+dU(e_D), V(e_D)=V0+dV(e_D), same coefficient generator).
+Built on the exact locked NAFNet M-arm, read-only imported from
+fyp-adair-distill. Rank fixed at R=2 throughout -- basis adaptability is
+the sole manipulated variable.
+"""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import torch
+from torch import nn
+
+TEST13 = Path(__file__).resolve().parent.parent
+TEACHER_EXP = TEST13.parent
+FYP_ADAIR_DISTILL = TEACHER_EXP.parent / "fyp-adair-distill"
+sys.path.insert(0, str(FYP_ADAIR_DISTILL))
+from src.models.nafnet import NAFNet  # noqa: E402 (read-only reuse)
+
+LOCKED_CFG = dict(
+    img_channels=3, width=16, enc_blk_nums=[2, 2, 4, 8], middle_blk_num=12,
+    dec_blk_nums=[2, 2, 2, 2], use_gate=False, norm_type="layernorm2d",
+    full_res_norm_type="affine_clamp", clamp_bound=8.0,
+)
+BOTTLENECK_CHAN = LOCKED_CFG["width"] * (2 ** len(LOCKED_CFG["enc_blk_nums"]))  # 256
+POOLED_DIM = BOTTLENECK_CHAN * 2  # GAP+GMP = 512 (== phi(F) dim)
+PCA_DIM = 16
+RANK = 2
+
+
+def build_base_nafnet() -> NAFNet:
+    return NAFNet(
+        img_channels=LOCKED_CFG["img_channels"], width=LOCKED_CFG["width"],
+        enc_blk_nums=LOCKED_CFG["enc_blk_nums"], middle_blk_num=LOCKED_CFG["middle_blk_num"],
+        dec_blk_nums=LOCKED_CFG["dec_blk_nums"], use_gate=LOCKED_CFG["use_gate"],
+        norm_type=LOCKED_CFG["norm_type"], full_res_norm_type=LOCKED_CFG["full_res_norm_type"],
+        clamp_bound=LOCKED_CFG["clamp_bound"],
+    )
+
+
+def pooled_gap_gmp(x: torch.Tensor) -> torch.Tensor:
+    gap = x.mean(dim=(2, 3))
+    gmp = x.amax(dim=(2, 3))
+    return torch.cat([gap, gmp], dim=1)
+
+
+def zero_init_linear(layer: nn.Linear):
+    nn.init.zeros_(layer.weight)
+    nn.init.zeros_(layer.bias)
+
+
+class PilotNAFNetBase(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.net = build_base_nafnet()
+
+    def _encode_to_bottleneck(self, inp: torch.Tensor):
+        net = self.net
+        x_in = net._pad(inp)
+        x = net.intro(x_in)
+        if net.gate is not None:
+            x = net.gate(x)
+        skips = []
+        for enc, down in zip(net.encoders, net.downs):
+            x = enc(x)
+            skips.append(x)
+            x = down(x)
+        x = net.middle_blks(x)
+        return x, skips, x_in
+
+    def _decode_from_bottleneck(self, x, skips, x_in, h, w):
+        net = self.net
+        for dec, up, skip in zip(net.decoders, net.ups, reversed(skips)):
+            x = up(x)
+            x = x + skip
+            x = dec(x)
+        x = net.ending(x)
+        x = x + x_in
+        return x[:, :, :h, :w]
+
+    def bottleneck_pooled(self, inp: torch.Tensor) -> torch.Tensor:
+        x, _, _ = self._encode_to_bottleneck(inp)
+        return pooled_gap_gmp(x)
+
+
+class ModelA(PilotNAFNetBase):
+    def forward(self, inp: torch.Tensor):
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        out = self._decode_from_bottleneck(x, skips, x_in, h, w)
+        return out, None
+
+
+class ModelF2(PilotNAFNetBase):
+    """= TEST12's validated T12 operator: fixed basis U0/V0, coefficients
+    a = G([e_D; phi(F)]) via a small MLP. Reference model for TEST13."""
+
+    def __init__(self, rank: int = RANK):
+        super().__init__()
+        self.rank = rank
+        self.proj = nn.Linear(POOLED_DIM, PCA_DIM)
+        self.U0 = nn.Parameter(torch.randn(BOTTLENECK_CHAN, rank) * 0.02)
+        self.V0 = nn.Parameter(torch.randn(BOTTLENECK_CHAN, rank) * 0.02)
+        self.coeff_head = nn.Sequential(
+            nn.Linear(PCA_DIM + POOLED_DIM, 32), nn.ReLU(inplace=True), nn.Linear(32, rank))
+        zero_init_linear(self.coeff_head[2])
+
+    def _condition(self, F_in, e_d, phi):
+        q = torch.cat([e_d, phi], dim=1)
+        a = self.coeff_head(q)
+        Vt_F = torch.einsum("cr,bchw->brhw", self.V0, F_in)
+        scaled = Vt_F * a[:, :, None, None]
+        delta = torch.einsum("cr,brhw->bchw", self.U0, scaled)
+        return F_in + delta, a
+
+    def forward(self, inp: torch.Tensor):
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        phi = pooled_gap_gmp(x)
+        e_d = self.proj(phi)
+        x, _ = self._condition(x, e_d, phi)
+        out = self._decode_from_bottleneck(x, skips, x_in, h, w)
+        return out, e_d
+
+    def forward_diagnostics(self, inp: torch.Tensor):
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        phi = pooled_gap_gmp(x)
+        e_d = self.proj(phi)
+        x_cond, a = self._condition(x, e_d, phi)
+        out = self._decode_from_bottleneck(x_cond, skips, x_in, h, w)
+        return out, e_d, a
+
+
+class ModelT13(PilotNAFNetBase):
+    """Adaptive basis: U(e_D)=U0+dU(e_D), V(e_D)=V0+dV(e_D), generated by
+    small Linear heads from e_D ONLY (not phi). Coefficients still
+    a=G([e_D;phi(F)]), same as F2. dU/dV heads zero-initialized so T13
+    starts exactly equivalent to F2 (U(e)=U0, V(e)=V0 at init)."""
+
+    def __init__(self, rank: int = RANK):
+        super().__init__()
+        self.rank = rank
+        self.proj = nn.Linear(POOLED_DIM, PCA_DIM)
+        self.U0 = nn.Parameter(torch.randn(BOTTLENECK_CHAN, rank) * 0.02)
+        self.V0 = nn.Parameter(torch.randn(BOTTLENECK_CHAN, rank) * 0.02)
+        self.coeff_head = nn.Sequential(
+            nn.Linear(PCA_DIM + POOLED_DIM, 32), nn.ReLU(inplace=True), nn.Linear(32, rank))
+        zero_init_linear(self.coeff_head[2])
+        # basis-adaptation heads: e_D (16) -> flat (C*R) correction, zero-init
+        self.delta_u_head = nn.Linear(PCA_DIM, BOTTLENECK_CHAN * rank)
+        self.delta_v_head = nn.Linear(PCA_DIM, BOTTLENECK_CHAN * rank)
+        zero_init_linear(self.delta_u_head)
+        zero_init_linear(self.delta_v_head)
+
+    def _basis(self, e_d):
+        b = e_d.shape[0]
+        delta_u = self.delta_u_head(e_d).view(b, BOTTLENECK_CHAN, self.rank)
+        delta_v = self.delta_v_head(e_d).view(b, BOTTLENECK_CHAN, self.rank)
+        U = self.U0.unsqueeze(0) + delta_u
+        V = self.V0.unsqueeze(0) + delta_v
+        return U, V, delta_u, delta_v
+
+    def _condition(self, F_in, e_d, phi):
+        U, V, delta_u, delta_v = self._basis(e_d)
+        q = torch.cat([e_d, phi], dim=1)
+        a = self.coeff_head(q)
+        Vt_F = torch.einsum("bcr,bchw->brhw", V, F_in)
+        scaled = Vt_F * a[:, :, None, None]
+        delta = torch.einsum("bcr,brhw->bchw", U, scaled)
+        return F_in + delta, a, delta_u, delta_v
+
+    def forward(self, inp: torch.Tensor):
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        phi = pooled_gap_gmp(x)
+        e_d = self.proj(phi)
+        x, _, _, _ = self._condition(x, e_d, phi)
+        out = self._decode_from_bottleneck(x, skips, x_in, h, w)
+        return out, e_d
+
+    def forward_diagnostics(self, inp: torch.Tensor):
+        """Returns out, e_d, a, phi, delta_u, delta_v."""
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        phi = pooled_gap_gmp(x)
+        e_d = self.proj(phi)
+        x_cond, a, delta_u, delta_v = self._condition(x, e_d, phi)
+        out = self._decode_from_bottleneck(x_cond, skips, x_in, h, w)
+        return out, e_d, a, phi, delta_u, delta_v
+
+    def forward_with_override(self, inp: torch.Tensor, e_d_override=None, phi_override=None):
+        """Normal encode, but condition using overridden e_d and/or phi.
+        e_d_override affects BOTH basis adaptation (dU,dV) and the
+        coefficient generator's e_D component; phi_override affects only
+        the coefficient generator. Supports all 5 TEST13 causal controls."""
+        _, _, h, w = inp.shape
+        x, skips, x_in = self._encode_to_bottleneck(inp)
+        phi_normal = pooled_gap_gmp(x)
+        e_d_normal = self.proj(phi_normal)
+        e_d_used = e_d_override if e_d_override is not None else e_d_normal
+        phi_used = phi_override if phi_override is not None else phi_normal
+        x_cond, a, delta_u, delta_v = self._condition(x, e_d_used, phi_used)
+        out = self._decode_from_bottleneck(x_cond, skips, x_in, h, w)
+        return out, a
+
+
+MODELS = {"A": lambda: ModelA(), "F2": lambda: ModelF2(), "T13": lambda: ModelT13()}

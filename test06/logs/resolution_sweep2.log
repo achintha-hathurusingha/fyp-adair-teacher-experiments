@@ -1,0 +1,25 @@
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0000.png (320, 480) psnr=25.45
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0001.png (320, 480) psnr=29.64
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0002.png (320, 480) psnr=40.30
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0003.png (320, 480) psnr=39.76
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0004.png (320, 480) psnr=17.48
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0005.png (320, 480) psnr=23.24
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0006.png (320, 480) psnr=30.94
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0007.png (480, 320) psnr=32.06
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0008.png (480, 320) psnr=28.79
+[native CBSD68] /home/minura/FYP/Workspace/Himeth/data/CBSD68-dataset/CBSD68/original_png/0009.png (480, 320) psnr=43.67
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-001.png (320, 480) psnr=43.23
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-002.png (320, 480) psnr=28.81
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-003.png (320, 480) psnr=37.95
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-004.png (320, 480) psnr=27.81
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-005.png (320, 480) psnr=43.38
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-006.png (320, 480) psnr=36.16
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-007.png (320, 480) psnr=27.59
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-008.png (480, 320) psnr=39.11
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-009.png (320, 480) psnr=32.95
+[native Rain100L] /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/norain-010.png (480, 320) psnr=31.41
+[20 done, 0 skipped] res=384 aspect=2:1 elapsed=15s
+[40 done, 0 skipped] res=768 aspect=2:1 elapsed=51s
+  OOM at res=1280 aspect=4:3 img=0 -- skipped, continuing
+  OOM at res=1280 aspect=3:2 img=0 -- skipped, continuing
+[60 done, 8 skipped] res=256 aspect=3:2 elapsed=104s

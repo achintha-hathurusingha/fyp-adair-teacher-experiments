@@ -1,0 +1,29 @@
+
+Phase 11 -- radial band energy by point x degradation (re-verified, not assumed):
+         point degradation  low_frac  mid_frac  high_frac
+AFLB1_aflb_out        Haze  0.393839  0.438139   0.168022
+AFLB1_aflb_out       Noise  0.392971  0.429505   0.177524
+AFLB1_aflb_out        Rain  0.382427  0.443104   0.174469
+AFLB2_aflb_out        Haze  0.387670  0.431564   0.180767
+AFLB2_aflb_out       Noise  0.363986  0.460549   0.175465
+AFLB2_aflb_out        Rain  0.359169  0.457170   0.183661
+AFLB3_aflb_out        Haze  0.372466  0.438880   0.188654
+AFLB3_aflb_out       Noise  0.391321  0.444994   0.163685
+AFLB3_aflb_out        Rain  0.337543  0.455413   0.207044
+         input        Haze  0.570484  0.336781   0.092735
+         input       Noise  0.326148  0.435165   0.238687
+         input        Rain  0.540041  0.360268   0.099691
+    latent_pre        Haze  0.389593  0.440435   0.169972
+    latent_pre       Noise  0.395431  0.426843   0.177725
+    latent_pre        Rain  0.382401  0.442129   0.175470
+Phase 11 done, elapsed=67s
+Traceback (most recent call last):
+  File "/home/minura/teacher-experiments/test05_5/src/frequency_randomization_and_bands.py", line 234, in <module>
+    main()
+  File "/home/minura/teacher-experiments/test05_5/src/frequency_randomization_and_bands.py", line 229, in main
+    phase10_frequency_randomization(scene_rows, device, OUT_DIR, n_pairs=min(30, len(scene_rows)))
+  File "/home/minura/teacher-experiments/test05_5/src/frequency_randomization_and_bands.py", line 150, in phase10_frequency_randomization
+    from metrics_utils import psnr_ssim_mse, output_diff  # noqa: E402 (test04, read-only)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'metrics_utils'
+DONE_EXIT_1

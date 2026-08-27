@@ -1,0 +1,7 @@
+metric,value
+mean_pairwise_cosine_diff_images,0.9929824471473694
+collapsed,False
+degradation_probe_accuracy,0.7838383838383838
+degradation_probe_macro_f1,0.7812923151516757
+min_band_std,0.011711368337273598
+max_band_std,0.09953292459249496

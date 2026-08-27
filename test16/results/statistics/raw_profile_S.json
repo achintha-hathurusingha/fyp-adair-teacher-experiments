@@ -1,0 +1,498 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 438,
+    "estimated_inference_peak_memory": 125456384,
+    "first_load_time": 94010,
+    "first_load_peak_memory": 139911168,
+    "warm_load_time": 93888,
+    "warm_load_peak_memory": 84463616,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      0,
+      2696480
+    ],
+    "first_load_memory_peak_range": [
+      1015808,
+      7939120
+    ],
+    "warm_load_memory_increase_range": [
+      0,
+      2895280
+    ],
+    "warm_load_memory_peak_range": [
+      950272,
+      11815872
+    ],
+    "inference_memory_increase_range": [
+      0,
+      815152
+    ],
+    "inference_memory_peak_range": [
+      806912,
+      10704752
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      94010
+    ],
+    "all_warm_load_times": [
+      93888
+    ],
+    "all_inference_times": [
+      1037,
+      500,
+      478,
+      487,
+      480,
+      477,
+      476,
+      480,
+      480,
+      477,
+      479,
+      606,
+      487,
+      478,
+      480,
+      478,
+      477,
+      520,
+      481,
+      479,
+      479,
+      480,
+      478,
+      478,
+      480,
+      480,
+      477,
+      481,
+      477,
+      478,
+      479,
+      484,
+      480,
+      481,
+      482,
+      474,
+      439,
+      443,
+      440,
+      440,
+      438,
+      440,
+      439,
+      440,
+      441,
+      440,
+      439,
+      441,
+      439,
+      442,
+      441,
+      442,
+      440,
+      443,
+      440,
+      438,
+      442,
+      440,
+      442,
+      440,
+      441,
+      440,
+      441,
+      439,
+      440,
+      443,
+      441,
+      441,
+      440,
+      442,
+      438,
+      441,
+      440,
+      441,
+      440,
+      439,
+      442,
+      439,
+      442,
+      440,
+      441,
+      440,
+      440,
+      441,
+      439,
+      443,
+      441,
+      443,
+      440,
+      442,
+      440,
+      440,
+      443,
+      439,
+      442,
+      441,
+      442,
+      441,
+      440,
+      441
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "Input",
+      "type": "Input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2737
+    },
+    {
+      "name": "input_0231",
+      "type": "input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 338941
+    },
+    {
+      "name": "/inner/intro/Conv",
+      "type": "/inner/intro/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74127
+    },
+    {
+      "name": "/inner/downs.0/Conv",
+      "type": "/inner/downs.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 158657
+    },
+    {
+      "name": "/inner/downs.1/Conv",
+      "type": "/inner/downs.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 40296
+    },
+    {
+      "name": "/inner/downs.2/Conv",
+      "type": "/inner/downs.2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26388
+    },
+    {
+      "name": "/inner/downs.3/Conv",
+      "type": "/inner/downs.3/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20073
+    },
+    {
+      "name": "/inner/ReduceMean",
+      "type": "/inner/ReduceMean",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 35626
+    },
+    {
+      "name": "/inner/ReduceMax",
+      "type": "/inner/ReduceMax",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 33939
+    },
+    {
+      "name": "/inner/Concat_3",
+      "type": "/inner/Concat",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/proj/Gemm",
+      "type": "/inner/proj/Gemm",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 823
+    },
+    {
+      "name": "node_Concat_740",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7657
+    },
+    {
+      "name": "/inner/coeff_head/coeff_head.0/Gemm",
+      "type": "/inner/coeff",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/coeff_head/coeff_head.1/Relu",
+      "type": "/inner/coeff",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1331
+    },
+    {
+      "name": "node_Gemm_156",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1054
+    },
+    {
+      "name": "/inner/Gather_1",
+      "type": "/inner/Gather",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_/inner/Gather_1",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/experts.0/Conv",
+      "type": "/inner/experts.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4205
+    },
+    {
+      "name": "/inner/Unsqueeze_6_output_0_0231",
+      "type": "/inner/Unsqueeze",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/Mul",
+      "type": "/inner/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53367
+    },
+    {
+      "name": "/inner/Add",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5260
+    },
+    {
+      "name": "/inner/Gather_2",
+      "type": "/inner/Gather",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1117
+    },
+    {
+      "name": "Reshape_post_/inner/Gather_2",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/experts.1/Conv",
+      "type": "/inner/experts.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4357
+    },
+    {
+      "name": "/inner/Unsqueeze_9_output_0_0231",
+      "type": "/inner/Unsqueeze",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/Mul_1",
+      "type": "/inner/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27828
+    },
+    {
+      "name": "/inner/Add_1",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3392
+    },
+    {
+      "name": "/inner/Gather_3",
+      "type": "/inner/Gather",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1631
+    },
+    {
+      "name": "Reshape_post_/inner/Gather_3",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/experts.2/Conv",
+      "type": "/inner/experts.2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6255
+    },
+    {
+      "name": "/inner/Unsqueeze_12_output_0_0231",
+      "type": "/inner/Unsqueeze",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/Mul_2",
+      "type": "/inner/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28674
+    },
+    {
+      "name": "/inner/Add_2",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3090
+    },
+    {
+      "name": "/inner/ups.0/ups.0.0/Conv",
+      "type": "/inner/ups.0/ups.0.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10946
+    },
+    {
+      "name": "/inner/ups.0/ups.0.1/DepthToSpace",
+      "type": "/inner/ups.0/ups.0.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27529
+    },
+    {
+      "name": "/inner/Add_3",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3657
+    },
+    {
+      "name": "/inner/ups.1/ups.1.0/Conv",
+      "type": "/inner/ups.1/ups.1.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9985
+    },
+    {
+      "name": "/inner/ups.1/ups.1.1/DepthToSpace",
+      "type": "/inner/ups.1/ups.1.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 41469
+    },
+    {
+      "name": "/inner/Add_4",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6929
+    },
+    {
+      "name": "/inner/ups.2/ups.2.0/Conv",
+      "type": "/inner/ups.2/ups.2.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12228
+    },
+    {
+      "name": "/inner/ups.2/ups.2.1/DepthToSpace",
+      "type": "/inner/ups.2/ups.2.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72860
+    },
+    {
+      "name": "/inner/Add_5",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11548
+    },
+    {
+      "name": "/inner/ups.3/ups.3.0/Conv",
+      "type": "/inner/ups.3/ups.3.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14985
+    },
+    {
+      "name": "/inner/ups.3/ups.3.1/DepthToSpace",
+      "type": "/inner/ups.3/ups.3.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1048892
+    },
+    {
+      "name": "/inner/Add_6",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 39537
+    },
+    {
+      "name": "/inner/ending/Conv",
+      "type": "/inner/ending/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 81043
+    },
+    {
+      "name": "/inner/Add_7",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 716185
+    },
+    {
+      "name": "output_0_0231",
+      "type": "output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115607
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22677
+    }
+  ]
+}

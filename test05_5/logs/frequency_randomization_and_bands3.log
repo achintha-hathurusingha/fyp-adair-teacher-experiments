@@ -1,0 +1,29 @@
+
+Phase 11 -- radial band energy by point x degradation (re-verified, not assumed):
+         point degradation  low_frac  mid_frac  high_frac
+AFLB1_aflb_out        Haze  0.393839  0.438139   0.168022
+AFLB1_aflb_out       Noise  0.392971  0.429505   0.177524
+AFLB1_aflb_out        Rain  0.382427  0.443104   0.174469
+AFLB2_aflb_out        Haze  0.387670  0.431564   0.180767
+AFLB2_aflb_out       Noise  0.363986  0.460549   0.175465
+AFLB2_aflb_out        Rain  0.359169  0.457170   0.183661
+AFLB3_aflb_out        Haze  0.372466  0.438880   0.188654
+AFLB3_aflb_out       Noise  0.391321  0.444994   0.163685
+AFLB3_aflb_out        Rain  0.337543  0.455413   0.207044
+         input        Haze  0.570484  0.336781   0.092735
+         input       Noise  0.326148  0.435165   0.238687
+         input        Rain  0.540041  0.360268   0.099691
+    latent_pre        Haze  0.389593  0.440435   0.169972
+    latent_pre       Noise  0.395431  0.426843   0.177725
+    latent_pre        Rain  0.382401  0.442129   0.175470
+Phase 11 done, elapsed=67s
+/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/skimage/metrics/simple_metrics.py:168: RuntimeWarning: divide by zero encountered in scalar divide
+  return 10 * np.log10((data_range**2) / err)
+
+Phase 10 -- frequency-branch-only randomization effect on final output:
+l2                0.007962
+mae               0.000008
+psnr_vs_normal         inf
+ssim_vs_normal    0.999986
+Phase 10 done, elapsed=41s
+DONE_EXIT_0

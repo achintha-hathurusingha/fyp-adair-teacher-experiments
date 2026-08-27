@@ -1,0 +1,47 @@
+latent_pre has 384 channels; top-10: [ 72  47 102 336  87  52  11 321 100 270]
+  top-5%: 19 channels
+  top-10%: 38 channels
+  top-20%: 77 channels
+  top-30%: 115 channels
+  top-50%: 192 channels
+checkpoint loaded
+computed degradation-group averages over majority shape (1, 384, 40, 60)
+  ablation: scene_005
+  ablation: scene_010
+  ablation: scene_015
+  ablation: scene_020
+wrote /home/minura/teacher-experiments/test05/results/intervention/channel_ablation.csv (144 rows)
+  group intervention: scene_001
+  group intervention: scene_002
+  group intervention: scene_003
+  group intervention: scene_004
+  group intervention: scene_005
+  group intervention: scene_006
+  group intervention: scene_007
+  group intervention: scene_008
+  group intervention: scene_009
+  group intervention: scene_010
+  group intervention: scene_011
+  group intervention: scene_012
+  group intervention: scene_013
+  group intervention: scene_014
+  group intervention: scene_015
+  group intervention: scene_016
+  group intervention: scene_017
+  group intervention: scene_018
+  group intervention: scene_019
+  group intervention: scene_020
+  group intervention: scene_021
+  group intervention: scene_022
+  group intervention: scene_023
+  group intervention: scene_024
+  group intervention: scene_025
+  group intervention: scene_026
+  group intervention: scene_027
+  group intervention: scene_028
+  group intervention: scene_029
+  group intervention: scene_030
+wrote /home/minura/teacher-experiments/test05/results/intervention/channel_group_intervention.csv (1980 rows)
+  skipped 18 cross-scene pairs (shape mismatch)
+wrote /home/minura/teacher-experiments/test05/results/intervention/content_control.csv (39 rows)
+DONE_EXIT=0

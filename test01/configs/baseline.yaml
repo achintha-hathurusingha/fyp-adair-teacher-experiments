@@ -1,0 +1,17 @@
+# Phase 1 -- released AdaIR, unmodified. Reproduces the original 300-image
+# analysis (../.. manifest.csv) under the exact released forward pass.
+variant: released
+checkpoint: ../weights/adair3d.ckpt          # 3-degradation all-in-one teacher, 28,784,824 params
+adair_source: ../AdaIR                        # git rev-parse HEAD: ccb8b98e49614e07badd0641e5163fa7635c2f02
+manifest: ../manifest.csv                     # 100 derain (Rain100L) + 100 dehaze (SOTS-outdoor) + 100 denoise (BSD68)
+device: cuda
+seed: 0
+noise_seed_policy: per_image_hash             # np.random.RandomState(hash(image_id)); NOT a single global seed(0)
+representative_images_per_degradation: 3      # deep-traced (full internal tensors saved) subset
+host_notes: >
+  devon (192.248.10.68) logical CPUs 8-11 are unreliable and have been observed to
+  silently corrupt in-process data. Every invocation MUST be pinned:
+  taskset -c 0-7,12-31 python <script>
+outputs:
+  per_image_results: results/baseline/results.csv
+  comparison_row: results/comparison.csv  (degradation=='ALL', model=='released')

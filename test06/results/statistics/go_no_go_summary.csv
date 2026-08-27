@@ -1,0 +1,19 @@
+question,answer
+First mask activation resolution -- AFLB1,not reached (needs input >=2048px based on floor(feat/128)>=2 requirement)
+First mask activation resolution -- AFLB2,not reached in tested range (beta~0.497 just misses the 0.5 threshold needed at feat=256-320)
+First mask activation resolution -- AFLB3,768px input (384px feature resolution)
+Mask active fraction at first activation (AFLB3),0.000027
+Raw low energy fraction at first activation (AFLB3),0.822145 (tiny mask carries 82% of energy)
+Restoration sanity across sweep,no NaN/Inf observed; 16/448 grid configs hit CUDA OOM at largest resolutions and were skipped (not silently treated as valid)
+Self-swap control (Phase 8),max L2 = 0.00000000 (exact) -- intervention mechanism verified correct
+Same-scene cross-degradation swap effect (Phase 9 -- PRIMARY),normalized L2 = 0.000013 (mean of 150 swaps)
+Cross-scene same-degradation control,normalized L2 = 0.000011
+Random matched-distribution control,normalized L2 = 0.000012
+Zero-tensor control,normalized L2 = 0.000012
+Mean-tensor control,normalized L2 = 0.000012
+Donor-behavior analysis (Phase 11),0.0% of 150 swaps moved output toward donor's own normal output
+Does frequency have measurable causal influence at the non-degenerate resolution?,NO -- primary effect does not exceed any control
+Is that influence degradation-specific?,N/A -- no influence to be degradation-specific
+Should Phases 12-14 (06-B/C/D) be run?,NO -- correctly gated/skipped per Phase 4/17's explicit decision rule
+Case classification,CASE B -- mask activates but 06-E is null
+FINAL DECISION,NO-GO for frequency-derived spatial-kernel student signal; proceed with compact-embedding distillation (TEST05.5's validated approach) instead

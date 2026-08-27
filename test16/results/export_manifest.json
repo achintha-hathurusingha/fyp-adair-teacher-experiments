@@ -1,0 +1,4730 @@
+[
+  {
+    "name": "A",
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "opset": 17,
+    "export_status": "success",
+    "onnx_path": "/home/minura/teacher-experiments/test16/results/onnx_models/A.onnx",
+    "model_size_bytes": 29987475,
+    "node_count": 2333,
+    "op_histogram": {
+      "Constant": 608,
+      "Mod": 4,
+      "Sub": 67,
+      "Unsqueeze": 4,
+      "Concat": 3,
+      "Shape": 73,
+      "Gather": 73,
+      "Cast": 2,
+      "ConstantOfShape": 1,
+      "Reshape": 2,
+      "Slice": 147,
+      "Transpose": 1,
+      "Pad": 1,
+      "Conv": 226,
+      "Mul": 396,
+      "Add": 285,
+      "Clip": 8,
+      "Div": 136,
+      "GlobalAveragePool": 36,
+      "ReduceMean": 128,
+      "Pow": 64,
+      "Sqrt": 64,
+      "DepthToSpace": 4
+    },
+    "gather_count": 73,
+    "fft_count": 0,
+    "n_conv": 226,
+    "n_conv_dynamic_weight": 0,
+    "all_conv_weights_constant": true,
+    "unsupported_ops_flagged": false,
+    "conv_nodes": [
+      {
+        "name": "/inner/intro/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.intro.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.0.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.0/ups.0.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.0.0.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.1/ups.1.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.1.0.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.2/ups.2.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.2.0.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.3/ups.3.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.3.0.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ending/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ending.weight"
+      }
+    ]
+  },
+  {
+    "name": "F2",
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "opset": 17,
+    "export_status": "success",
+    "onnx_path": "/home/minura/teacher-experiments/test16/results/onnx_models/F2.onnx",
+    "model_size_bytes": 30026305,
+    "node_count": 2346,
+    "op_histogram": {
+      "Constant": 610,
+      "Mod": 4,
+      "Sub": 67,
+      "Unsqueeze": 6,
+      "Concat": 4,
+      "Shape": 73,
+      "Gather": 73,
+      "Cast": 2,
+      "ConstantOfShape": 1,
+      "Reshape": 2,
+      "Slice": 147,
+      "Transpose": 1,
+      "Pad": 1,
+      "Conv": 226,
+      "Mul": 397,
+      "Add": 286,
+      "Clip": 8,
+      "Div": 136,
+      "GlobalAveragePool": 36,
+      "ReduceMean": 129,
+      "Pow": 64,
+      "Sqrt": 64,
+      "ReduceMax": 1,
+      "Gemm": 2,
+      "Einsum": 2,
+      "DepthToSpace": 4
+    },
+    "gather_count": 73,
+    "fft_count": 0,
+    "n_conv": 226,
+    "n_conv_dynamic_weight": 0,
+    "all_conv_weights_constant": true,
+    "unsupported_ops_flagged": false,
+    "conv_nodes": [
+      {
+        "name": "/inner/intro/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.intro.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.0.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.0/ups.0.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.0.0.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.1/ups.1.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.1.0.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.2/ups.2.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.2.0.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.3/ups.3.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.3.0.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ending/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ending.weight"
+      }
+    ]
+  },
+  {
+    "name": "N",
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "opset": 17,
+    "export_status": "success",
+    "onnx_path": "/home/minura/teacher-experiments/test16/results/onnx_models/N.onnx",
+    "model_size_bytes": 29832158,
+    "node_count": 2155,
+    "op_histogram": {
+      "Identity": 206,
+      "Constant": 608,
+      "Mod": 4,
+      "Sub": 3,
+      "Unsqueeze": 4,
+      "Concat": 3,
+      "Shape": 73,
+      "Gather": 73,
+      "Cast": 2,
+      "ConstantOfShape": 1,
+      "Reshape": 2,
+      "Slice": 147,
+      "Transpose": 1,
+      "Pad": 1,
+      "Conv": 226,
+      "Mul": 396,
+      "Add": 221,
+      "Clip": 72,
+      "Div": 72,
+      "GlobalAveragePool": 36,
+      "DepthToSpace": 4
+    },
+    "gather_count": 73,
+    "fft_count": 0,
+    "n_conv": 226,
+    "n_conv_dynamic_weight": 0,
+    "all_conv_weights_constant": true,
+    "unsupported_ops_flagged": false,
+    "conv_nodes": [
+      {
+        "name": "/inner/net/intro/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.intro.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.0/encoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/downs.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.0.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.1/encoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/downs.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.2/encoders.2.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv5.weight"
+      },
+      {
+        "name": "/inner/net/downs.2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv5.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv2.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv3.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv4.weight"
+      },
+      {
+        "name": "/inner/net/encoders.3/encoders.3.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv5.weight"
+      },
+      {
+        "name": "/inner/net/downs.3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.8/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.9/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.10/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv5.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv2.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv3.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv4.weight"
+      },
+      {
+        "name": "/inner/net/middle_blks/middle_blks.11/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv5.weight"
+      },
+      {
+        "name": "/inner/net/ups.0/ups.0.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.0.0.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.0/decoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/ups.1/ups.1.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.1.0.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.1/decoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/ups.2/ups.2.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.2.0.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.2/decoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/ups.3/ups.3.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.3.0.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/net/decoders.3/decoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/net/ending/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ending.weight"
+      }
+    ]
+  },
+  {
+    "name": "S",
+    "input_shape": [
+      1,
+      3,
+      256,
+      256
+    ],
+    "opset": 17,
+    "export_status": "success",
+    "onnx_path": "/home/minura/teacher-experiments/test16/results/onnx_models/S.onnx",
+    "model_size_bytes": 30776376,
+    "node_count": 2580,
+    "op_histogram": {
+      "Identity": 206,
+      "Constant": 620,
+      "Mod": 4,
+      "Sub": 67,
+      "Unsqueeze": 13,
+      "Concat": 5,
+      "Shape": 73,
+      "Gather": 76,
+      "Cast": 2,
+      "ConstantOfShape": 1,
+      "Reshape": 2,
+      "Slice": 147,
+      "Transpose": 1,
+      "Pad": 1,
+      "Conv": 229,
+      "Mul": 399,
+      "Add": 288,
+      "Clip": 8,
+      "Div": 136,
+      "GlobalAveragePool": 36,
+      "ReduceMean": 129,
+      "Pow": 64,
+      "Sqrt": 64,
+      "ReduceMax": 1,
+      "Gemm": 3,
+      "Relu": 1,
+      "DepthToSpace": 4
+    },
+    "gather_count": 76,
+    "fft_count": 0,
+    "n_conv": 229,
+    "n_conv_dynamic_weight": 0,
+    "all_conv_weights_constant": true,
+    "unsupported_ops_flagged": false,
+    "conv_nodes": [
+      {
+        "name": "/inner/intro/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.intro.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.0/encoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.0.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.1/encoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.2/encoders.2.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.2.3.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.2.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.3.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.4.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.5.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.6.conv5.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv2.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv3.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv4.weight"
+      },
+      {
+        "name": "/inner/encoders.3/encoders.3.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.encoders.3.7.conv5.weight"
+      },
+      {
+        "name": "/inner/downs.3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.downs.3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.0.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.1.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.2/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.2.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.3/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.3.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.4/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.4.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.5/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.5.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.6/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.6.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.7/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.7.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.8/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.8.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.9/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.9.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.10/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.10.conv5.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv2.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.sca.1.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv3.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv4.weight"
+      },
+      {
+        "name": "/inner/middle_blks/middle_blks.11/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.middle_blks.11.conv5.weight"
+      },
+      {
+        "name": "/inner/experts.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.experts.0.weight"
+      },
+      {
+        "name": "/inner/experts.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.experts.1.weight"
+      },
+      {
+        "name": "/inner/experts.2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.experts.2.weight"
+      },
+      {
+        "name": "/inner/ups.0/ups.0.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.0.0.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.0/decoders.0.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.0.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.1/ups.1.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.1.0.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.1/decoders.1.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.1.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.2/ups.2.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.2.0.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.2/decoders.2.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.2.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ups.3/ups.3.0/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ups.3.0.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.0/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.0.conv5.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv2/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv2.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/sca/sca.1/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.sca.1.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv3/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv3.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv4/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv4.weight"
+      },
+      {
+        "name": "/inner/decoders.3/decoders.3.1/conv5/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.decoders.3.1.conv5.weight"
+      },
+      {
+        "name": "/inner/ending/Conv",
+        "weight_is_constant": true,
+        "weight_input": "inner.net.ending.weight"
+      }
+    ]
+  }
+]

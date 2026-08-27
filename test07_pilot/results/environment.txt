@@ -1,0 +1,12 @@
+TEST07-Pilot -- Overnight Student Direction Experiment -- Environment Record
+PURPOSE: small pilot (15 epochs, 40 train / 10 val scenes) comparing 4
+NAFNet student variants (A baseline, B compact latent KD, C +affine
+conditioning, D +low-rank dynamic kernel) to give an early empirical signal
+on which student direction deserves full investment. NOT final benchmark
+numbers. Does not modify test01-06_r, fyp-adair-distill, or AdaIR source/checkpoint.
+Teacher checkpoint SHA256: f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb (matches TEST01-06R record)
+Student architecture: fyp-adair-distill's LOCKED NAFNet M arm (width=16, enc=[2,2,4,8], middle=12, dec=[2,2,2,2], N-F+clamp norm), read-only import, unmodified.
+Host: devon (192.248.10.68), conda env: adair-distill, taskset -c 0-7,12-31 pinning.
+Dataset: 40 train + 10 val scenes, DIV2K validation images 40-79/90-99 (read-only reuse of TEST06's already-downloaded set), fixed 128x128 crops, parameter-randomized Rain/Haze/Noise.
+PCA-16 fit on training split only (120 samples), explained variance 75.5%.
+Training: Adam, LR=2e-4, batch=8, 15 epochs, seed=0, lambda_kd=0.1 (stable, no reduction needed), identical across all 4 models.

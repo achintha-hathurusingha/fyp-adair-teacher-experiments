@@ -1,0 +1,50 @@
+NOTE: excluding {'scene_021'} (data-quality issue, see rerun_audit.md) -- proceeding with 24 scenes
+[baseline 5/24] elapsed=24s
+[baseline 10/24] elapsed=46s
+[baseline 15/24] elapsed=69s
+[baseline 20/24] elapsed=92s
+Control D (global mean) computed from 72 real 06-E tensors, shape=(1, 96, 512, 512)
+/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/skimage/metrics/simple_metrics.py:168: RuntimeWarning: divide by zero encountered in scalar divide
+  return 10 * np.log10((data_range**2) / err)
+
+Phase 4 self-swap: max_L2=0.00000000 mean_L2=0.00000000 max_MAE=0.00000000 max_normalized_L2=0.00000000 (PASS)
+[primary+propagation scene_000] elapsed=268s
+[primary+propagation scene_001] elapsed=292s
+[primary+propagation scene_002] elapsed=315s
+[primary+propagation scene_003] elapsed=338s
+[primary+propagation scene_004] elapsed=362s
+[primary+propagation scene_005] elapsed=385s
+[primary+propagation scene_006] elapsed=408s
+[primary+propagation scene_007] elapsed=432s
+[primary+propagation scene_008] elapsed=455s
+[primary+propagation scene_009] elapsed=479s
+[primary+propagation scene_010] elapsed=502s
+[primary+propagation scene_011] elapsed=526s
+[primary+propagation scene_012] elapsed=549s
+[primary+propagation scene_013] elapsed=573s
+[primary+propagation scene_014] elapsed=596s
+[primary+propagation scene_015] elapsed=620s
+[primary+propagation scene_016] elapsed=643s
+[primary+propagation scene_017] elapsed=666s
+[primary+propagation scene_018] elapsed=690s
+[primary+propagation scene_019] elapsed=713s
+[primary+propagation scene_020] elapsed=737s
+[primary+propagation scene_022] elapsed=760s
+[primary+propagation scene_023] elapsed=783s
+[primary+propagation scene_024] elapsed=807s
+Phase 2+10: 144 primary swaps, 1152 propagation-stage rows, elapsed=807s
+[controls 5/24] elapsed=930s
+[controls 10/24] elapsed=1054s
+[controls 15/24] elapsed=1178s
+[controls 20/24] elapsed=1302s
+Phase 3: 72 unique control computations x 4 = 288 actual forward passes, expanded to 576 rows (150 per control type), elapsed=1401s
+
+======================================================================
+PRIMARY vs BALANCED CONTROLS (normalized_l2, mean, N=150 each):
+  primary (same_scene_cross_degradation): 0.000013
+  cross_scene_same_degradation: 0.000013
+  random_matched: 0.000013
+  zero: 0.000013
+  global_mean: 0.000013
+======================================================================
+DONE_EXIT_0

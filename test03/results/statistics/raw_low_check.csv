@@ -1,0 +1,4 @@
+feature_name,n_images,mean_of_mean,max_of_mean,mean_of_std,max_of_max,min_of_min,mean_of_L1,mean_of_L2,mean_of_energy,all_exactly_zero
+AFLB1_raw_low,300,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+AFLB2_raw_low,300,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+AFLB3_raw_low,300,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True

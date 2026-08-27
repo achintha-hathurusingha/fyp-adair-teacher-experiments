@@ -1,0 +1,21 @@
+tensor,producer,consumer,shape_480x320_input,skip_connection,safe_to_swap,reason
+inp_enc_level1,patch_embed(inp_img),encoder_level1,"(1,48,H,W)",no,n/a,intermediate only
+out_enc_level1,encoder_level1,"down1_2; cat at decoder_level1 input","(1,48,H,W)",YES - skip to decoder L1,yes,stateless plain tensor; shape fixed by architecture
+inp_enc_level2,down1_2(out_enc_level1),encoder_level2,"(1,96,H/2,W/2)",no,n/a,intermediate only
+out_enc_level2,encoder_level2,"down2_3; cat at decoder_level2 input","(1,96,H/2,W/2)",YES - skip to decoder L2,yes,stateless plain tensor
+inp_enc_level3,down2_3(out_enc_level2),encoder_level3,"(1,192,H/4,W/4)",no,n/a,intermediate only
+out_enc_level3,encoder_level3,"down3_4; cat at decoder_level3 input","(1,192,H/4,W/4)",YES - skip to decoder L3,yes,stateless plain tensor
+inp_enc_level4,down3_4(out_enc_level3),latent,"(1,384,H/8,W/8)",no,n/a,intermediate only
+latent_pre_AFLB1,self.latent(inp_enc_level4),fre1 (AFLB1),"(1,384,H/8,W/8)",no,YES,"no hidden state (LayerNorm is per-sample); PRIMARY swap point"
+aflb1_out,"fre1(inp_img; latent_pre)",up4_3,"(1,384,H/8,W/8)",no,YES,plain tensor output; PRIMARY swap point
+inp_dec_level3,"up4_3(aflb1_out) + cat(out_enc_level3) + reduce_chan_level3",decoder_level3,"(1,192,H/4,W/4)",consumes skip out_enc_level3,n/a,intermediate only
+out_dec_level3_pre,decoder_level3,fre2 (AFLB2),"(1,192,H/4,W/4)",no,n/a,intermediate only
+aflb2_out,"fre2(inp_img; out_dec_level3)",up3_2,"(1,192,H/4,W/4)",no,YES,plain tensor output; PRIMARY swap point
+inp_dec_level2,"up3_2(aflb2_out) + cat(out_enc_level2) + reduce_chan_level2",decoder_level2,"(1,96,H/2,W/2)",consumes skip out_enc_level2,n/a,intermediate only
+out_dec_level2_pre,decoder_level2,fre3 (AFLB3),"(1,96,H/2,W/2)",no,n/a,intermediate only
+aflb3_out,"fre3(inp_img; out_dec_level2)",up2_1,"(1,96,H/2,W/2)",no,YES,plain tensor output; PRIMARY swap point
+inp_dec_level1,"up2_1(aflb3_out) + cat(out_enc_level1)",decoder_level1,"(1,96,H,W)",consumes skip out_enc_level1,n/a,intermediate only
+out_dec_level1,decoder_level1,refinement,"(1,96,H,W)",no,n/a,intermediate only
+refine,refinement,output conv,"(1,96,H,W)",no,n/a,intermediate only
+output,"output_conv(refine) + inp_img (residual)",final restored image,"(1,3,H,W)",consumes inp_img directly,n/a,final residual re-injects recipient's own degraded image
+inp_img,top-level forward() argument,"fre1, fre2, fre3 (FMiM x branch), final residual",varies,n/a,NOT swapped in TEST04,"re-injected 4x independently of latent/AFLB swaps -- recipient identity persists regardless of intervention (see Critical Finding #1)"

@@ -1,0 +1,13 @@
+comparison,metric,mean,std,bootstrap_ci95_lo,bootstrap_ci95_hi,n_seeds,note
+G-F,delta_last5_psnr,-0.3339664681613262,0.2087546695509495,-0.523919824583821,-0.11047207192179442,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-F,delta_last5_ssim,-0.0060133424408401375,0.007871644851472593,-0.015092522007716158,-0.001100702443582735,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-F,delta_best_psnr,-0.3965226049897896,0.19927184462724246,-0.5892767788602811,-0.19131703188124405,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-F,delta_best_ssim,-0.0018970150463057944,0.004873637480366491,-0.007420971425941336,0.001795968904474754,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-A,delta_last5_psnr,-0.6103259882728919,0.23828940608619908,-0.775199515541459,-0.3371161105542875,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-A,delta_last5_ssim,0.00331998178458226,0.017977578225940205,-0.017430368751400027,0.014205581723993332,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-A,delta_best_psnr,-0.7304869672116077,0.3562153271485901,-1.0017096779577592,-0.3270733710390772,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+G-A,delta_best_ssim,0.00583673785235143,0.016835176872912326,-0.01344633023047681,0.017610323564574704,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+F-A,delta_last5_psnr,-0.2763595201115656,0.06593544351019863,-0.35115483074456577,-0.22664403863249305,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+F-A,delta_last5_ssim,0.009333324225422398,0.010146068288525871,-0.002337846743683869,0.016052384595214853,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+F-A,delta_best_psnr,-0.3339643622218181,0.17288909196213634,-0.453703848410143,-0.13575633915783314,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+F-A,delta_best_ssim,0.007733752898657224,0.012303137281849454,-0.0060253588045354745,0.017676366182025505,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance

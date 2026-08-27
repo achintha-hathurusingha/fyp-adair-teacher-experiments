@@ -1,0 +1,2 @@
+epsilon = 95th percentile of |control_A - control_B| across all 6 control-type pairs x 150 matched rows (864 pooled values) = 0.00000028
+Computed from control-vs-control comparisons ONLY, before any primary-vs-control comparison was examined, per the task's explicit instruction.

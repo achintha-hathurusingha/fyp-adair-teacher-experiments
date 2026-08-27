@@ -1,0 +1,181 @@
+[
+  {
+    "name": "conv3x3",
+    "status": "SUBMITTED",
+    "compile_job_id": "jpey92n75",
+    "profile_job_id": "j5w4oxrzg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "depthwise_conv",
+    "status": "SUBMITTED",
+    "compile_job_id": "jg9dv8qq5",
+    "profile_job_id": "jp1603mk5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "conv1x1",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgd2w0mk5",
+    "profile_job_id": "j579z68qg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "add",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp43q82q5",
+    "profile_job_id": "jpxxvmzjp",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "multiply",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgnk2xdvg",
+    "profile_job_id": "jprwk9mv5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "relu_clamp",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp2e8jqxp",
+    "profile_job_id": "jpymenkrp",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "sigmoid",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp06yk82p",
+    "profile_job_id": "jp81o8dz5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "softmax",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgk8zdwyg",
+    "profile_job_id": "j5qv8wx7g",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "global_avg_pool",
+    "status": "SUBMITTED",
+    "compile_job_id": "jglln79eg",
+    "profile_job_id": "j56w6v9vg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "global_max_pool",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp36k8lxp",
+    "profile_job_id": "jgo8ym74p",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "resize",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgjqx1675",
+    "profile_job_id": "jpey92075",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "concatenate",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgznewqzg",
+    "profile_job_id": "j5w4ox0zg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "elementwise_affine",
+    "status": "SUBMITTED",
+    "compile_job_id": "jg9dv87q5",
+    "profile_job_id": "jp1603kk5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "layernorm2d",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgd2w0yk5",
+    "profile_job_id": "j579z61qg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "rmsnorm_like",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp43q86q5",
+    "profile_job_id": "jpxxvm8jp",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "dynamic_conv",
+    "status": "SUBMITTED",
+    "compile_job_id": "j5m8r41yp",
+    "profile_job_id": "jprwk9rv5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "fft",
+    "status": "SKIPPED (ONNX export failed)"
+  },
+  {
+    "name": "combo_conv_add",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp2e8j1xp",
+    "profile_job_id": "jpymenlrp",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_conv_clamp",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp06ykw2p",
+    "profile_job_id": "jp81o8nz5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_conv_mul",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgk8zd1yg",
+    "profile_job_id": "j5qv8wn7g",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_conv_add_clamp",
+    "status": "SUBMITTED",
+    "compile_job_id": "jglln7deg",
+    "profile_job_id": "j56w6vxvg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_dwconv_pointwise",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgo8ymx4p",
+    "profile_job_id": "jpv73487p",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_1x1_add_clamp",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgjqx1975",
+    "profile_job_id": "jpey92q75",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "combo_gap_linear_mul",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgznew6zg",
+    "profile_job_id": "j5w4oxkzg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "minura_lowrank_op",
+    "status": "SUBMITTED",
+    "compile_job_id": "jg9dv8rq5",
+    "profile_job_id": "jp16039k5",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "static_mixture_op",
+    "status": "SUBMITTED",
+    "compile_job_id": "jgd2w0kk5",
+    "profile_job_id": "j579z6mqg",
+    "device": "Snapdragon 8 Elite QRD"
+  }
+]

@@ -1,0 +1,10 @@
+check,result
+Checkpoint SHA256 matches TEST01-06,YES (f3822d9c2ea...5937fb)
+AdaIR source git SHA matches,YES (ccb8b98e49614e07badd0641e5163fa7635c2f02)
+Intervention point identical to original TEST06 (AFLB3 raw_high/raw_low),YES -- verified by re-reading causal_intervention_06e.py
+Resolution identical (1024x1024),YES
+06-E dataset reused exactly (not regenerated),YES -- read from test06/results/frequency_intervention/scene_manifest.csv
+Degradation synthesis identical,"YES -- same manifest, same PNG files on disk"
+Original intervention mechanism correctness,CONFIRMED -- original self-swap produced exact 0.0 difference
+Data-quality issue discovered,scene_021 is 1024x104 not 1024x1024 -- excluded from TEST06-R (N=24 not 25)
+Resolution sweep re-run,"NO -- no bug found, per the task's explicit instruction not to re-run unless a bug is demonstrated"

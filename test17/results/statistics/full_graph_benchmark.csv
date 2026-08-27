@@ -1,0 +1,5 @@
+name,compile_success,profile_success,device,latency_mean_ms,latency_median_ms,latency_p50_ms,latency_p90_ms,latency_p95_ms,latency_std_ms,latency_n_samples,latency_ms,peak_memory_bytes,first_load_time_us,warm_load_time_us,compute_units_used,npu_only,any_cpu_fallback,any_gpu_fallback,n_layers,n_cpu_layers,n_gpu_layers
+A,True,True,Snapdragon 8 Elite QRD,10559.68,10539.5,10539.5,10634.9,10684.7,82.6007118613393,100,10480,125485056,126206,123224,NPU,True,False,False,946,0,0
+N,True,True,Snapdragon 8 Elite QRD,3777.11,3740.0,3740.0,3879.0,3950.45,116.50355316469965,100,3699,125931520,111142,113231,NPU,True,False,False,810,0,0
+F2,True,True,Snapdragon 8 Elite QRD,10610.49,10577.5,10577.5,10693.6,10859.3,133.43174247531957,100,10477,125448192,122242,130625,NPU,True,False,False,962,0,0
+NF2,True,True,Snapdragon 8 Elite QRD,3843.62,3798.0,3798.0,3939.1,4045.5499999999993,134.05392795438706,100,3765,125333504,110610,107360,NPU,True,False,False,826,0,0

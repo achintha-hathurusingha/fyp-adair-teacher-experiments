@@ -1,0 +1,14 @@
+TEST05 -- Degradation-Specific Representation Discovery -- Environment Record
+AdaIR source git SHA: ccb8b98e49614e07badd0641e5163fa7635c2f02
+Checkpoint path: /home/minura/teacher-experiments/weights/adair3d.ckpt
+Checkpoint SHA256: f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb
+Python version: 3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]
+PyTorch version: 2.5.1+cu124
+CUDA version (torch): 12.4
+GPU: NVIDIA GeForce RTX 4090, 580.173.02, 24564 MiB
+Host: devon (192.248.10.68) -- KNOWN ISSUE: logical CPUs 8-11 are unreliable; every script invocation pinned: taskset -c 0-7,12-31 python <script>
+conda env: adair-distill
+Dataset: TEST03's exact 100 scenes x Rain/Haze/Noise (read-only reference, not regenerated) -- test03/data/{rain,haze,noise,clean}/scene_NNN.png
+Model: released, UNMODIFIED AdaIR (decoder=True), adair3d.ckpt, 28,784,824 params, 0 missing / 0 unexpected keys -- IDENTICAL checkpoint/loader to test01-04
+Intervention mechanism: TEST04's verified-bit-exact manual_forward (read-only import from test04/src/intervention.py, not modified), extended in TEST05 to substitute partial (channel-subset) tensors, not just whole tensors
+No retraining, no fine-tuning, no weight modification, no degradation label ever supplied to AdaIR. FFT/mask code (raw_low) untouched, per instruction. raw_low included only as a negative control, per instruction.

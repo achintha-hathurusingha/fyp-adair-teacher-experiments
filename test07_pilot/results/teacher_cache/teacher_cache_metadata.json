@@ -1,0 +1,16 @@
+{
+  "teacher_checkpoint_path": "/home/minura/teacher-experiments/weights/adair3d.ckpt",
+  "teacher_checkpoint_sha256": "f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb",
+  "expected_sha256_from_test01_06r": "f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb",
+  "sha256_matches": true,
+  "n_params": 28784824,
+  "raw_pooled_dim": 768,
+  "pca_dim": 16,
+  "pca_fit_sample_count": 120,
+  "pca_fit_source": "TEST07-Pilot's own training split ONLY (NOT test05/test05_5's PCA transform, NOT fit on validation data) -- a fresh, pilot-scoped, leakage-safe PCA, methodology matches TEST05.5's leakage-safe re-audit (fit inside train fold only).",
+  "pca_explained_variance_ratio_sum": 0.75483638048172,
+  "n_scenes_total": 50,
+  "n_records_total": 150,
+  "n_train_records": 120,
+  "n_val_records": 30
+}

@@ -1,0 +1,17 @@
+# Phase 9 -- resolution sweep across all 3 variants, square + rectangular.
+# Feature-map size at each AFLB is a fixed fraction of input resolution
+# (AFLB1=H/8, AFLB2=H/4, AFLB3=H/2). Input sizes chosen so AFLB3's feature
+# size lands near the task-requested targets (64/128/160/256/320/512):
+#   target 64 -> input 128, 128->256, 160->320, 256->512, 320->640, 512->1024
+source_image: /home/minura/FYP/Workspace/Himeth/data/rain100L/rain100L_test/Rain100L/rainy/rain-001.png
+sizes_square: [128, 256, 320, 512, 640, 1024]
+sizes_rectangular_2to1: [[256,128], [512,256], [640,320], [1024,512]]  # [H, W]
+variants: [released, modified_mask, no_frequency]
+device: cuda
+note: >
+  Does NOT modify the model -- reads out alpha/beta/mask under the
+  unmodified trained rate_conv weights (released, modified_mask) at each
+  resolution; no_frequency has no mask (recorded as N/A) but is swept for
+  peak-memory/cost comparison at each resolution.
+outputs:
+  results/resolution_sweep.csv

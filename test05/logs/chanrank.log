@@ -1,0 +1,55 @@
+latent_pre: 384 channels
+AFLB1_aflb_out: 384 channels
+AFLB2_aflb_out: 192 channels
+AFLB3_aflb_out: 96 channels
+AFLB1_mined_low: 384 channels
+AFLB1_mined_high: 384 channels
+AFLB1_fmom_agg: 384 channels
+AFLB1_raw_high: 384 channels
+AFLB2_mined_low: 192 channels
+AFLB2_mined_high: 192 channels
+AFLB2_fmom_agg: 192 channels
+AFLB3_mined_low: 96 channels
+AFLB3_mined_high: 96 channels
+AFLB3_fmom_agg: 96 channels
+AFLB1_lh_channel_weight: 384 channels
+AFLB1_cross_agg_out: 384 channels
+
+wrote /home/minura/teacher-experiments/test05/results/channel_analysis/channel_rank.csv (4224 rows)
+
+Top 20 channels overall by degradation_probe_accuracy:
+         feature  channel  degradation_probe_accuracy  degradation_scene_ratio
+  AFLB3_fmom_agg       71                    0.956667                 4.902146
+  AFLB3_aflb_out       92                    0.953333                 4.465356
+  AFLB3_aflb_out        1                    0.953333                 3.655478
+  AFLB3_aflb_out       33                    0.950000                 4.318490
+ AFLB3_mined_low       32                    0.943333                 4.585643
+ AFLB3_mined_low       71                    0.943333                 4.506509
+ AFLB3_mined_low       95                    0.936667                 4.318346
+ AFLB3_mined_low       74                    0.936667                 4.059451
+  AFLB3_fmom_agg       11                    0.933333                 3.559430
+  AFLB3_aflb_out       59                    0.926667                 3.291553
+ AFLB3_mined_low       76                    0.923333                 3.706125
+ AFLB3_mined_low       56                    0.923333                 4.290752
+  AFLB3_aflb_out       81                    0.920000                 4.701408
+  AFLB3_fmom_agg        9                    0.916667                 4.259190
+AFLB3_mined_high        4                    0.916667                 3.650026
+  AFLB3_aflb_out       20                    0.916667                 3.542112
+ AFLB3_mined_low       33                    0.913333                 4.530136
+ AFLB3_mined_low       70                    0.913333                 4.699744
+  AFLB3_aflb_out       36                    0.913333                 3.688555
+  AFLB3_aflb_out       71                    0.910000                 3.237357
+
+Top 10 channels by degradation_scene_ratio (>random-accuracy channels only):
+                feature  channel  degradation_probe_accuracy  degradation_scene_ratio
+         AFLB3_fmom_agg       53                    0.903333                 5.599990
+AFLB1_lh_channel_weight      188                    0.813333                 5.338346
+AFLB1_lh_channel_weight       77                    0.810000                 5.130550
+AFLB1_lh_channel_weight      262                    0.776667                 5.045564
+         AFLB3_fmom_agg       71                    0.956667                 4.902146
+         AFLB3_fmom_agg       57                    0.860000                 4.834822
+        AFLB3_mined_low       39                    0.910000                 4.806438
+AFLB1_lh_channel_weight      215                    0.823333                 4.768977
+        AFLB3_mined_low       64                    0.890000                 4.749727
+         AFLB3_aflb_out       81                    0.920000                 4.701408
+DONE_EXIT=0

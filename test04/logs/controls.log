@@ -1,0 +1,20 @@
+checkpoint loaded
+  skip-progressive [5/20] scene_005
+  skip-progressive [10/20] scene_010
+  skip-progressive [15/20] scene_015
+  skip-progressive [20/20] scene_020
+wrote /home/minura/teacher-experiments/test04/results/interventions/skip_connection_progressive.csv (360 rows)
+Traceback (most recent call last):
+  File "/home/minura/teacher-experiments/test04/src/run_controls.py", line 191, in <module>
+    main()
+  File "/home/minura/teacher-experiments/test04/src/run_controls.py", line 130, in main
+    swapped_out = manual_forward(model, recipient_img, overrides={"latent_pre": donor_latent})["output"]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/test04/src/intervention.py", line 58, in manual_forward
+    latent_pre = sub("latent_pre", net.latent(inp_enc_level4))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/test04/src/intervention.py", line 42, in sub
+    assert donor.shape == computed.shape, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: override 'latent_pre' shape mismatch: donor (1, 384, 40, 60) vs recipient (1, 384, 60, 40)
+DONE_EXIT=1

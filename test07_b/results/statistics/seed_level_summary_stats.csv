@@ -1,0 +1,5 @@
+metric,mean,std,bootstrap_ci95_lo,bootstrap_ci95_hi,n_seeds,note
+delta_last5_psnr,-0.793228830555685,0.231055215385486,-1.014130636131437,-0.5532082292389369,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+delta_last5_ssim,0.004636641504546642,0.010642925639022478,-0.0075993096728723675,0.011746075738700235,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+delta_best_psnr,-0.7497950194883446,0.15994828495195315,-0.8817693451355026,-0.5719126517337472,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance
+delta_best_ssim,0.005907787636581174,0.007990923827319297,-0.0023697764371775065,0.013577336356156211,3,EXPLORATORY (N=3 seeds) -- not a claim of statistical significance

@@ -1,0 +1,2 @@
+classifier,n_features,accuracy_mean,accuracy_std,balanced_accuracy,macro_f1,random_baseline,confusion_matrix
+logreg_fft_only,3,0.9333333333333333,0.038005847503304574,0.9333333333333332,0.9330309149472313,33.333333333333336,"[[97, 0, 3], [0, 98, 2], [14, 1, 85]]"

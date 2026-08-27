@@ -1,0 +1,18 @@
+100 scenes x 3 = 300 images, 15 representative scenes (raw tensors saved)
+loading AdaIR (released, unmodified) ckpt adair3d.ckpt
+checkpoint OK: 28,784,824 params, 0 missing/0 unexpected keys
+[30/300] scene_010 elapsed=9s
+[60/300] scene_020 elapsed=16s
+[90/300] scene_030 elapsed=23s
+[120/300] scene_040 elapsed=30s
+[150/300] scene_050 elapsed=36s
+[180/300] scene_060 elapsed=43s
+[210/300] scene_070 elapsed=49s
+[240/300] scene_080 elapsed=56s
+[270/300] scene_090 elapsed=63s
+[300/300] scene_100 elapsed=70s
+
+wrote 31 candidate-feature .npz files -> /home/minura/teacher-experiments/test05/results/feature_analysis
+wrote raw tensors for 15 representative scenes -> /home/minura/teacher-experiments/test05/results/tensors
+total elapsed: 70s
+DONE_EXIT=0

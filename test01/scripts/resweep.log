@@ -1,0 +1,39 @@
+
+=== variant: released ===
+  H=  128 W=  128  AFLB1:feat=(16,16) mask%=0.0  AFLB2:feat=(32,32) mask%=0.0  AFLB3:feat=(64,64) mask%=0.0
+  H=  256 W=  256  AFLB1:feat=(32,32) mask%=0.0  AFLB2:feat=(64,64) mask%=0.0  AFLB3:feat=(128,128) mask%=0.0
+  H=  320 W=  320  AFLB1:feat=(40,40) mask%=0.0  AFLB2:feat=(80,80) mask%=0.0  AFLB3:feat=(160,160) mask%=0.0
+  H=  512 W=  512  AFLB1:feat=(64,64) mask%=0.0  AFLB2:feat=(128,128) mask%=0.0  AFLB3:feat=(256,256) mask%=0.0
+  H=  640 W=  640  AFLB1:feat=(80,80) mask%=0.0  AFLB2:feat=(160,160) mask%=0.0  AFLB3:feat=(320,320) mask%=0.0
+  H= 1024 W= 1024  AFLB1:feat=(128,128) mask%=0.0  AFLB2:feat=(256,256) mask%=0.0  AFLB3:feat=(512,512) mask%=0.00152587890625
+  H=  256 W=  128  AFLB1:feat=(32,16) mask%=0.0  AFLB2:feat=(64,32) mask%=0.0  AFLB3:feat=(128,64) mask%=0.0
+  H=  512 W=  256  AFLB1:feat=(64,32) mask%=0.0  AFLB2:feat=(128,64) mask%=0.0  AFLB3:feat=(256,128) mask%=0.0
+  H=  640 W=  320  AFLB1:feat=(80,40) mask%=0.0  AFLB2:feat=(160,80) mask%=0.0  AFLB3:feat=(320,160) mask%=0.0
+  H= 1024 W=  512  AFLB1:feat=(128,64) mask%=0.0  AFLB2:feat=(256,128) mask%=0.0  AFLB3:feat=(512,256) mask%=0.0
+
+=== variant: modified_mask ===
+  H=  128 W=  128  AFLB1:feat=(16,16) mask%=0.0  AFLB2:feat=(32,32) mask%=0.0  AFLB3:feat=(64,64) mask%=0.0
+  H=  256 W=  256  AFLB1:feat=(32,32) mask%=0.0  AFLB2:feat=(64,64) mask%=0.0  AFLB3:feat=(128,128) mask%=0.0
+  H=  320 W=  320  AFLB1:feat=(40,40) mask%=0.0  AFLB2:feat=(80,80) mask%=0.0  AFLB3:feat=(160,160) mask%=0.0
+  H=  512 W=  512  AFLB1:feat=(64,64) mask%=0.0  AFLB2:feat=(128,128) mask%=0.0  AFLB3:feat=(256,256) mask%=0.0
+  H=  640 W=  640  AFLB1:feat=(80,80) mask%=0.0  AFLB2:feat=(160,160) mask%=0.0  AFLB3:feat=(320,320) mask%=0.0039062499126885086
+  H= 1024 W= 1024  AFLB1:feat=(128,128) mask%=0.0  AFLB2:feat=(256,256) mask%=0.0  AFLB3:feat=(512,512) mask%=0.00152587890625
+  H=  256 W=  128  AFLB1:feat=(32,16) mask%=0.0  AFLB2:feat=(64,32) mask%=0.0  AFLB3:feat=(128,64) mask%=0.0
+  H=  512 W=  256  AFLB1:feat=(64,32) mask%=0.0  AFLB2:feat=(128,64) mask%=0.0  AFLB3:feat=(256,128) mask%=0.0
+  H=  640 W=  320  AFLB1:feat=(80,40) mask%=0.0  AFLB2:feat=(160,80) mask%=0.0  AFLB3:feat=(320,160) mask%=0.0
+  H= 1024 W=  512  AFLB1:feat=(128,64) mask%=0.0  AFLB2:feat=(256,128) mask%=0.0  AFLB3:feat=(512,256) mask%=0.0
+
+=== variant: no_frequency ===
+  H=  128 W=  128  AFLB1:feat=(16,16) mask%=  AFLB2:feat=(32,32) mask%=  AFLB3:feat=(64,64) mask%=
+  H=  256 W=  256  AFLB1:feat=(32,32) mask%=  AFLB2:feat=(64,64) mask%=  AFLB3:feat=(128,128) mask%=
+  H=  320 W=  320  AFLB1:feat=(40,40) mask%=  AFLB2:feat=(80,80) mask%=  AFLB3:feat=(160,160) mask%=
+  H=  512 W=  512  AFLB1:feat=(64,64) mask%=  AFLB2:feat=(128,128) mask%=  AFLB3:feat=(256,256) mask%=
+  H=  640 W=  640  AFLB1:feat=(80,80) mask%=  AFLB2:feat=(160,160) mask%=  AFLB3:feat=(320,320) mask%=
+  H= 1024 W= 1024  AFLB1:feat=(128,128) mask%=  AFLB2:feat=(256,256) mask%=  AFLB3:feat=(512,512) mask%=
+  H=  256 W=  128  AFLB1:feat=(32,16) mask%=  AFLB2:feat=(64,32) mask%=  AFLB3:feat=(128,64) mask%=
+  H=  512 W=  256  AFLB1:feat=(64,32) mask%=  AFLB2:feat=(128,64) mask%=  AFLB3:feat=(256,128) mask%=
+  H=  640 W=  320  AFLB1:feat=(80,40) mask%=  AFLB2:feat=(160,80) mask%=  AFLB3:feat=(320,160) mask%=
+  H= 1024 W=  512  AFLB1:feat=(128,64) mask%=  AFLB2:feat=(256,128) mask%=  AFLB3:feat=(512,256) mask%=
+
+wrote /home/minura/teacher-experiments/test01/results/resolution_sweep.csv (90 rows)
+DONE_EXIT=0

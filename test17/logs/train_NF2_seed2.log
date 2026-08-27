@@ -1,0 +1,13 @@
+Model NF2 seed 2: 7,381,189 params, MACs=1033114656, train_examples=1920, val_examples=60
+[NF2/s2] epoch 1/50: L1=0.1025 KD=29.2262 val_psnr=20.038 val_ssim=0.5843 elapsed=33s
+[NF2/s2] epoch 5/50: L1=0.0719 KD=21.5738 val_psnr=21.393 val_ssim=0.6231 elapsed=160s
+[NF2/s2] epoch 10/50: L1=0.0541 KD=16.6711 val_psnr=22.460 val_ssim=0.6799 elapsed=319s
+[NF2/s2] epoch 15/50: L1=0.0469 KD=11.7840 val_psnr=23.399 val_ssim=0.7149 elapsed=479s
+[NF2/s2] epoch 20/50: L1=0.0426 KD=6.9413 val_psnr=23.838 val_ssim=0.7306 elapsed=639s
+[NF2/s2] epoch 25/50: L1=0.0400 KD=3.6638 val_psnr=24.420 val_ssim=0.7441 elapsed=798s
+[NF2/s2] epoch 30/50: L1=0.0373 KD=2.2454 val_psnr=24.474 val_ssim=0.7560 elapsed=958s
+[NF2/s2] epoch 35/50: L1=0.0348 KD=1.6618 val_psnr=24.472 val_ssim=0.7574 elapsed=1118s
+[NF2/s2] epoch 40/50: L1=0.0330 KD=1.2587 val_psnr=24.853 val_ssim=0.7628 elapsed=1277s
+[NF2/s2] epoch 45/50: L1=0.0313 KD=1.1437 val_psnr=25.041 val_ssim=0.7759 elapsed=1437s
+[NF2/s2] epoch 50/50: L1=0.0306 KD=1.1250 val_psnr=24.877 val_ssim=0.7567 elapsed=1596s
+[NF2/s2] DONE. last5_mean_psnr=25.150 last5_mean_ssim=0.7701 total_time=1596s

@@ -1,0 +1,2 @@
+feature,metric,n_scenes,D_degradation_mean,bootstrap_ci95_lo,bootstrap_ci95_hi,note
+latent,euclidean,100,38.91718495686849,38.367510208924614,39.46186369832357,"bootstrap resampled by SCENE (the experimental unit, not by individual image), 2000 resamples, 95% percentile CI"

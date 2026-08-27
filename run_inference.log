@@ -1,0 +1,20 @@
+loading AdaIR from /home/minura/teacher-experiments/AdaIR (git ccb8b98e), ckpt adair3d.ckpt
+running inference on 300 images
+[20/300] R020 (Rain) psnr=37.49 ssim=0.9821 elapsed=10s
+[40/300] R040 (Rain) psnr=39.53 ssim=0.9853 elapsed=18s
+[60/300] R060 (Rain) psnr=45.91 ssim=0.9937 elapsed=26s
+[80/300] R080 (Rain) psnr=43.32 ssim=0.9903 elapsed=34s
+[100/300] R100 (Rain) psnr=33.52 ssim=0.9634 elapsed=43s
+[120/300] H020 (Haze) psnr=32.83 ssim=0.9871 elapsed=56s
+[140/300] H040 (Haze) psnr=24.86 ssim=0.9804 elapsed=71s
+[160/300] H060 (Haze) psnr=35.40 ssim=0.9925 elapsed=88s
+[180/300] H080 (Haze) psnr=24.16 ssim=0.9668 elapsed=104s
+[200/300] H100 (Haze) psnr=40.89 ssim=0.9918 elapsed=123s
+[220/300] N020 (Noise) psnr=31.30 ssim=0.8877 elapsed=132s
+[240/300] N040 (Noise) psnr=31.57 ssim=0.8496 elapsed=140s
+[260/300] N060 (Noise) psnr=32.91 ssim=0.8568 elapsed=148s
+[280/300] N080 (Noise) psnr=32.81 ssim=0.9179 elapsed=156s
+[300/300] N100 (Noise) psnr=25.60 ssim=0.7915 elapsed=165s
+wrote /home/minura/teacher-experiments/AdaIR_3Degradation_Analysis.xlsx
+total elapsed: 166s
+DONE_EXIT=0

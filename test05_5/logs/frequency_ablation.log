@@ -1,0 +1,67 @@
+[T0_released] [20/100] elapsed=17s
+[T0_released] [40/100] elapsed=31s
+[T0_released] [60/100] elapsed=46s
+[T0_released] [80/100] elapsed=61s
+[T0_released] [100/100] elapsed=76s
+variant T0_released done, elapsed=76s
+[T1_no_frequency] [20/100] elapsed=91s
+[T1_no_frequency] [40/100] elapsed=106s
+[T1_no_frequency] [60/100] elapsed=120s
+[T1_no_frequency] [80/100] elapsed=135s
+[T1_no_frequency] [100/100] elapsed=149s
+variant T1_no_frequency done, elapsed=149s
+[T2_matched_random] [20/100] elapsed=165s
+[T2_matched_random] [40/100] elapsed=180s
+[T2_matched_random] [60/100] elapsed=195s
+[T2_matched_random] [80/100] elapsed=210s
+[T2_matched_random] [100/100] elapsed=225s
+variant T2_matched_random done, elapsed=226s
+[T3_phase_shuffle] [20/100] elapsed=239s
+[T3_phase_shuffle] [40/100] elapsed=252s
+[T3_phase_shuffle] [60/100] elapsed=265s
+[T3_phase_shuffle] [80/100] elapsed=278s
+[T3_phase_shuffle] [100/100] elapsed=291s
+variant T3_phase_shuffle done, elapsed=291s
+T0_released / latent_pre: deg_probe=100.0% pca16=99.7% deg/scene_ratio=1.865
+T0_released / AFLB1_aflb_out: deg_probe=100.0% pca16=99.7% deg/scene_ratio=2.056
+T0_released / AFLB2_aflb_out: deg_probe=100.0% pca16=99.3% deg/scene_ratio=2.242
+T0_released / AFLB3_aflb_out: deg_probe=99.7% pca16=99.7% deg/scene_ratio=2.426
+T1_no_frequency / latent_pre: deg_probe=100.0% pca16=99.7% deg/scene_ratio=1.865
+T1_no_frequency / AFLB1_aflb_out: deg_probe=100.0% pca16=99.7% deg/scene_ratio=2.055
+T1_no_frequency / AFLB2_aflb_out: deg_probe=100.0% pca16=99.0% deg/scene_ratio=2.239
+T1_no_frequency / AFLB3_aflb_out: deg_probe=99.7% pca16=99.7% deg/scene_ratio=2.430
+T2_matched_random / latent_pre: deg_probe=100.0% pca16=99.7% deg/scene_ratio=1.865
+T2_matched_random / AFLB1_aflb_out: deg_probe=100.0% pca16=99.7% deg/scene_ratio=2.056
+T2_matched_random / AFLB2_aflb_out: deg_probe=100.0% pca16=99.3% deg/scene_ratio=2.242
+T2_matched_random / AFLB3_aflb_out: deg_probe=99.7% pca16=99.7% deg/scene_ratio=2.426
+T3_phase_shuffle / latent_pre: deg_probe=100.0% pca16=99.7% deg/scene_ratio=1.865
+T3_phase_shuffle / AFLB1_aflb_out: deg_probe=100.0% pca16=99.7% deg/scene_ratio=2.056
+T3_phase_shuffle / AFLB2_aflb_out: deg_probe=100.0% pca16=99.3% deg/scene_ratio=2.242
+T3_phase_shuffle / AFLB3_aflb_out: deg_probe=99.7% pca16=99.7% deg/scene_ratio=2.426
+
+Representation distance from T0:
+          variant          point  mean_normalized_distance_from_T0  n_pairs
+  T1_no_frequency     latent_pre                          0.000000      300
+T2_matched_random     latent_pre                          0.000000      300
+ T3_phase_shuffle     latent_pre                          0.000000      300
+  T1_no_frequency AFLB1_aflb_out                          0.010489      300
+T2_matched_random AFLB1_aflb_out                          0.002245      300
+ T3_phase_shuffle AFLB1_aflb_out                          0.002238      300
+  T1_no_frequency AFLB2_aflb_out                          0.016403      300
+T2_matched_random AFLB2_aflb_out                          0.001629      300
+ T3_phase_shuffle AFLB2_aflb_out                          0.001627      300
+  T1_no_frequency AFLB3_aflb_out                          0.013589      300
+T2_matched_random AFLB3_aflb_out                          0.001311      300
+ T3_phase_shuffle AFLB3_aflb_out                          0.001311      300
+
+Restoration output quality per variant:
+          variant  mean_psnr_vs_clean  mean_ssim_vs_clean
+      T0_released           32.666736            0.945426
+  T1_no_frequency           32.659365            0.945355
+T2_matched_random           32.666293            0.945434
+ T3_phase_shuffle           32.666329            0.945434
+
+T0 vs T1 max mean normalized distance across points: 0.016403 (UNEXPECTED: T0 and T1 differ)
+
+wrote outputs to /home/minura/teacher-experiments/test05_5/results/frequency
+DONE_EXIT_0

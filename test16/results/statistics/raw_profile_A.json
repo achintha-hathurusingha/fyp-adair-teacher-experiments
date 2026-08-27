@@ -1,0 +1,6777 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 10408,
+    "estimated_inference_peak_memory": 125419520,
+    "first_load_time": 123596,
+    "first_load_peak_memory": 142430208,
+    "warm_load_time": 120303,
+    "warm_load_peak_memory": 84623360,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      0,
+      1918576
+    ],
+    "first_load_memory_peak_range": [
+      1052672,
+      7582128
+    ],
+    "warm_load_memory_increase_range": [
+      0,
+      3087904
+    ],
+    "warm_load_memory_peak_range": [
+      1085440,
+      12211968
+    ],
+    "inference_memory_increase_range": [
+      0,
+      880960
+    ],
+    "inference_memory_peak_range": [
+      843776,
+      10366032
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      123596
+    ],
+    "all_warm_load_times": [
+      120303
+    ],
+    "all_inference_times": [
+      11497,
+      10530,
+      10456,
+      10536,
+      10575,
+      10446,
+      10683,
+      10598,
+      10580,
+      10582,
+      10626,
+      10901,
+      10473,
+      10587,
+      10452,
+      10421,
+      10519,
+      10565,
+      10443,
+      10536,
+      10526,
+      10449,
+      10484,
+      10533,
+      10459,
+      10491,
+      10569,
+      10423,
+      10490,
+      10545,
+      10514,
+      10519,
+      10451,
+      10477,
+      10542,
+      10431,
+      10466,
+      10548,
+      10485,
+      10450,
+      10511,
+      10511,
+      10465,
+      10505,
+      10532,
+      10433,
+      10467,
+      10547,
+      10924,
+      10516,
+      10543,
+      10453,
+      10517,
+      10587,
+      10466,
+      10479,
+      10667,
+      10453,
+      10490,
+      10476,
+      10519,
+      10456,
+      10477,
+      10577,
+      10477,
+      10507,
+      10568,
+      10993,
+      10513,
+      10534,
+      10431,
+      10475,
+      10559,
+      10459,
+      10432,
+      10575,
+      10427,
+      10425,
+      10496,
+      10504,
+      10427,
+      10474,
+      10517,
+      10430,
+      10463,
+      10537,
+      10880,
+      10452,
+      10534,
+      10442,
+      10419,
+      10594,
+      10451,
+      10449,
+      10505,
+      10545,
+      10414,
+      10501,
+      10543,
+      10408
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "Input",
+      "type": "Input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3797
+    },
+    {
+      "name": "input_0231",
+      "type": "input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 401166
+    },
+    {
+      "name": "/inner/intro/Conv",
+      "type": "/inner/intro/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 145904
+    },
+    {
+      "name": "_batchnorm_0",
+      "type": "batchnorm",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 306884
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/norm1/Clip",
+      "type": "/inner/encoders.0/encoders.0.0/norm1/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 122778
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/conv1/Conv",
+      "type": "/inner/encoders.0/encoders.0.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 34028
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/conv2/Conv",
+      "type": "/inner/encoders.0/encoders.0.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80458
+    },
+    {
+      "name": "node_Slice_5187",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5190",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 154588
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/sg/Mul_2",
+      "type": "/inner/encoders.0/encoders.0.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 290098
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.0/encoders.0.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204978
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/sca/sca.1/Conv",
+      "type": "/inner/encoders.0/encoders.0.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 646
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/Mul",
+      "type": "/inner/encoders.0/encoders.0.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 254755
+    },
+    {
+      "name": "node_Conv_157",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 190351
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/Add",
+      "type": "/inner/encoders.0/encoders.0.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 42581
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/norm2/Mul",
+      "type": "/inner/encoders.0/encoders.0.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/norm2/Add",
+      "type": "/inner/encoders.0/encoders.0.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 304805
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/norm2/Clip",
+      "type": "/inner/encoders.0/encoders.0.0/norm2/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105916
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/conv4/Conv",
+      "type": "/inner/encoders.0/encoders.0.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 36408
+    },
+    {
+      "name": "node_Slice_5194",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5197",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 149772
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/sg_1/Mul_2",
+      "type": "/inner/encoders.0/encoders.0.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 256551
+    },
+    {
+      "name": "node_Conv_164",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31194
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.0/Add_1",
+      "type": "/inner/encoders.0/encoders.0.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 142313
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm1/Mul",
+      "type": "/inner/encoders.0/encoders.0.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm1/Add",
+      "type": "/inner/encoders.0/encoders.0.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 304493
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm1/Clip",
+      "type": "/inner/encoders.0/encoders.0.1/norm1/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 107849
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/conv1/Conv",
+      "type": "/inner/encoders.0/encoders.0.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32921
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/conv2/Conv",
+      "type": "/inner/encoders.0/encoders.0.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80092
+    },
+    {
+      "name": "node_Slice_5201",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5204",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 150983
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/sg/Mul_2",
+      "type": "/inner/encoders.0/encoders.0.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 264491
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.0/encoders.0.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 198128
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/sca/sca.1/Conv",
+      "type": "/inner/encoders.0/encoders.0.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 559
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/Mul",
+      "type": "/inner/encoders.0/encoders.0.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 255591
+    },
+    {
+      "name": "node_Conv_171",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 184434
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/Add",
+      "type": "/inner/encoders.0/encoders.0.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 34363
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm2/Mul",
+      "type": "/inner/encoders.0/encoders.0.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm2/Add",
+      "type": "/inner/encoders.0/encoders.0.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 303605
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/norm2/Clip",
+      "type": "/inner/encoders.0/encoders.0.1/norm2/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104133
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/conv4/Conv",
+      "type": "/inner/encoders.0/encoders.0.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30685
+    },
+    {
+      "name": "node_Slice_5208",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5211",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 149157
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/sg_1/Mul_2",
+      "type": "/inner/encoders.0/encoders.0.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 271677
+    },
+    {
+      "name": "node_Conv_178",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32522
+    },
+    {
+      "name": "/inner/encoders.0/encoders.0.1/Add_1",
+      "type": "/inner/encoders.0/encoders.0.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 126897
+    },
+    {
+      "name": "/inner/downs.0/Conv",
+      "type": "/inner/downs.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200168
+    },
+    {
+      "name": "node_LayerNormalization_865",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1142918
+    },
+    {
+      "name": "OpId_258",
+      "type": "",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 130
+    },
+    {
+      "name": "node_Transpose_866",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 140880
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm1/Mul",
+      "type": "/inner/encoders.1/encoders.1.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 421101
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm1/Add_1",
+      "type": "/inner/encoders.1/encoders.1.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 399995
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.1/encoders.1.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117148
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/conv1/Conv",
+      "type": "/inner/encoders.1/encoders.1.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 21304
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/conv2/Conv",
+      "type": "/inner/encoders.1/encoders.1.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 40708
+    },
+    {
+      "name": "node_Slice_5215",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5218",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/sg/Mul_2",
+      "type": "/inner/encoders.1/encoders.1.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 107467
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.1/encoders.1.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 51810
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/sca/sca.1/Conv",
+      "type": "/inner/encoders.1/encoders.1.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 487
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/Mul",
+      "type": "/inner/encoders.1/encoders.1.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 59718
+    },
+    {
+      "name": "node_Conv_185",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8179
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/Add",
+      "type": "/inner/encoders.1/encoders.1.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10599
+    },
+    {
+      "name": "node_LayerNormalization_869",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1084681
+    },
+    {
+      "name": "node_Transpose_870",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 122143
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm2/Mul",
+      "type": "/inner/encoders.1/encoders.1.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 381215
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm2/Add_1",
+      "type": "/inner/encoders.1/encoders.1.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 389165
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.1/encoders.1.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115006
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/conv4/Conv",
+      "type": "/inner/encoders.1/encoders.1.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8085",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10493
+    },
+    {
+      "name": "node_Slice_8088",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9010
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/sg_1/Mul_2",
+      "type": "/inner/encoders.1/encoders.1.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 93742
+    },
+    {
+      "name": "node_Conv_192",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8807
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.0/Add_1",
+      "type": "/inner/encoders.1/encoders.1.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10724
+    },
+    {
+      "name": "node_LayerNormalization_873",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1089434
+    },
+    {
+      "name": "node_Transpose_874",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 121828
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm1/Mul",
+      "type": "/inner/encoders.1/encoders.1.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 376723
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm1/Add_1",
+      "type": "/inner/encoders.1/encoders.1.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 394039
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.1/encoders.1.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115655
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/conv1/Conv",
+      "type": "/inner/encoders.1/encoders.1.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 21816
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/conv2/Conv",
+      "type": "/inner/encoders.1/encoders.1.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 40607
+    },
+    {
+      "name": "node_Slice_8092",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8095",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/sg/Mul_2",
+      "type": "/inner/encoders.1/encoders.1.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 107972
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.1/encoders.1.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 50812
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/sca/sca.1/Conv",
+      "type": "/inner/encoders.1/encoders.1.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 496
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/Mul",
+      "type": "/inner/encoders.1/encoders.1.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 59592
+    },
+    {
+      "name": "node_Conv_199",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8148
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/Add",
+      "type": "/inner/encoders.1/encoders.1.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10079
+    },
+    {
+      "name": "node_LayerNormalization_877",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1083390
+    },
+    {
+      "name": "node_Transpose_878",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123466
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm2/Mul",
+      "type": "/inner/encoders.1/encoders.1.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 380180
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm2/Add_1",
+      "type": "/inner/encoders.1/encoders.1.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 395902
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.1/encoders.1.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118124
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/conv4/Conv",
+      "type": "/inner/encoders.1/encoders.1.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8099",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12939
+    },
+    {
+      "name": "node_Slice_8102",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9349
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/sg_1/Mul_2",
+      "type": "/inner/encoders.1/encoders.1.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104221
+    },
+    {
+      "name": "node_Conv_206",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8342
+    },
+    {
+      "name": "/inner/encoders.1/encoders.1.1/Add_1",
+      "type": "/inner/encoders.1/encoders.1.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9699
+    },
+    {
+      "name": "/inner/downs.1/Conv",
+      "type": "/inner/downs.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 39693
+    },
+    {
+      "name": "node_LayerNormalization_881",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 348028
+    },
+    {
+      "name": "OpId_495",
+      "type": "",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 119
+    },
+    {
+      "name": "node_Transpose_882",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60395
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm1/Mul",
+      "type": "/inner/encoders.2/encoders.2.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 209450
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm1/Add_1",
+      "type": "/inner/encoders.2/encoders.2.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204102
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57787
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/conv1/Conv",
+      "type": "/inner/encoders.2/encoders.2.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10875
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/conv2/Conv",
+      "type": "/inner/encoders.2/encoders.2.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20871
+    },
+    {
+      "name": "node_Slice_10636",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10639",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/sg/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23789
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.2/encoders.2.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26856
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/sca/sca.1/Conv",
+      "type": "/inner/encoders.2/encoders.2.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 544
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/Mul",
+      "type": "/inner/encoders.2/encoders.2.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29749
+    },
+    {
+      "name": "node_Conv_213",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6060
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/Add",
+      "type": "/inner/encoders.2/encoders.2.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5894
+    },
+    {
+      "name": "node_LayerNormalization_885",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 346512
+    },
+    {
+      "name": "node_Transpose_886",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60081
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm2/Mul",
+      "type": "/inner/encoders.2/encoders.2.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 205996
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm2/Add_1",
+      "type": "/inner/encoders.2/encoders.2.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 205787
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57761
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/conv4/Conv",
+      "type": "/inner/encoders.2/encoders.2.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8615",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5632
+    },
+    {
+      "name": "node_Slice_8618",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5111
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/sg_1/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20189
+    },
+    {
+      "name": "node_Conv_220",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5991
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.0/Add_1",
+      "type": "/inner/encoders.2/encoders.2.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5785
+    },
+    {
+      "name": "node_LayerNormalization_889",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345734
+    },
+    {
+      "name": "node_Transpose_890",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60352
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm1/Mul",
+      "type": "/inner/encoders.2/encoders.2.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204289
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm1/Add_1",
+      "type": "/inner/encoders.2/encoders.2.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 213816
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58328
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/conv1/Conv",
+      "type": "/inner/encoders.2/encoders.2.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9886
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/conv2/Conv",
+      "type": "/inner/encoders.2/encoders.2.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20558
+    },
+    {
+      "name": "node_Slice_8622",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8625",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/sg/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23701
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.2/encoders.2.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26618
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/sca/sca.1/Conv",
+      "type": "/inner/encoders.2/encoders.2.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 976
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/Mul",
+      "type": "/inner/encoders.2/encoders.2.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29871
+    },
+    {
+      "name": "node_Conv_227",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6207
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/Add",
+      "type": "/inner/encoders.2/encoders.2.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5948
+    },
+    {
+      "name": "node_LayerNormalization_893",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345847
+    },
+    {
+      "name": "node_Transpose_894",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60143
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm2/Mul",
+      "type": "/inner/encoders.2/encoders.2.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 199596
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm2/Add_1",
+      "type": "/inner/encoders.2/encoders.2.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 209301
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57661
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/conv4/Conv",
+      "type": "/inner/encoders.2/encoders.2.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8629",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6301
+    },
+    {
+      "name": "node_Slice_8632",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5364
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/sg_1/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20223
+    },
+    {
+      "name": "node_Conv_234",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6016
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.1/Add_1",
+      "type": "/inner/encoders.2/encoders.2.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5702
+    },
+    {
+      "name": "node_LayerNormalization_897",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345625
+    },
+    {
+      "name": "node_Transpose_898",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60616
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm1/Mul",
+      "type": "/inner/encoders.2/encoders.2.2/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 209507
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm1/Add_1",
+      "type": "/inner/encoders.2/encoders.2.2/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 209927
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.2/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58368
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/conv1/Conv",
+      "type": "/inner/encoders.2/encoders.2.2/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9896
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/conv2/Conv",
+      "type": "/inner/encoders.2/encoders.2.2/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20932
+    },
+    {
+      "name": "node_Slice_8636",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8639",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/sg/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.2/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23484
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.2/encoders.2.2/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26260
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/sca/sca.1/Conv",
+      "type": "/inner/encoders.2/encoders.2.2/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 624
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/Mul",
+      "type": "/inner/encoders.2/encoders.2.2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29734
+    },
+    {
+      "name": "node_Conv_241",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6293
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/Add",
+      "type": "/inner/encoders.2/encoders.2.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5890
+    },
+    {
+      "name": "node_LayerNormalization_901",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345824
+    },
+    {
+      "name": "node_Transpose_902",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 61166
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm2/Mul",
+      "type": "/inner/encoders.2/encoders.2.2/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 205612
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm2/Add_1",
+      "type": "/inner/encoders.2/encoders.2.2/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200208
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.2/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58926
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/conv4/Conv",
+      "type": "/inner/encoders.2/encoders.2.2/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8643",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6031
+    },
+    {
+      "name": "node_Slice_8646",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5701
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/sg_1/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.2/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19939
+    },
+    {
+      "name": "node_Conv_248",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6191
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.2/Add_1",
+      "type": "/inner/encoders.2/encoders.2.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6330
+    },
+    {
+      "name": "node_LayerNormalization_905",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 346005
+    },
+    {
+      "name": "node_Transpose_906",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60084
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm1/Mul",
+      "type": "/inner/encoders.2/encoders.2.3/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 208528
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm1/Add_1",
+      "type": "/inner/encoders.2/encoders.2.3/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 208244
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.3/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58849
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/conv1/Conv",
+      "type": "/inner/encoders.2/encoders.2.3/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9912
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/conv2/Conv",
+      "type": "/inner/encoders.2/encoders.2.3/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20523
+    },
+    {
+      "name": "node_Slice_8650",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8653",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/sg/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.3/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24148
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.2/encoders.2.3/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26033
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/sca/sca.1/Conv",
+      "type": "/inner/encoders.2/encoders.2.3/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 705
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/Mul",
+      "type": "/inner/encoders.2/encoders.2.3/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29994
+    },
+    {
+      "name": "node_Conv_255",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6160
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/Add",
+      "type": "/inner/encoders.2/encoders.2.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5817
+    },
+    {
+      "name": "node_LayerNormalization_909",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345725
+    },
+    {
+      "name": "node_Transpose_910",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 61426
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm2/Mul",
+      "type": "/inner/encoders.2/encoders.2.3/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 214926
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm2/Add_1",
+      "type": "/inner/encoders.2/encoders.2.3/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 203443
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.2/encoders.2.3/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 60645
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/conv4/Conv",
+      "type": "/inner/encoders.2/encoders.2.3/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8657",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6046
+    },
+    {
+      "name": "node_Slice_8660",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5104
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/sg_1/Mul_2",
+      "type": "/inner/encoders.2/encoders.2.3/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19940
+    },
+    {
+      "name": "node_Conv_262",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6020
+    },
+    {
+      "name": "/inner/encoders.2/encoders.2.3/Add_1",
+      "type": "/inner/encoders.2/encoders.2.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6035
+    },
+    {
+      "name": "/inner/downs.2/Conv",
+      "type": "/inner/downs.2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27350
+    },
+    {
+      "name": "node_LayerNormalization_913",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 126208
+    },
+    {
+      "name": "OpId_960",
+      "type": "",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 131
+    },
+    {
+      "name": "node_Transpose_914",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29452
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 102338
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 149460
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29541
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8592
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11159
+    },
+    {
+      "name": "node_Slice_10643",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10646",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17584
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13190
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 553
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/Mul",
+      "type": "/inner/encoders.3/encoders.3.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14797
+    },
+    {
+      "name": "node_Conv_269",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4427
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/Add",
+      "type": "/inner/encoders.3/encoders.3.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3578
+    },
+    {
+      "name": "node_LayerNormalization_917",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123948
+    },
+    {
+      "name": "node_Transpose_918",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29347
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 112799
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 141374
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31119
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8671",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4546
+    },
+    {
+      "name": "node_Slice_8674",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4329
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9964
+    },
+    {
+      "name": "node_Conv_276",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4614
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.0/Add_1",
+      "type": "/inner/encoders.3/encoders.3.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4718
+    },
+    {
+      "name": "node_LayerNormalization_921",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124847
+    },
+    {
+      "name": "node_Transpose_922",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29454
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105819
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 146832
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30504
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8768
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13655
+    },
+    {
+      "name": "node_Slice_8678",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8681",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18784
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13150
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 565
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/Mul",
+      "type": "/inner/encoders.3/encoders.3.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14878
+    },
+    {
+      "name": "node_Conv_283",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4501
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/Add",
+      "type": "/inner/encoders.3/encoders.3.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4265
+    },
+    {
+      "name": "node_LayerNormalization_925",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123958
+    },
+    {
+      "name": "node_Transpose_926",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29545
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 112348
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143404
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29782
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8685",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4601
+    },
+    {
+      "name": "node_Slice_8688",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4613
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10169
+    },
+    {
+      "name": "node_Conv_290",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4402
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4294
+    },
+    {
+      "name": "node_LayerNormalization_929",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123900
+    },
+    {
+      "name": "node_Transpose_930",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31249
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.2/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106075
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.2/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 141185
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.2/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30771
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.2/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8679
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.2/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10667
+    },
+    {
+      "name": "node_Slice_8190",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8193",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.2/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18331
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.2/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13001
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.2/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 595
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/Mul",
+      "type": "/inner/encoders.3/encoders.3.2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14817
+    },
+    {
+      "name": "node_Conv_297",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4511
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/Add",
+      "type": "/inner/encoders.3/encoders.3.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3697
+    },
+    {
+      "name": "node_LayerNormalization_933",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124253
+    },
+    {
+      "name": "node_Transpose_934",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29767
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.2/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106279
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.2/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 144000
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.2/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30421
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.2/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8692",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4775
+    },
+    {
+      "name": "node_Slice_8695",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4400
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.2/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10125
+    },
+    {
+      "name": "node_Conv_304",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4564
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3496
+    },
+    {
+      "name": "node_LayerNormalization_937",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 126141
+    },
+    {
+      "name": "node_Transpose_938",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30537
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.3/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104937
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.3/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 144947
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.3/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30968
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.3/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9219
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.3/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11300
+    },
+    {
+      "name": "node_Slice_8699",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8702",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.3/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18571
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.3/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13625
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.3/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 612
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/Mul",
+      "type": "/inner/encoders.3/encoders.3.3/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14850
+    },
+    {
+      "name": "node_Conv_311",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4575
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/Add",
+      "type": "/inner/encoders.3/encoders.3.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4131
+    },
+    {
+      "name": "node_LayerNormalization_941",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124259
+    },
+    {
+      "name": "node_Transpose_942",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30171
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.3/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 107831
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.3/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 146885
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.3/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29918
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.3/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8706",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4835
+    },
+    {
+      "name": "node_Slice_8709",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4303
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.3/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10314
+    },
+    {
+      "name": "node_Conv_318",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4450
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.3/Add_1",
+      "type": "/inner/encoders.3/encoders.3.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4094
+    },
+    {
+      "name": "node_LayerNormalization_945",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124573
+    },
+    {
+      "name": "node_Transpose_946",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30598
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.4/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 101255
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.4/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143094
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.4/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29858
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.4/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8905
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.4/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11368
+    },
+    {
+      "name": "node_Slice_8218",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8221",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.4/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18459
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.4/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13082
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.4/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 623
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/Mul",
+      "type": "/inner/encoders.3/encoders.3.4/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14888
+    },
+    {
+      "name": "node_Conv_325",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4457
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/Add",
+      "type": "/inner/encoders.3/encoders.3.4/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4592
+    },
+    {
+      "name": "node_LayerNormalization_949",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123871
+    },
+    {
+      "name": "node_Transpose_950",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29568
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.4/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 101116
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.4/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 147558
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.4/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31413
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.4/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10993",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4595
+    },
+    {
+      "name": "node_Slice_10996",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4275
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.4/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10453
+    },
+    {
+      "name": "node_Conv_332",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4454
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.4/Add_1",
+      "type": "/inner/encoders.3/encoders.3.4/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5011
+    },
+    {
+      "name": "node_LayerNormalization_953",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124222
+    },
+    {
+      "name": "node_Transpose_954",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29644
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.5/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 112167
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.5/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 142462
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.5/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31193
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.5/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8656
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.5/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11011
+    },
+    {
+      "name": "node_Slice_5369",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5372",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.5/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19070
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.5/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13013
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.5/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1041
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/Mul",
+      "type": "/inner/encoders.3/encoders.3.5/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14849
+    },
+    {
+      "name": "node_Conv_339",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4463
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/Add",
+      "type": "/inner/encoders.3/encoders.3.5/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4085
+    },
+    {
+      "name": "node_LayerNormalization_957",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124453
+    },
+    {
+      "name": "node_Transpose_958",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30165
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.5/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 114010
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.5/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 139646
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.5/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30873
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.5/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5376",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4544
+    },
+    {
+      "name": "node_Slice_5379",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4702
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.5/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10135
+    },
+    {
+      "name": "node_Conv_346",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4616
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.5/Add_1",
+      "type": "/inner/encoders.3/encoders.3.5/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4030
+    },
+    {
+      "name": "node_LayerNormalization_961",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124311
+    },
+    {
+      "name": "node_Transpose_962",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29488
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.6/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104732
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.6/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 149762
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.6/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31791
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.6/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8945
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.6/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11271
+    },
+    {
+      "name": "node_Slice_5383",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5386",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.6/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19491
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.6/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13174
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.6/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 529
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/Mul",
+      "type": "/inner/encoders.3/encoders.3.6/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14873
+    },
+    {
+      "name": "node_Conv_353",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4490
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/Add",
+      "type": "/inner/encoders.3/encoders.3.6/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4034
+    },
+    {
+      "name": "node_LayerNormalization_965",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124529
+    },
+    {
+      "name": "node_Transpose_966",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31034
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.6/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 110516
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.6/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143983
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.6/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29760
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.6/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_5390",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5408
+    },
+    {
+      "name": "node_Slice_5393",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4566
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.6/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9991
+    },
+    {
+      "name": "node_Conv_360",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4749
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.6/Add_1",
+      "type": "/inner/encoders.3/encoders.3.6/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3782
+    },
+    {
+      "name": "node_LayerNormalization_969",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124026
+    },
+    {
+      "name": "node_Transpose_970",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30330
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm1/Mul",
+      "type": "/inner/encoders.3/encoders.3.7/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 110393
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm1/Add_1",
+      "type": "/inner/encoders.3/encoders.3.7/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 152339
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm1/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.7/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31187
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/conv1/Conv",
+      "type": "/inner/encoders.3/encoders.3.7/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8708
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/conv2/Conv",
+      "type": "/inner/encoders.3/encoders.3.7/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10790
+    },
+    {
+      "name": "node_Slice_11000",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_11003",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/sg/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.7/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19204
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/encoders.3/encoders.3.7/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12955
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/sca/sca.1/Conv",
+      "type": "/inner/encoders.3/encoders.3.7/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 984
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/Mul",
+      "type": "/inner/encoders.3/encoders.3.7/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 15151
+    },
+    {
+      "name": "node_Conv_367",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4537
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/Add",
+      "type": "/inner/encoders.3/encoders.3.7/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3894
+    },
+    {
+      "name": "node_LayerNormalization_973",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123670
+    },
+    {
+      "name": "node_Transpose_974",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30613
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm2/Mul",
+      "type": "/inner/encoders.3/encoders.3.7/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105302
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm2/Add_1",
+      "type": "/inner/encoders.3/encoders.3.7/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 141501
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/norm2/Add_1_output_0_0231",
+      "type": "/inner/encoders.3/encoders.3.7/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29874
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/conv4/Conv",
+      "type": "/inner/encoders.3/encoders.3.7/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_11007",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4727
+    },
+    {
+      "name": "node_Slice_11010",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4615
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/sg_1/Mul_2",
+      "type": "/inner/encoders.3/encoders.3.7/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10011
+    },
+    {
+      "name": "node_Conv_374",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4644
+    },
+    {
+      "name": "/inner/encoders.3/encoders.3.7/Add_1",
+      "type": "/inner/encoders.3/encoders.3.7/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4680
+    },
+    {
+      "name": "/inner/downs.3/Conv",
+      "type": "/inner/downs.3/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 38289
+    },
+    {
+      "name": "node_LayerNormalization_977",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 55858
+    },
+    {
+      "name": "OpId_1881",
+      "type": "",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 223
+    },
+    {
+      "name": "node_Transpose_978",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30819
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 119820
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136889
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23017
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10274
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6781
+    },
+    {
+      "name": "node_Slice_8246",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8249",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14445
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14753
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 965
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7449
+    },
+    {
+      "name": "node_Conv_381",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4266
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5747
+    },
+    {
+      "name": "node_LayerNormalization_981",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52532
+    },
+    {
+      "name": "node_Transpose_982",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29832
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 131236
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136327
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23395
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8253",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4339
+    },
+    {
+      "name": "node_Slice_8256",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4235
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5684
+    },
+    {
+      "name": "node_Conv_388",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4250
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.0/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2423
+    },
+    {
+      "name": "node_LayerNormalization_985",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 51842
+    },
+    {
+      "name": "node_Transpose_986",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31297
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 116989
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136481
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23588
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9325
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7404
+    },
+    {
+      "name": "node_Slice_8260",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8263",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13670
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12714
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1015
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7493
+    },
+    {
+      "name": "node_Conv_395",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4266
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4967
+    },
+    {
+      "name": "node_LayerNormalization_989",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53613
+    },
+    {
+      "name": "node_Transpose_990",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31296
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117553
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138355
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 25180
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8267",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5036
+    },
+    {
+      "name": "node_Slice_8270",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4201
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5933
+    },
+    {
+      "name": "node_Conv_402",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4305
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3435
+    },
+    {
+      "name": "node_LayerNormalization_993",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52630
+    },
+    {
+      "name": "node_Transpose_994",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30005
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115714
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136027
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22908
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8960
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7250
+    },
+    {
+      "name": "node_Slice_8734",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8737",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13452
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11161
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1242
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7450
+    },
+    {
+      "name": "node_Conv_409",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4321
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4826
+    },
+    {
+      "name": "node_LayerNormalization_997",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53812
+    },
+    {
+      "name": "node_Transpose_998",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31465
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 120681
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137652
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24569
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9470",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4700
+    },
+    {
+      "name": "node_Slice_9473",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4250
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6477
+    },
+    {
+      "name": "node_Conv_416",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4258
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4565
+    },
+    {
+      "name": "node_LayerNormalization_1001",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52870
+    },
+    {
+      "name": "node_Transpose_1002",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30599
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 120632
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138070
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23940
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9905
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7933
+    },
+    {
+      "name": "node_Slice_9477",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9480",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14389
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11191
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1101
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8484
+    },
+    {
+      "name": "node_Conv_423",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4207
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3990
+    },
+    {
+      "name": "node_LayerNormalization_1005",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53750
+    },
+    {
+      "name": "node_Transpose_1006",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31117
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117845
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138643
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23898
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8295",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4339
+    },
+    {
+      "name": "node_Slice_8298",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4779
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5416
+    },
+    {
+      "name": "node_Conv_430",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4321
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.3/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2882
+    },
+    {
+      "name": "node_LayerNormalization_1009",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 51745
+    },
+    {
+      "name": "node_Transpose_1010",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28960
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118171
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143429
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23754
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8619
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7397
+    },
+    {
+      "name": "node_Slice_8302",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8305",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14793
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11996
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1060
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7517
+    },
+    {
+      "name": "node_Conv_437",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4152
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2584
+    },
+    {
+      "name": "node_LayerNormalization_1013",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53471
+    },
+    {
+      "name": "node_Transpose_1014",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29021
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 121798
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137992
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22951
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8309",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4495
+    },
+    {
+      "name": "node_Slice_8312",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4610
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5440
+    },
+    {
+      "name": "node_Conv_444",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4322
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.4/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4907
+    },
+    {
+      "name": "node_LayerNormalization_1017",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53034
+    },
+    {
+      "name": "node_Transpose_1018",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30314
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117305
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 142755
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23613
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10226
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6947
+    },
+    {
+      "name": "node_Slice_8316",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8319",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 15180
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14067
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1080
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7651
+    },
+    {
+      "name": "node_Conv_451",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4228
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6254
+    },
+    {
+      "name": "node_LayerNormalization_1021",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53108
+    },
+    {
+      "name": "node_Transpose_1022",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30096
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117039
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137432
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22910
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8323",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5121
+    },
+    {
+      "name": "node_Slice_8326",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4221
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5419
+    },
+    {
+      "name": "node_Conv_458",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4205
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.5/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4847
+    },
+    {
+      "name": "node_LayerNormalization_1025",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52496
+    },
+    {
+      "name": "node_Transpose_1026",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29501
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117687
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136279
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23257
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8352
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6550
+    },
+    {
+      "name": "node_Slice_9484",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9487",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 15399
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10971
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1160
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7500
+    },
+    {
+      "name": "node_Conv_465",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4382
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3724
+    },
+    {
+      "name": "node_LayerNormalization_1029",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52147
+    },
+    {
+      "name": "node_Transpose_1030",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28918
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 122630
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138152
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22916
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8337",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4293
+    },
+    {
+      "name": "node_Slice_8340",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4305
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5374
+    },
+    {
+      "name": "node_Conv_472",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4330
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.6/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3905
+    },
+    {
+      "name": "node_LayerNormalization_1033",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 53203
+    },
+    {
+      "name": "node_Transpose_1034",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28877
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 120374
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 136184
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24599
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10118
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6829
+    },
+    {
+      "name": "node_Slice_8344",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8347",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13726
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14800
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1130
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7505
+    },
+    {
+      "name": "node_Conv_479",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4291
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3813
+    },
+    {
+      "name": "node_LayerNormalization_1037",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52221
+    },
+    {
+      "name": "node_Transpose_1038",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30416
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118490
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137547
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24114
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8351",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4342
+    },
+    {
+      "name": "node_Slice_8354",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4225
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6543
+    },
+    {
+      "name": "node_Conv_486",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4172
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.7/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4459
+    },
+    {
+      "name": "node_LayerNormalization_1041",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52442
+    },
+    {
+      "name": "node_Transpose_1042",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29542
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 121627
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137489
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22889
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8452
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6480
+    },
+    {
+      "name": "node_Slice_8358",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8361",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14973
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13664
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 984
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7488
+    },
+    {
+      "name": "node_Conv_493",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4318
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3920
+    },
+    {
+      "name": "node_LayerNormalization_1045",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52495
+    },
+    {
+      "name": "node_Transpose_1046",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30286
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118526
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143324
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24378
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8365",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4236
+    },
+    {
+      "name": "node_Slice_8368",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4287
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5449
+    },
+    {
+      "name": "node_Conv_500",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4143
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.8/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2880
+    },
+    {
+      "name": "node_LayerNormalization_1049",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52503
+    },
+    {
+      "name": "node_Transpose_1050",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30001
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118109
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 144469
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23016
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9409
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6402
+    },
+    {
+      "name": "node_Slice_8372",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8375",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13826
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11004
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1053
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7706
+    },
+    {
+      "name": "node_Conv_507",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4328
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3641
+    },
+    {
+      "name": "node_LayerNormalization_1053",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 54183
+    },
+    {
+      "name": "node_Transpose_1054",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28997
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117872
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138921
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22911
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9491",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4684
+    },
+    {
+      "name": "node_Slice_9494",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4311
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7219
+    },
+    {
+      "name": "node_Conv_514",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4189
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.9/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6453
+    },
+    {
+      "name": "node_LayerNormalization_1057",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52719
+    },
+    {
+      "name": "node_Transpose_1058",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30084
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117912
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138449
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24818
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8435
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6545
+    },
+    {
+      "name": "node_Slice_9498",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9501",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14079
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12489
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1042
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7650
+    },
+    {
+      "name": "node_Conv_521",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4212
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4773
+    },
+    {
+      "name": "node_LayerNormalization_1061",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52059
+    },
+    {
+      "name": "node_Transpose_1062",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29842
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118575
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 137373
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22884
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9505",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4200
+    },
+    {
+      "name": "node_Slice_9508",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4104
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5413
+    },
+    {
+      "name": "node_Conv_528",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4328
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.10/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7447
+    },
+    {
+      "name": "node_LayerNormalization_1065",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52505
+    },
+    {
+      "name": "node_Transpose_1066",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30833
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm1/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 120698
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm1/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 144939
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm1/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24732
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/conv1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10730
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/conv2/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6868
+    },
+    {
+      "name": "node_Slice_9512",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9515",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/sg/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14984
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14496
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/sca/sca.1/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1353
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7472
+    },
+    {
+      "name": "node_Conv_535",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4263
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/Add",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4933
+    },
+    {
+      "name": "node_LayerNormalization_1069",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 52457
+    },
+    {
+      "name": "node_Transpose_1070",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30384
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm2/Mul",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 116778
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm2/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 138502
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/norm2/Add_1_output_0_0231",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24079
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/conv4/Conv",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8407",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4766
+    },
+    {
+      "name": "node_Slice_8410",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4467
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/sg_1/Mul_2",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5251
+    },
+    {
+      "name": "node_Conv_542",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4259
+    },
+    {
+      "name": "/inner/middle_blks/middle_blks.11/Add_1",
+      "type": "/inner/middle",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3845
+    },
+    {
+      "name": "/inner/ups.0/ups.0.0/Conv",
+      "type": "/inner/ups.0/ups.0.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8187
+    },
+    {
+      "name": "/inner/ups.0/ups.0.1/DepthToSpace",
+      "type": "/inner/ups.0/ups.0.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27598
+    },
+    {
+      "name": "/inner/Add",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3628
+    },
+    {
+      "name": "node_LayerNormalization_1073",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 127775
+    },
+    {
+      "name": "node_Transpose_1074",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32431
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm1/Mul",
+      "type": "/inner/decoders.0/decoders.0.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104248
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm1/Add_1",
+      "type": "/inner/decoders.0/decoders.0.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 156538
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.0/decoders.0.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32746
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/conv1/Conv",
+      "type": "/inner/decoders.0/decoders.0.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9409
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/conv2/Conv",
+      "type": "/inner/decoders.0/decoders.0.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11349
+    },
+    {
+      "name": "node_Slice_9519",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9522",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/sg/Mul_2",
+      "type": "/inner/decoders.0/decoders.0.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20496
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.0/decoders.0.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13743
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/sca/sca.1/Conv",
+      "type": "/inner/decoders.0/decoders.0.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2105
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/Mul",
+      "type": "/inner/decoders.0/decoders.0.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17407
+    },
+    {
+      "name": "node_Conv_549",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4452
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/Add",
+      "type": "/inner/decoders.0/decoders.0.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6573
+    },
+    {
+      "name": "node_LayerNormalization_1077",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123883
+    },
+    {
+      "name": "node_Transpose_1078",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31890
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm2/Mul",
+      "type": "/inner/decoders.0/decoders.0.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105569
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm2/Add_1",
+      "type": "/inner/decoders.0/decoders.0.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 153475
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.0/decoders.0.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30505
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/conv4/Conv",
+      "type": "/inner/decoders.0/decoders.0.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9526",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4850
+    },
+    {
+      "name": "node_Slice_9529",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4424
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/sg_1/Mul_2",
+      "type": "/inner/decoders.0/decoders.0.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10102
+    },
+    {
+      "name": "node_Conv_556",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4800
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.0/Add_1",
+      "type": "/inner/decoders.0/decoders.0.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4920
+    },
+    {
+      "name": "node_LayerNormalization_1081",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124874
+    },
+    {
+      "name": "node_Transpose_1082",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29548
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm1/Mul",
+      "type": "/inner/decoders.0/decoders.0.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 111890
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm1/Add_1",
+      "type": "/inner/decoders.0/decoders.0.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 152226
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.0/decoders.0.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30201
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/conv1/Conv",
+      "type": "/inner/decoders.0/decoders.0.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9250
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/conv2/Conv",
+      "type": "/inner/decoders.0/decoders.0.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12165
+    },
+    {
+      "name": "node_Slice_9533",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9536",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/sg/Mul_2",
+      "type": "/inner/decoders.0/decoders.0.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19176
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.0/decoders.0.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13602
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/sca/sca.1/Conv",
+      "type": "/inner/decoders.0/decoders.0.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 952
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/Mul",
+      "type": "/inner/decoders.0/decoders.0.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 15409
+    },
+    {
+      "name": "node_Conv_563",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4733
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/Add",
+      "type": "/inner/decoders.0/decoders.0.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4577
+    },
+    {
+      "name": "node_LayerNormalization_1085",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 124209
+    },
+    {
+      "name": "node_Transpose_1086",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29512
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm2/Mul",
+      "type": "/inner/decoders.0/decoders.0.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106448
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm2/Add_1",
+      "type": "/inner/decoders.0/decoders.0.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 151841
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.0/decoders.0.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31000
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/conv4/Conv",
+      "type": "/inner/decoders.0/decoders.0.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9540",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4744
+    },
+    {
+      "name": "node_Slice_9543",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4704
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/sg_1/Mul_2",
+      "type": "/inner/decoders.0/decoders.0.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9962
+    },
+    {
+      "name": "node_Conv_570",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5046
+    },
+    {
+      "name": "/inner/decoders.0/decoders.0.1/Add_1",
+      "type": "/inner/decoders.0/decoders.0.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4272
+    },
+    {
+      "name": "/inner/ups.1/ups.1.0/Conv",
+      "type": "/inner/ups.1/ups.1.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9451
+    },
+    {
+      "name": "/inner/ups.1/ups.1.1/DepthToSpace",
+      "type": "/inner/ups.1/ups.1.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 41923
+    },
+    {
+      "name": "/inner/Add_1",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6868
+    },
+    {
+      "name": "node_LayerNormalization_1089",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 350236
+    },
+    {
+      "name": "node_Transpose_1090",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 62693
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm1/Mul",
+      "type": "/inner/decoders.1/decoders.1.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200657
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm1/Add_1",
+      "type": "/inner/decoders.1/decoders.1.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 221291
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.1/decoders.1.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57867
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/conv1/Conv",
+      "type": "/inner/decoders.1/decoders.1.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11818
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/conv2/Conv",
+      "type": "/inner/decoders.1/decoders.1.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22494
+    },
+    {
+      "name": "node_Slice_9547",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9550",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/sg/Mul_2",
+      "type": "/inner/decoders.1/decoders.1.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27180
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.1/decoders.1.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26756
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/sca/sca.1/Conv",
+      "type": "/inner/decoders.1/decoders.1.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1591
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/Mul",
+      "type": "/inner/decoders.1/decoders.1.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32948
+    },
+    {
+      "name": "node_Conv_577",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6100
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/Add",
+      "type": "/inner/decoders.1/decoders.1.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6321
+    },
+    {
+      "name": "node_LayerNormalization_1093",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 346080
+    },
+    {
+      "name": "node_Transpose_1094",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 62091
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm2/Mul",
+      "type": "/inner/decoders.1/decoders.1.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204098
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm2/Add_1",
+      "type": "/inner/decoders.1/decoders.1.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 219116
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.1/decoders.1.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 59940
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/conv4/Conv",
+      "type": "/inner/decoders.1/decoders.1.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9554",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6742
+    },
+    {
+      "name": "node_Slice_9557",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6760
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/sg_1/Mul_2",
+      "type": "/inner/decoders.1/decoders.1.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20538
+    },
+    {
+      "name": "node_Conv_584",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6148
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.0/Add_1",
+      "type": "/inner/decoders.1/decoders.1.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6138
+    },
+    {
+      "name": "node_LayerNormalization_1097",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 345582
+    },
+    {
+      "name": "node_Transpose_1098",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 63668
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm1/Mul",
+      "type": "/inner/decoders.1/decoders.1.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204133
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm1/Add_1",
+      "type": "/inner/decoders.1/decoders.1.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 217368
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.1/decoders.1.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57339
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/conv1/Conv",
+      "type": "/inner/decoders.1/decoders.1.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10860
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/conv2/Conv",
+      "type": "/inner/decoders.1/decoders.1.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22508
+    },
+    {
+      "name": "node_Slice_9561",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9564",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/sg/Mul_2",
+      "type": "/inner/decoders.1/decoders.1.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24491
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.1/decoders.1.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26222
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/sca/sca.1/Conv",
+      "type": "/inner/decoders.1/decoders.1.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 784
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/Mul",
+      "type": "/inner/decoders.1/decoders.1.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30163
+    },
+    {
+      "name": "node_Conv_591",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6311
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/Add",
+      "type": "/inner/decoders.1/decoders.1.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6741
+    },
+    {
+      "name": "node_LayerNormalization_1101",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 346143
+    },
+    {
+      "name": "node_Transpose_1102",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 66310
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm2/Mul",
+      "type": "/inner/decoders.1/decoders.1.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197221
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm2/Add_1",
+      "type": "/inner/decoders.1/decoders.1.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 212250
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.1/decoders.1.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 62876
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/conv4/Conv",
+      "type": "/inner/decoders.1/decoders.1.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9568",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5797
+    },
+    {
+      "name": "node_Slice_9571",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6046
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/sg_1/Mul_2",
+      "type": "/inner/decoders.1/decoders.1.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 20460
+    },
+    {
+      "name": "node_Conv_598",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6499
+    },
+    {
+      "name": "/inner/decoders.1/decoders.1.1/Add_1",
+      "type": "/inner/decoders.1/decoders.1.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5906
+    },
+    {
+      "name": "/inner/ups.2/ups.2.0/Conv",
+      "type": "/inner/ups.2/ups.2.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11651
+    },
+    {
+      "name": "/inner/ups.2/ups.2.1/DepthToSpace",
+      "type": "/inner/ups.2/ups.2.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74474
+    },
+    {
+      "name": "/inner/Add_2",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12516
+    },
+    {
+      "name": "node_LayerNormalization_1105",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1110596
+    },
+    {
+      "name": "node_Transpose_1106",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 127248
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm1/Mul",
+      "type": "/inner/decoders.2/decoders.2.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 385182
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm1/Add_1",
+      "type": "/inner/decoders.2/decoders.2.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 398360
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.2/decoders.2.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123516
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/conv1/Conv",
+      "type": "/inner/decoders.2/decoders.2.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 21239
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/conv2/Conv",
+      "type": "/inner/decoders.2/decoders.2.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 43556
+    },
+    {
+      "name": "node_Slice_9575",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_9578",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/sg/Mul_2",
+      "type": "/inner/decoders.2/decoders.2.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106975
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.2/decoders.2.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 50167
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/sca/sca.1/Conv",
+      "type": "/inner/decoders.2/decoders.2.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1803
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/Mul",
+      "type": "/inner/decoders.2/decoders.2.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 61561
+    },
+    {
+      "name": "node_Conv_605",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9687
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/Add",
+      "type": "/inner/decoders.2/decoders.2.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10910
+    },
+    {
+      "name": "node_LayerNormalization_1109",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1108274
+    },
+    {
+      "name": "node_Transpose_1110",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 130455
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm2/Mul",
+      "type": "/inner/decoders.2/decoders.2.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 377958
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm2/Add_1",
+      "type": "/inner/decoders.2/decoders.2.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 396810
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.2/decoders.2.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 127490
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/conv4/Conv",
+      "type": "/inner/decoders.2/decoders.2.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_8477",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11696
+    },
+    {
+      "name": "node_Slice_8480",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9497
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/sg_1/Mul_2",
+      "type": "/inner/decoders.2/decoders.2.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106083
+    },
+    {
+      "name": "node_Conv_612",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9324
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.0/Add_1",
+      "type": "/inner/decoders.2/decoders.2.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10681
+    },
+    {
+      "name": "node_LayerNormalization_1113",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1096150
+    },
+    {
+      "name": "node_Transpose_1114",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 122031
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm1/Mul",
+      "type": "/inner/decoders.2/decoders.2.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 384160
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm1/Add_1",
+      "type": "/inner/decoders.2/decoders.2.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 404856
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm1/Add_1_output_0_0231",
+      "type": "/inner/decoders.2/decoders.2.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 127439
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/conv1/Conv",
+      "type": "/inner/decoders.2/decoders.2.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 21846
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/conv2/Conv",
+      "type": "/inner/decoders.2/decoders.2.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 41335
+    },
+    {
+      "name": "node_Slice_11014",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_11017",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/sg/Mul_2",
+      "type": "/inner/decoders.2/decoders.2.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 107509
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.2/decoders.2.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 49951
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/sca/sca.1/Conv",
+      "type": "/inner/decoders.2/decoders.2.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1353
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/Mul",
+      "type": "/inner/decoders.2/decoders.2.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 63098
+    },
+    {
+      "name": "node_Conv_619",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8118
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/Add",
+      "type": "/inner/decoders.2/decoders.2.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10904
+    },
+    {
+      "name": "node_LayerNormalization_1117",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1094654
+    },
+    {
+      "name": "node_Transpose_1118",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 123101
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm2/Mul",
+      "type": "/inner/decoders.2/decoders.2.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 383760
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm2/Add_1",
+      "type": "/inner/decoders.2/decoders.2.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 393585
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/norm2/Add_1_output_0_0231",
+      "type": "/inner/decoders.2/decoders.2.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 114239
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/conv4/Conv",
+      "type": "/inner/decoders.2/decoders.2.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_11021",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 13161
+    },
+    {
+      "name": "node_Slice_11024",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9527
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/sg_1/Mul_2",
+      "type": "/inner/decoders.2/decoders.2.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 106309
+    },
+    {
+      "name": "node_Conv_626",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8974
+    },
+    {
+      "name": "/inner/decoders.2/decoders.2.1/Add_1",
+      "type": "/inner/decoders.2/decoders.2.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9922
+    },
+    {
+      "name": "/inner/ups.3/ups.3.0/Conv",
+      "type": "/inner/ups.3/ups.3.0/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 16279
+    },
+    {
+      "name": "/inner/ups.3/ups.3.1/DepthToSpace",
+      "type": "/inner/ups.3/ups.3.1/DepthToSpace",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1092966
+    },
+    {
+      "name": "/inner/Add_3",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 98290
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm1/Mul",
+      "type": "/inner/decoders.3/decoders.3.0/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm1/Add",
+      "type": "/inner/decoders.3/decoders.3.0/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 313336
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm1/Clip",
+      "type": "/inner/decoders.3/decoders.3.0/norm1/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 121943
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/conv1/Conv",
+      "type": "/inner/decoders.3/decoders.3.0/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 33411
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/conv2/Conv",
+      "type": "/inner/decoders.3/decoders.3.0/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 85271
+    },
+    {
+      "name": "node_Slice_10685",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10688",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 153652
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/sg/Mul_2",
+      "type": "/inner/decoders.3/decoders.3.0/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 276263
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.3/decoders.3.0/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200731
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/sca/sca.1/Conv",
+      "type": "/inner/decoders.3/decoders.3.0/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1010
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/Mul",
+      "type": "/inner/decoders.3/decoders.3.0/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 257334
+    },
+    {
+      "name": "node_Conv_633",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 195482
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/Add",
+      "type": "/inner/decoders.3/decoders.3.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 34291
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm2/Mul",
+      "type": "/inner/decoders.3/decoders.3.0/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm2/Add",
+      "type": "/inner/decoders.3/decoders.3.0/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 305403
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/norm2/Clip",
+      "type": "/inner/decoders.3/decoders.3.0/norm2/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 98694
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/conv4/Conv",
+      "type": "/inner/decoders.3/decoders.3.0/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31258
+    },
+    {
+      "name": "node_Slice_10692",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10695",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 151393
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/sg_1/Mul_2",
+      "type": "/inner/decoders.3/decoders.3.0/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 261586
+    },
+    {
+      "name": "node_Conv_640",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30993
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.0/Add_1",
+      "type": "/inner/decoders.3/decoders.3.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 108544
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm1/Mul",
+      "type": "/inner/decoders.3/decoders.3.1/norm1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm1/Add",
+      "type": "/inner/decoders.3/decoders.3.1/norm1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 302136
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm1/Clip",
+      "type": "/inner/decoders.3/decoders.3.1/norm1/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 100411
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/conv1/Conv",
+      "type": "/inner/decoders.3/decoders.3.1/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103970
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/conv2/Conv",
+      "type": "/inner/decoders.3/decoders.3.1/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 84480
+    },
+    {
+      "name": "node_Slice_10699",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10702",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 153497
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/sg/Mul_2",
+      "type": "/inner/decoders.3/decoders.3.1/sg/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 297090
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/sca/sca.0/GlobalAveragePool",
+      "type": "/inner/decoders.3/decoders.3.1/sca/sca.0/GlobalAveragePool",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 198841
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/sca/sca.1/Conv",
+      "type": "/inner/decoders.3/decoders.3.1/sca/sca.1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1385
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/Mul",
+      "type": "/inner/decoders.3/decoders.3.1/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 256071
+    },
+    {
+      "name": "node_Conv_647",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30009
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/Add",
+      "type": "/inner/decoders.3/decoders.3.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 38541
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm2/Mul",
+      "type": "/inner/decoders.3/decoders.3.1/norm2/Mul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm2/Add",
+      "type": "/inner/decoders.3/decoders.3.1/norm2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 305204
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/norm2/Clip",
+      "type": "/inner/decoders.3/decoders.3.1/norm2/Clip",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105156
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/conv4/Conv",
+      "type": "/inner/decoders.3/decoders.3.1/conv4/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 31083
+    },
+    {
+      "name": "node_Slice_10706",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Slice_10709",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 151142
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/sg_1/Mul_2",
+      "type": "/inner/decoders.3/decoders.3.1/sg",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 269632
+    },
+    {
+      "name": "node_Conv_654",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32393
+    },
+    {
+      "name": "/inner/decoders.3/decoders.3.1/Add_1",
+      "type": "/inner/decoders.3/decoders.3.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 40532
+    },
+    {
+      "name": "/inner/ending/Conv",
+      "type": "/inner/ending/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80965
+    },
+    {
+      "name": "/inner/Add_4",
+      "type": "/inner/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 820623
+    },
+    {
+      "name": "output_0_0231",
+      "type": "output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 114742
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18196
+    }
+  ]
+}

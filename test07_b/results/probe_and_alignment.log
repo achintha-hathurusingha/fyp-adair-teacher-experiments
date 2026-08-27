@@ -1,0 +1,25 @@
+teacher_PCA16: acc=96.1% bal_acc=96.1% f1=0.961
+model_A_bottleneck seed0: acc=78.4% f1=0.783
+model_A_bottleneck seed1: acc=90.2% f1=0.902
+model_A_bottleneck seed2: acc=90.4% f1=0.903
+model_B_bottleneck seed0: acc=98.2% f1=0.982
+model_B_compact_eS seed0: acc=96.4% f1=0.964
+B/seed0 alignment: cosine=0.9901 mse=0.5737
+model_B_bottleneck seed1: acc=98.8% f1=0.988
+model_B_compact_eS seed1: acc=96.2% f1=0.962
+B/seed1 alignment: cosine=0.9882 mse=0.7262
+model_B_bottleneck seed2: acc=98.2% f1=0.982
+model_B_compact_eS seed2: acc=96.2% f1=0.962
+B/seed2 alignment: cosine=0.9883 mse=0.7120
+
+wrote /home/minura/teacher-experiments/test07_b/results/statistics/representation_probe.csv
+wrote /home/minura/teacher-experiments/test07_b/results/statistics/teacher_student_alignment.csv
+
+Aggregated across seeds:
+                    accuracy           balanced_accuracy            macro_f1          
+                        mean       std              mean       std      mean       std
+representation                                                                        
+model_A_bottleneck  0.863131  0.068674          0.863131  0.068674  0.862667  0.069230
+model_B_bottleneck  0.984007  0.003363          0.984007  0.003363  0.983985  0.003374
+model_B_compact_eS  0.962290  0.001166          0.962290  0.001166  0.962293  0.001192
+teacher_PCA16       0.961111       NaN          0.961111       NaN  0.961105       NaN

@@ -1,0 +1,476 @@
+[
+  {
+    "name": "conv3x3",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/conv3x3.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "depthwise_conv",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/depthwise_conv.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "conv1x1",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/conv1x1.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "add",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/add.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "multiply",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/multiply.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "relu_clamp",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/relu_clamp.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "sigmoid",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/sigmoid.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "softmax",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/softmax.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "global_avg_pool",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/global_avg_pool.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "global_max_pool",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/global_max_pool.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "resize",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/resize.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "concatenate",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/concatenate.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "elementwise_affine",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/elementwise_affine.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "layernorm2d",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/layernorm2d.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "rmsnorm_like",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/rmsnorm_like.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "dynamic_conv",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/dynamic_conv.onnx",
+    "input_names": [
+      "x",
+      "e_d"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        16
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "fft",
+    "onnx_path": null,
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": null,
+    "export_status": "FAILED",
+    "error": "Exporting the operator 'aten::fft_fft2' to ONNX opset version 17 is not supported. Please feel free to request support or submit a pull request on PyTorch GitHub: https://github.com/pytorch/pytorch/issues."
+  },
+  {
+    "name": "combo_conv_add",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_conv_add.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_conv_clamp",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_conv_clamp.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_conv_mul",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_conv_mul.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_conv_add_clamp",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_conv_add_clamp.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_dwconv_pointwise",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_dwconv_pointwise.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_1x1_add_clamp",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_1x1_add_clamp.onnx",
+    "input_names": [
+      "x",
+      "y"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "combo_gap_linear_mul",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/combo_gap_linear_mul.onnx",
+    "input_names": [
+      "x"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "minura_lowrank_op",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/minura_lowrank_op.onnx",
+    "input_names": [
+      "F",
+      "e_d"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        8,
+        8
+      ],
+      [
+        1,
+        16
+      ]
+    ],
+    "export_status": "success"
+  },
+  {
+    "name": "static_mixture_op",
+    "onnx_path": "/home/minura/teacher-experiments/test15/results/onnx_models/static_mixture_op.onnx",
+    "input_names": [
+      "F",
+      "e_d"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        8,
+        8
+      ],
+      [
+        1,
+        16
+      ]
+    ],
+    "export_status": "success"
+  }
+]

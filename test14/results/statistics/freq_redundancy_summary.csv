@@ -1,0 +1,6 @@
+metric,value
+max_abs_corr_eD_qF,0.5754668325349048
+mean_abs_corr_eD_qF,0.1372873012848884
+max_abs_corr_phiPCA_qF,0.657795165749874
+mean_abs_corr_phiPCA_qF,0.14679849971908865
+cca_top_correlation_eD_qF,0.8669206444116991

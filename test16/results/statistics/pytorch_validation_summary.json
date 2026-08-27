@@ -1,0 +1,66 @@
+[
+  {
+    "model": "A",
+    "trained": true,
+    "params": 7371923,
+    "macs": 1033040896,
+    "val_psnr": 27.283128077589016,
+    "val_ssim": 0.8063309543001833,
+    "rain_psnr": 29.897018055956757,
+    "haze_psnr": 24.82573976279882,
+    "noise_psnr": 27.12662641401147
+  },
+  {
+    "model": "F2",
+    "trained": true,
+    "params": 7381189,
+    "macs": 1033114656,
+    "val_psnr": 27.147371738431186,
+    "val_ssim": 0.8248138314313043,
+    "rain_psnr": 28.64754289890255,
+    "haze_psnr": 24.438581453383602,
+    "noise_psnr": 28.355990863007424
+  },
+  {
+    "model": "N",
+    "trained": false,
+    "params": 7371923,
+    "macs": 1033040896,
+    "val_psnr": null,
+    "val_ssim": null,
+    "rain_psnr": null,
+    "haze_psnr": null,
+    "noise_psnr": null,
+    "note": "untrained -- latency/architecture only, see TEST16 scoping decision",
+    "shapes_ok": true,
+    "finite_ok": true,
+    "n_checked": 40,
+    "output_shape": [
+      8,
+      3,
+      128,
+      128
+    ]
+  },
+  {
+    "model": "S",
+    "trained": false,
+    "params": 7594534,
+    "macs": 1045648992,
+    "val_psnr": null,
+    "val_ssim": null,
+    "rain_psnr": null,
+    "haze_psnr": null,
+    "noise_psnr": null,
+    "note": "untrained -- latency/architecture only, see TEST16 scoping decision",
+    "shapes_ok": true,
+    "finite_ok": true,
+    "n_checked": 40,
+    "output_shape": [
+      8,
+      3,
+      128,
+      128
+    ]
+  }
+]

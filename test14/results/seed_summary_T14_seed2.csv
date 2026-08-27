@@ -1,0 +1,2 @@
+model,seed,best_psnr_epoch,best_psnr,best_ssim_epoch,best_ssim,final_epoch,final_psnr,final_ssim,last5_mean_psnr,last5_mean_ssim,last5_mean_rain_psnr,last5_mean_haze_psnr,last5_mean_noise_psnr,last5_mean_rain_ssim,last5_mean_haze_ssim,last5_mean_noise_ssim,any_nan_or_inf,params,macs
+T14,2,48,27.22308061823459,48,0.8324078773040806,50,26.792205580567806,0.815478775195547,26.835111253953492,0.8244206882957947,29.39784598903475,22.383478785836427,28.72400898698931,0.911097454388307,0.8312760157151535,0.730888594783924,False,7398405,1033262912

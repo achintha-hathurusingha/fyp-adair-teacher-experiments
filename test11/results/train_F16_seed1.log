@@ -1,0 +1,14 @@
+Model F16 seed 1: 7,388,595 params, MACs=1033573632, train_examples=1920, val_examples=60
+[F16/s1] epoch 1/50: L1=0.1051 KD=29.6263 grad_norm=3.469 val_psnr=18.870 val_ssim=0.5273 elapsed=43s
+[F16/s1] epoch 5/50: L1=0.0615 KD=18.4651 grad_norm=14.837 val_psnr=22.374 val_ssim=0.6597 elapsed=212s
+[F16/s1] epoch 10/50: L1=0.0512 KD=7.8693 grad_norm=11.742 val_psnr=23.939 val_ssim=0.6859 elapsed=425s
+[F16/s1] epoch 15/50: L1=0.0431 KD=4.0352 grad_norm=9.770 val_psnr=24.615 val_ssim=0.7162 elapsed=639s
+[F16/s1] epoch 20/50: L1=0.0388 KD=1.8392 grad_norm=8.757 val_psnr=24.874 val_ssim=0.7524 elapsed=852s
+[F16/s1] epoch 25/50: L1=0.0355 KD=0.9471 grad_norm=5.662 val_psnr=25.466 val_ssim=0.7761 elapsed=1065s
+[F16/s1] epoch 30/50: L1=0.0330 KD=0.5874 grad_norm=4.684 val_psnr=25.911 val_ssim=0.7997 elapsed=1277s
+[F16/s1] epoch 35/50: L1=0.0312 KD=0.4166 grad_norm=3.627 val_psnr=26.101 val_ssim=0.8061 elapsed=1490s
+[F16/s1] epoch 40/50: L1=0.0298 KD=0.4008 grad_norm=3.653 val_psnr=26.106 val_ssim=0.8197 elapsed=1703s
+[F16/s1] epoch 45/50: L1=0.0287 KD=0.4080 grad_norm=3.826 val_psnr=26.712 val_ssim=0.8304 elapsed=1915s
+[F16/s1] epoch 50/50: L1=0.0264 KD=0.2419 grad_norm=2.524 val_psnr=27.102 val_ssim=0.8334 elapsed=2123s
+
+[F16/s1] DONE. last5_mean_psnr=26.812 last5_mean_ssim=0.8282 best_psnr=27.102 (epoch 50)

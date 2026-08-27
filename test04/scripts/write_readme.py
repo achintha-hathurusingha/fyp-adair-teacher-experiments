@@ -1,0 +1,143 @@
+"""Writes results/README.csv for the TEST04 workbook. Run LOCALLY."""
+from __future__ import annotations
+
+from pathlib import Path
+
+import pandas as pd
+
+TEST04 = Path(__file__).resolve().parent.parent
+
+readme_text = """TEST04 -- Causal Representation Intervention Study
+Research question: does changing an internal degradation-discriminative
+representation (while holding the recipient's scene, checkpoint, and
+downstream weights fixed) actually change AdaIR's restoration behavior?
+Full report: report/test04_report.md
+Forward graph audit: report/forward_graph_audit.md
+
+DIRECTORY RULE
+Everything for this experiment lives under test04/. test01/, test02/,
+test03/, the original AdaIR source, and the checkpoint are read-only
+references and were NOT modified.
+
+MECHANISM (verified before any intervention was run)
+A manual, line-by-line replica of AdaIR.forward() (src/intervention.py::
+manual_forward) lets any intermediate tensor be substituted at its exact
+production point, then continues the SAME recipient computation (same
+inp_img, same skip connections unless also overridden, same weights) from
+there. Verified bit-identical (0.0 max abs diff) against calling the real
+model directly, and bit-identical (0.0 max abs diff) under self-override
+(substituting a tensor with itself) -- the Phase-4 self-swap gate PASSED
+exactly, for all 300 (scene, degradation) combinations, at all 4
+intervention points simultaneously.
+
+FORWARD-GRAPH AUDIT -- KEY FINDING BEFORE ANY INTERVENTION
+AdaIR's decoder receives THREE independent skip connections
+(encoder L1/L2/L3 outputs, concatenated at each decoder stage) that bypass
+latent/AFLB entirely, and the recipient's raw `inp_img` is re-injected at
+every one of the 3 AFLBs plus the final residual. A latent-only or
+AFLB-output-only swap therefore CANNOT fully substitute the donor's
+identity -- the recipient's own image and encoder skip features keep
+flowing through un-intervened channels. This is stated as architecture,
+not assumption, in report/forward_graph_audit.md, and is exactly what
+Phase 8's skip-connection experiment (below) confirms empirically.
+
+PRIMARY EXPERIMENT (2400 interventions: 100 scenes x 4 points x 6 donor/recipient pairs)
+Mean output change (L2 distance from the recipient's own normal output),
+by intervention point (Point_Summary within Swap_Matrix sheet):
+  latent_pre   14.17   (statistically indistinguishable from aflb1_out)
+  aflb1_out    14.18
+  aflb2_out    32.35
+  aflb3_out    53.94   (largest effect -- closest to output)
+Effect size increases monotonically with intervention depth. latent_pre
+and aflb1_out are essentially identical -- confirms AFLB1's transform is
+near-identity when the frequency mask is degenerate (raw_low=0, per
+TEST01-03), consistent across an entirely different analysis method.
+
+DONOR-BEHAVIOR SIMILARITY (Phase 12)
+Swapped outputs remain closest to the RECIPIENT's own normal output 74-92%
+of the time (varies by point); donor-closeness rises with intervention
+depth (5% at latent/AFLB1 -> 15% at AFLB3). Noise-recipient swaps show 0%
+donor-closeness in every single donor/point combination -- denoising
+appears unusually robust to this intervention.
+
+SKIP-CONNECTION PROGRESSIVE INTERVENTION (Phase 8) -- confirms the audit
+  A. latent only:            mean L2 = 15.16
+  B. latent + deepest skip:  mean L2 = 31.92  (~2x)
+  C. latent + all 3 skips:   mean L2 = 138.63 (~9x A)
+Closing the skip-connection channels the audit identified dramatically
+amplifies the intervention effect, exactly as predicted before any
+empirical result was seen.
+
+*** THE MOST IMPORTANT, HONEST FINDING (Control comparison, Phase 9) ***
+Random control (recipient=Rain, distribution-matched noise):  L2 = 1.30
+Zero control:                                                  L2 = 1.23
+Dataset-mean control:                                          L2 = 2.21
+Same-scene CROSS-DEGRADATION swap (the primary experiment, same subset):  L2 = 4.03
+Cross-scene SAME-DEGRADATION control (different scene, same degradation): L2 = 7.81
+The primary intervention (L2=4.03) clearly exceeds random/zero/mean
+controls (L2 1.2-2.2) -- ruling out "any perturbation causes this much
+change." BUT it is SMALLER than the cross-scene same-degradation control
+(L2=7.81). In plain terms: swapping in a DIFFERENT SCENE'S latent (same
+degradation) moves AdaIR's output MORE than swapping in the SAME SCENE'S
+latent from a DIFFERENT DEGRADATION. Scene/content identity has a larger
+causal footprint on the output than degradation identity does, at the
+latent bottleneck. This is reported prominently, not minimized -- see
+Causal Evidence Assessment in the report for the full, calibrated
+interpretation.
+
+OUTPUT DEGRADATION PROBE (Phase 14)
+Trained on 30 normal outputs (the 10-scene visualization subset -- SCOPE
+NOTE: not the full 100-scene set, see Limitations), grouped CV accuracy
+43.3% (n=30, noisy but consistent with TEST02/03's finding that the final
+output is only weakly degradation-discriminative). On swapped outputs, the
+probe predicts the DONOR class 28.3% of the time vs. RECIPIENT 46.7% --
+directionally consistent with, but not identical to, the pixel-distance
+donor-similarity finding above (probe and pixel-distance are different
+notions of "similarity").
+
+CAUSAL EVIDENCE CLASSIFICATION (Phase 21, using the task's 4-level scale)
+MODERATE intervention evidence for latent/AFLB representations causally
+influencing restoration output: the effect is real, structured, exceeds
+random/zero/mean-tensor controls, and scales predictably with intervention
+depth and with how many un-intervened channels (skip connections) are
+closed. It falls short of STRONG evidence because the cross-scene control
+demonstrates the SAME mechanism is at least as (here, more) sensitive to
+scene/content changes as to degradation-type changes -- so this experiment
+alone cannot claim the representation is SPECIFICALLY or PRIMARILY a
+"degradation controller" as opposed to a general content-and-context
+bottleneck that happens to also correlate with degradation type.
+
+SHEETS
+  README                        this sheet
+  Forward_Graph                  Phase-0 audit table (tensor flow, skip connections, safety verdict)
+  Environment                    reproducibility record
+  Normal_Baseline                 Phase-3: normal inference PSNR/SSIM/MSE/latency/peak-mem, 300 rows
+  Self_Swap_Control                Phase-4 gate: max/mean abs diff, all 300 (scene,degradation) combos -- all exactly 0.0
+  Cross_Degradation_Swaps          Phase 5-7 PRIMARY: 2400 interventions, all metrics (psnr/ssim/mse vs clean,
+                                    L2/MAE vs normal recipient/donor/third, residual stats, sanity checks)
+  Skip_Connection_Progressive      Phase 8: conditions A/B/C, 360 rows (20 scenes x 6 pairs x 3 conditions)
+  Cross_Scene_Control               Phase 9 Control C: 39 valid pairs (18 skipped for portrait/landscape shape mismatch)
+  Random_Control                    Phase 9 Control D: 20 rows
+  Zero_Mean_Control                  Phase 9 Control E: 36 rows (zero + dataset-mean, 4 scenes skipped for shape)
+  Donor_Similarity                  Phase 12: per-intervention distance to recipient/donor/third normal outputs
+  Residual_Analysis                  Phase 13: residual mean/std/energy/MAE per (point,recipient,donor)
+  Output_Probe                       Phase 14: degradation probe accuracy on normal vs. swapped outputs
+  Swap_Matrix                        Phase 18: the full recipient x donor x point table with bootstrap CIs
+  Point_Summary                      per-intervention-point aggregate ranking
+  Distillation_Ranking               Phase 22: 9 candidate targets ranked on evidence + practicality
+  Tensor_Index                       (see results/tensors/output_images/ for the raw PNGs backing Phase 20 panels)
+
+REPRODUCE
+  cd test04/scripts && conda activate adair-distill
+  python build_manifest.py && python write_environment.py
+  cd ../src && taskset -c 0-7,12-31 python run_interventions.py   (primary, ~8 min)
+  taskset -c 0-7,12-31 python run_controls.py                      (Phase 8-9, ~4 min)
+  taskset -c 0-7,12-31 python donor_similarity_and_residual.py
+  taskset -c 0-7,12-31 python build_swap_matrix_and_stats.py
+  taskset -c 0-7,12-31 python output_probe.py
+  taskset -c 0-7,12-31 python build_visualizations.py
+"""
+
+out_path = TEST04 / "results" / "README.csv"
+pd.DataFrame({"README": readme_text.split("\n")}).to_csv(out_path, index=False)
+print(f"wrote {out_path}")

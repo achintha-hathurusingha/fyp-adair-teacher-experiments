@@ -1,0 +1,14 @@
+checkpoint SHA256 verified: f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb
+checkpoint OK: 28,784,824 params, frozen (requires_grad=False)
+[100/660] elapsed=11s
+[200/660] elapsed=20s
+[300/660] elapsed=30s
+[400/660] elapsed=39s
+[500/660] elapsed=49s
+[600/660] elapsed=60s
+extracted 1980 latent_pre vectors (768-dim pooled GAP+GMP), elapsed=65s
+PCA-16 fit on 1920 TRAINING rows ONLY. Explained variance: 0.6844
+
+wrote teacher cache to /home/minura/teacher-experiments/test07_b/results/teacher_cache
+explained_variance=0.6844  n_train=1920  n_val=60
+DONE_EXIT_0

@@ -1,0 +1,5 @@
+model,trained,params,macs,val_psnr,val_ssim,rain_psnr,haze_psnr,noise_psnr,note,shapes_ok,finite_ok,n_checked,output_shape
+A,True,7371923,1033040896,27.283128077589016,0.8063309543001833,29.897018055956757,24.82573976279882,27.12662641401147,,,,,
+F2,True,7381189,1033114656,27.147371738431186,0.8248138314313043,28.64754289890255,24.438581453383602,28.355990863007424,,,,,
+N,False,7371923,1033040896,,,,,,"untrained -- latency/architecture only, see TEST16 scoping decision",True,True,40.0,"(8, 3, 128, 128)"
+S,False,7594534,1045648992,,,,,,"untrained -- latency/architecture only, see TEST16 scoping decision",True,True,40.0,"(8, 3, 128, 128)"

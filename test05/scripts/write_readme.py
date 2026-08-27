@@ -1,0 +1,136 @@
+"""Writes results/README.csv for the TEST05 workbook. Run LOCALLY."""
+from __future__ import annotations
+
+from pathlib import Path
+
+import pandas as pd
+
+TEST05 = Path(__file__).resolve().parent.parent
+
+readme_text = """TEST05 -- Degradation-Specific Representation Discovery
+Research question: what is the SMALLEST teacher representation that
+preserves degradation-aware restoration information while minimizing
+scene/content dependence -- the object AdaIR should transfer to a NAFNet
+student, not merely "which feature classifies best."
+Full report: report/test05_report.md
+Design doc: report/test05_design.md
+
+DIRECTORY RULE
+Everything for this experiment lives under test05/. test01-04, the
+original AdaIR source, and the checkpoint are read-only references and
+were NOT modified. test04's manual_forward mechanism is imported
+read-only, extended (not modified) to support partial-tensor overrides.
+
+DATASET / MODEL
+Identical to test03/test04: TEST03's exact 100 scenes x Rain/Haze/Noise
+(300 images), released unmodified adair3d.ckpt (28,784,824 params, 0
+missing/0 unexpected keys), scene-grouped cross-validation throughout.
+
+CANDIDATE FEATURES (31 total: latent_pre + 3 AFLB x 10 sub-features each)
+Pooled-level (GAP+GMP) grouped-CV linear probe reproduces TEST02/03/04:
+most candidates 90-100% accuracy; raw_low (negative control, all 3 AFLBs)
+exactly 33.33% -- FIFTH independent confirmation (test01 trace, test02
+probe, test03 probe, test04 causal intervention, test05 probe) that this
+tensor is a constant zero at benchmark resolution.
+
+KEY FINDING 1 -- degradation/scene ratio varies by feature, and by CHANNEL
+Pooled-level: AFLB1/AFLB3 lh_channel_weight (the L-H attention map) has
+the HIGHEST degradation/scene ratio of any pooled candidate (3.15),
+higher than full latent_pre (1.77) or any AFLB output (1.90-2.46).
+Channel-level: individual channels reach ratios of 4.7-4.8 -- higher
+still than any pooled feature -- confirming degradation-specificity is
+concentrated in a subset of channels, not spread evenly.
+
+KEY FINDING 2 -- top-ranked (by classification accuracy) channels do NOT
+reliably beat random same-size channels causally
+Grouped intervention (Phase 8, latent_pre, 30 scenes x 6 pairs x 5 subset
+sizes): top-degradation-specific channels retain 3.4% (top-5%) to 41.6%
+(top-50%) of the full tensor's causal effect -- roughly proportional to
+subset size, NOT a super-linear "small subset captures most of the
+effect" result. Critically, top-ranked channels beat random-same-size
+channels at only 3 of 5 tested sizes (10%, 30%, 50%) and LOSE to random
+at 5% and 20% -- classification-discriminative channels are not reliably
+more causally impactful than randomly chosen channels of the same count.
+This is reported plainly, not minimized, per the task's explicit
+instruction not to manufacture a clean result the data doesn't support.
+
+KEY FINDING 3 -- selected channels shift the scene-vs-degradation balance
+TEST04 found the FULL latent tensor is more sensitive to scene changes
+than degradation changes (cross-scene L2=7.81 > cross-degradation
+L2=4.03). At the TOP-10%-CHANNEL level, this reverses/balances: same-scene
+cross-degradation L2=1.359 vs. cross-scene same-degradation (content
+control) L2=1.265 -- selecting channels by degradation-classification
+accuracy modestly shifts the causal balance toward degradation-sensitivity
+relative to the full tensor, though the difference remains small (~7%)
+and should not be overstated.
+
+KEY FINDING 4 -- compact embeddings preserve almost everything
+PCA-16 (16 dimensions!) on latent_pre's pooled vector retains 99.7%
+degradation-classification accuracy, statistically indistinguishable from
+the full 768-dim pooled vector (100.0%). PCA-64/128 reach 100.0% exactly.
+Degradation-aware information compresses dramatically without loss of
+linear separability -- highly relevant for NPU deployment.
+
+KEY FINDING 5 -- alpha/beta remains a weak, non-primary signal
+62.0-62.7% across all 3 AFLBs and combined (vs. 33.3% random) --
+confirmed again, consistent with test02/03, and now shown to be far
+weaker than even a 16-dim compressed projection of the real feature
+tensor (99.7%). Alpha/beta could serve as a cheap auxiliary signal, not
+a primary distillation target.
+
+KEY FINDING 6 -- frequency structure IS associated with degradation, in a
+counter-intuitive direction
+Noise consistently shows the HIGHEST low-frequency spatial energy
+(89.9-99.3%) and LOWEST high-frequency energy across nearly every
+candidate feature -- the internal activation maps for noisy inputs are
+spatially SMOOTHER than for rain/haze, despite the input image itself
+being high-frequency. AFLB3_aflb_out shows the most degradation-dependent
+frequency-band variance (14.2, vs. 0.05-6.9 for other candidates) --
+the most frequency-sensitive candidate measured.
+
+CAVEAT ON THE COMPOSITE RANKING
+The Distillation_Ranking sheet's composite score uses POOLED-VECTOR
+dimensionality as its compactness proxy, which favors AFLB3_aflb_out
+(pooled dim 192, smallest of the AFLB outputs) -- but AFLB3_aflb_out's
+RAW SPATIAL TENSOR is actually the LARGEST of any candidate (96 ch x 160 x
+240 = 3.69M elements, 14.4MB fp32) because its spatial resolution is much
+higher than latent_pre/AFLB1 (384 ch x 40 x 60 = 921K elements, 3.6MB
+fp32) or AFLB2 (192 ch x 80 x 120 = 1.84M elements, 7.2MB fp32). See
+NPU_Cost sheet. The composite score is reported as computed, but the
+FINAL recommendation (report section 15-16) is based on genuine NPU
+practicality (raw tensor size), not the composite alone -- exactly the
+"do not let one number decide" caution the task required.
+
+SHEETS
+  README                        this sheet
+  Candidate_Features / Linear_Probe   pooled-level grouped-CV probe, 31 candidates
+  Scene_Sensitivity              same-scene vs cross-scene distance ratios, 31 candidates x 2 metrics
+  Channel_Ranking                 per-channel probe accuracy + distance ratio, ~4400 channels across 16 features
+  Channel_Ablation                 keep/zero/degradation-avg ablation of top-10 latent_pre channels, 144 rows
+  Channel_Group_Intervention       top-5/10/20/30/50% vs random-same-size channel swaps, 1980 rows
+  Content_Control                  cross-scene, top-10%-channel swap, 39 rows
+  Spatial_Analysis                 per-pixel degradation-variance importance maps, 5 features x 15 scenes
+  Frequency_Analysis / Frequency_Summary   2D-FFT radial energy profile, Rain/Haze/Noise, same scenes
+  Frequency_Channel_Ranking        per-channel spectral distinctiveness across degradations
+  Compact_Embedding                 PCA-16/32/64/128 + alpha/beta accuracy comparison
+  Alpha_Beta                        raw alpha/beta, 900 rows
+  NPU_Cost                          element counts, fp32/fp16/int8 memory, 9 representative candidates
+  Distillation_Ranking              full candidate table + explicit composite score + sensitivity check
+  Environment                       reproducibility record
+  Tensor_Index                      raw .pt tensor index, 15 representative scenes
+
+REPRODUCE
+  cd test05/scripts && conda activate adair-distill
+  python build_manifest.py && python write_environment.py
+  cd ../src && taskset -c 0-7,12-31 python extract_features.py            (~70s)
+  taskset -c 0-7,12-31 python primary_analysis.py                          (~1 min)
+  taskset -c 0-7,12-31 python channel_ranking.py                            (~5 min)
+  taskset -c 0-7,12-31 python causal_channel_experiments.py                 (~25 min)
+  taskset -c 0-7,12-31 python spatial_frequency_analysis.py                 (~10s, CPU-only)
+  taskset -c 0-7,12-31 python compact_embedding.py                          (~5s, CPU-only)
+  python npu_cost_and_ranking.py && python build_visualizations.py
+"""
+
+out_path = TEST05 / "results" / "README.csv"
+pd.DataFrame({"README": readme_text.split("\n")}).to_csv(out_path, index=False)
+print(f"wrote {out_path}")

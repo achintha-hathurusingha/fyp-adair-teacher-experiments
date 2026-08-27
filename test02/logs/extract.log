@@ -1,0 +1,21 @@
+300 images, 15 representative (raw tensors saved): ['H001', 'H002', 'H003', 'H004', 'H005', 'N001', 'N002', 'N003', 'N004', 'N005', 'R001', 'R002', 'R003', 'R004', 'R005']
+loading AdaIR (released, unmodified) from /home/minura/teacher-experiments/AdaIR (git ccb8b98e), ckpt adair3d.ckpt
+checkpoint OK: 28,784,824 params, 0 missing/0 unexpected keys
+[25/300] R025 (Rain) psnr=33.48 ssim=0.9660 elapsed=8s
+[50/300] R050 (Rain) psnr=43.71 ssim=0.9884 elapsed=14s
+[75/300] R075 (Rain) psnr=35.76 ssim=0.9792 elapsed=20s
+[100/300] R100 (Rain) psnr=33.52 ssim=0.9634 elapsed=26s
+[125/300] H025 (Haze) psnr=23.36 ssim=0.9634 elapsed=36s
+[150/300] H050 (Haze) psnr=29.74 ssim=0.9745 elapsed=48s
+[175/300] H075 (Haze) psnr=29.34 ssim=0.9880 elapsed=61s
+[200/300] H100 (Haze) psnr=40.89 ssim=0.9918 elapsed=76s
+[225/300] N025 (Noise) psnr=32.07 ssim=0.9483 elapsed=82s
+[250/300] N050 (Noise) psnr=29.35 ssim=0.8739 elapsed=88s
+[275/300] N075 (Noise) psnr=33.65 ssim=0.9355 elapsed=94s
+[300/300] N100 (Noise) psnr=25.59 ssim=0.7895 elapsed=100s
+
+wrote /home/minura/teacher-experiments/test02/results/statistics/feature_statistics.csv (12300 rows)
+wrote 41 pooled-feature .npz files -> /home/minura/teacher-experiments/test02/results/features
+wrote raw tensors for 15 representative images -> /home/minura/teacher-experiments/test02/results/tensors
+total elapsed: 100s
+DONE_EXIT=0

@@ -1,0 +1,46 @@
+# TEST02 -- Degradation Representation Analysis of AdaIR
+# Research question: where does the released 3-degradation AdaIR checkpoint
+# encode degradation-specific (Rain/Haze/Noise) information, and how
+# strongly, at each network stage?
+model:
+  variant: released_unmodified   # exactly test01's `released` variant, no changes
+  checkpoint: ../weights/adair3d.ckpt
+  checkpoint_sha256: f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb
+  adair_source: ../AdaIR
+  adair_git_sha: ccb8b98e49614e07badd0641e5163fa7635c2f02
+  parameters: 28784824
+  degradation_conditioning_input: NONE   # confirmed by source audit -- forward(inp_img, noise_emb=None), noise_emb unused
+
+dataset:
+  manifest: results/dataset_manifest.csv
+  n_images: 300
+  degradations: {Rain: 100, Haze: 100, Noise: 100}
+  labels_are_analysis_only: true   # NEVER fed into AdaIR -- used only after extraction
+
+extraction:
+  representative_images_per_degradation: 5   # raw .pt tensors saved for these (15 total)
+  pooling: [global_average_pool, global_max_pool]   # concatenated -> 2C-dim vector per feature
+  features_extracted: 41   # 11 global stages + shallow_Y0 + 3 AFLB x 10 sub-features
+  device: cuda
+  seed: 0
+  noise_seed_policy: per_image_hash
+
+analysis:
+  linear_probe:
+    classifiers: [logistic_regression, linear_svm]
+    cross_validation: stratified_5fold
+    random_baseline_pct: 33.33
+  distance_metrics: [euclidean, cosine]
+  dimensionality_reduction: [pca, tsne, umap]
+  correlation: [pearson, spearman]
+
+host_notes: >
+  devon (192.248.10.68) logical CPUs 8-11 are unreliable and have been
+  observed to silently corrupt in-process data. Every invocation MUST be
+  pinned: taskset -c 0-7,12-31 python <script>. Excel is rendered on a
+  separate (trusted) machine from exported CSVs, not on devon.
+
+directory_rule: >
+  Everything for this experiment lives under test02/. test01/, the original
+  AdaIR source, and the checkpoint are read-only references for this
+  experiment and were not modified.

@@ -1,0 +1,14 @@
+question,answer
+Does original TEST06 intervention implementation remain valid?,YES -- confirmed by self-swap exact 0.0 in both original and re-run
+Balanced control means (normalized_l2),primary=0.000013 cross_scene=0.000013 random=0.000013 zero=0.000013 global_mean=0.000013 (all N=144)
+Paired bootstrap 95% CIs (primary-control),all four entirely below zero and within +/-2.9e-7 of zero
+Paired statistical tests,Wilcoxon p<1e-15 for all four (statistically significant due to high power) but direction is NEGATIVE (primary smaller)
+Per-degradation results,Noise-recipient effect (0.000018) ~1.8x Rain/Haze-recipient (0.000010) -- real but still tiny
+Per-donor-direction results,no outlier direction; heterogeneity matches recipient-level pattern
+Donor-behavior result,"0.0% moved toward donor; mean gap -0.138 (CI [-0.187,-0.103])"
+Internal propagation changes,mined_high/mined_low change 2-3%; agg/cross_agg_out change 0.17-1.15%; aflb_out collapses to 3e-7%
+Where the frequency signal disappears,"AFLB3's own residual gate (para1~0, ~200x smaller than para2) -- a LEARNED suppression, not FMiM/FMoM ignoring the signal"
+Does corrected result change TEST06's conclusion?,NO -- strengthens it with statistical rigor and adds mechanistic explanation
+Is frequency-derived student hypothesis still NO-GO?,"YES -- NO-GO, confirmed with higher confidence"
+Is any additional frequency experiment justified?,"NO required experiment; one narrow OPTIONAL follow-up noted (para1 across checkpoints/AFLBs) but does not change the decision"
+Should we move to compact latent distillation?,YES -- proceed with TEST05.5's validated approach

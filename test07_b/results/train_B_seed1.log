@@ -1,0 +1,14 @@
+Model B seed 1: 7,380,131 params, MACs=1033049088, train_examples=1920, val_examples=60
+[B/s1] epoch 1/50: L1=0.1051 KD=29.6588 val_psnr=19.319 val_ssim=0.5457 elapsed=36s
+[B/s1] epoch 5/50: L1=0.0621 KD=16.2437 val_psnr=22.415 val_ssim=0.6515 elapsed=181s
+[B/s1] epoch 10/50: L1=0.0517 KD=7.7851 val_psnr=23.695 val_ssim=0.6824 elapsed=363s
+[B/s1] epoch 15/50: L1=0.0446 KD=4.2353 val_psnr=24.570 val_ssim=0.7188 elapsed=543s
+[B/s1] epoch 20/50: L1=0.0401 KD=1.7400 val_psnr=25.156 val_ssim=0.7606 elapsed=723s
+[B/s1] epoch 25/50: L1=0.0360 KD=0.9338 val_psnr=25.513 val_ssim=0.7712 elapsed=904s
+[B/s1] epoch 30/50: L1=0.0334 KD=0.5777 val_psnr=25.929 val_ssim=0.7907 elapsed=1085s
+[B/s1] epoch 35/50: L1=0.0319 KD=0.4357 val_psnr=26.082 val_ssim=0.7978 elapsed=1266s
+[B/s1] epoch 40/50: L1=0.0304 KD=0.5357 val_psnr=26.204 val_ssim=0.8138 elapsed=1446s
+[B/s1] epoch 45/50: L1=0.0293 KD=0.2431 val_psnr=26.544 val_ssim=0.8240 elapsed=1626s
+[B/s1] epoch 50/50: L1=0.0280 KD=0.4300 val_psnr=26.660 val_ssim=0.8224 elapsed=1801s
+
+[B/s1] DONE. last5_mean_psnr=26.398 last5_mean_ssim=0.8226 best_psnr=26.660 (epoch 50)

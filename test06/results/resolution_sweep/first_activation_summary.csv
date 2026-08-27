@@ -1,0 +1,4 @@
+aflb,first_activation_input_resolution,first_activation_feat_resolution,mask_active_fraction_at_first,n_activating_configs,n_total_configs,status,raw_low_energy_fraction_at_first
+AFLB1,,,,0,412,NEVER ACTIVATES IN TESTED RANGE,
+AFLB2,,,,0,412,NEVER ACTIVATES IN TESTED RANGE,
+AFLB3,768.0,384.0,2.7126736313221045e-05,116,412,ACTIVATES,0.8221452589900726

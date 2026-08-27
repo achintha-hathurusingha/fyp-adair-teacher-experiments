@@ -1,0 +1,20 @@
+100 scenes x 3 degradations = 300 images, 10 representative scenes (raw tensors saved for all 3 variants each)
+loading AdaIR (released, unmodified) from /home/minura/teacher-experiments/AdaIR (git ccb8b98e), ckpt adair3d.ckpt
+checkpoint OK: 28,784,824 params, 0 missing/0 unexpected keys
+[30/300] scene_010 (Noise) psnr=30.73 ssim=0.8868 elapsed=12s
+[60/300] scene_020 (Noise) psnr=31.68 ssim=0.8993 elapsed=20s
+[90/300] scene_030 (Noise) psnr=31.18 ssim=0.8651 elapsed=27s
+[120/300] scene_040 (Noise) psnr=31.99 ssim=0.8730 elapsed=34s
+[150/300] scene_050 (Noise) psnr=35.66 ssim=0.9137 elapsed=42s
+[180/300] scene_060 (Noise) psnr=37.84 ssim=0.9599 elapsed=49s
+[210/300] scene_070 (Noise) psnr=32.69 ssim=0.9230 elapsed=56s
+[240/300] scene_080 (Noise) psnr=34.62 ssim=0.9142 elapsed=64s
+[270/300] scene_090 (Noise) psnr=31.66 ssim=0.8884 elapsed=71s
+[300/300] scene_100 (Noise) psnr=30.08 ssim=0.8566 elapsed=78s
+
+wrote /home/minura/teacher-experiments/test03/results/statistics/feature_statistics.csv (12300 rows)
+wrote /home/minura/teacher-experiments/test03/results/statistics/restoration_metrics.csv (300 rows)
+wrote 41 pooled-feature .npz files -> /home/minura/teacher-experiments/test03/results/features
+wrote raw tensors for 10 representative scenes x 3 degradations -> /home/minura/teacher-experiments/test03/results/tensors
+total elapsed: 79s
+DONE_EXIT=0

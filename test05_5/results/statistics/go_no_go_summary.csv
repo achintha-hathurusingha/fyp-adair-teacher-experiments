@@ -1,0 +1,11 @@
+question,answer,confidence
+Does the latent representation contain degradation-relevant information?,YES -- 98.8-100% grouped-CV accuracy across all candidates and both datasets,High
+Is it robust to scene/content changes?,"YES (corrected from TEST04) -- degradation-specificity ratio 1.89-2.10 when generalized across all 3 degradations, reversing TEST04's Rain-only-subset conclusion",High
+Is it robust to degradation-parameter/severity changes?,YES -- 90.3-100% severity-generalization accuracy on new randomized-severity dataset,High
+Is it causally relevant to the restoration output?,"YES in general, but NOT via the frequency pathway specifically",High
+Is the representation compact (small subspace suffices)?,"YES -- PCA-16 leakage-safe = 99.67%, matches original, beats random projection, negative controls collapse to chance",High
+Is the useful representation causally implicated by frequency-aware processing (H_F2S)?,"NO -- CONTRADICTED. T0=T1=T2=T3 across all representation and output metrics; cross-image frequency swap has negligible effect (L2=0.008)",High
+Is Frequency-to-Spatial (F2S) distillation as originally conceived scientifically justified?,NO,High
+Does the PCA-16 compact representation remain a valid distillation target?,"YES, independent of the frequency question",High
+Should TEST06 proceed?,"YES, but with the frequency-causal framing replaced by a general compact-embedding distillation design (Alternative Model C)",High
+FINAL DECISION,GO WITH MODIFICATIONS,High

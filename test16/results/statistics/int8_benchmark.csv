@@ -1,0 +1,5 @@
+name,quantize_success,compile_success,profile_success,latency_ms,peak_memory_bytes,compute_units_used,npu_only,any_cpu_fallback,int8_psnr,int8_ssim,int8_n_samples
+A,True,True,True,2525,124968960,NPU,True,False,24.840551629490403,0.713108365930741,12.0
+F2,True,True,True,2558,125493248,NPU,True,False,26.0118062050766,0.7041951344808907,12.0
+N,True,True,True,1609,125308928,NPU,True,False,,,
+S,True,True,True,2530,125702144,NPU,True,False,,,

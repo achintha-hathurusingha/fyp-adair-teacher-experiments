@@ -1,0 +1,73 @@
+README
+README
+TEST06 -- Resolution-Dependent Frequency Influence Study
+"Research question: ""When AdaIR's frequency pathway actually has enough"
+"spatial resolution to become non-degenerate, does it begin to matter for"
+"restoration, and is that influence degradation-specific?"""
+Full report: report/test06_report.md
+Forward-path audit: report/forward_path_audit.md
+GO/NO-GO decision: report/GO_NO_GO.md
+""
+DIRECTORY RULE
+"Everything for this experiment lives under test06/. test01-05.5,"
+"fyp-adair-distill, and the AdaIR source/checkpoint are read-only"
+references and were NOT modified.
+""
+HEADLINE RESULT -- RESOLUTION WAS NOT THE MISSING VARIABLE
+TEST05.5 found that removing/replacing AdaIR's frequency-specific
+"computation at benchmark resolution has negligible effect, but that"
+resolution's frequency mask is mathematically degenerate (h_=w_=0). TEST06
+was built to test the natural follow-up: does frequency processing matter
+once it is genuinely non-degenerate? Answer: AFLB3's mask DOES activate at
+"input >=768px (verified: mask_active_fraction>0, raw_low_energy_fraction"
+up to 0.82). But a controlled causal swap of AFLB3's frequency-path tensor
+at 1024px (confirmed non-degenerate) produces an effect (normalized L2 =
+"0.000013) that does NOT exceed cross-scene (0.000011), random (0.000012),"
+"zero (0.000012), or mean (0.000012) controls. Donor-behavior analysis:"
+swapped outputs moved toward the donor's own behavior in 0.0% of 150
+swaps. This is Case B from the task's own decision framework: mask
+"activates, but the intervention is null. Per the task's explicit gate,"
+"Phases 12-14 (frequency-band sensitivity, degradation-specific"
+"sensitivity, compact frequency signature) were correctly SKIPPED, not"
+omitted by oversight.
+""
+WHAT THIS MEANS FOR H_RES
+"H_RES (""frequency usefulness increases once the mask is non-degenerate"")"
+is NOT SUPPORTED for AFLB3 in the 768-1536px range tested. AFLB1 (needs
+"input >=2048px) and AFLB2 (right at the edge, beta~0.497 just misses the"
+0.5 threshold needed at feat=256-320) were never confirmed active within
+the tested range -- their resolution-dependent behavior remains genuinely
+"untested, not refuted. Per the task's mandatory claim discipline, we do"
+"NOT claim ""frequency is useless"" -- only that no causal effect above"
+control level was found for the one AFLB (AFLB3) where a clean test was
+possible.
+""
+SHEETS
+  README                             this sheet
+  Forward_Path_Audit                 Phase 0: tensor trace + TEST05.5 intervention verification
+  Resolution_Sweep                   Phase 1: full 432-row mask/energy/restoration sweep
+  Mask_Activation                    Phase 1: per-AFLB mask stats summary by resolution
+  Restoration_Sanity                 Phase 2: PSNR/SSIM/NaN/Inf/latency at every tested config
+  First_Activation                   Phase 3-4: R_first per AFLB + gate decision
+  Same_Scene_Manifest                Phase 5: 25-scene same-scene Rain/Haze/Noise dataset
+"  Self_Swap                          Phase 8: self-swap control (max L2 = 0.0, PASS)"
+"  Frequency_Swap                     Phase 9: PRIMARY causal test, 150 same-scene cross-degradation swaps"
+  Frequency_Swap_Controls            Phase 10: cross-scene/random/zero/mean controls
+  Donor_Behavior                     Phase 11: does swap pull output toward donor's behavior? (0.0%)
+"  Frequency_Band_Sensitivity         Phase 12 -- NOT RUN (gated on 06-E, which was null)"
+"  Degradation_Frequency_Sensitivity  Phase 13 -- NOT RUN (gated on 06-E, which was null)"
+"  Compact_Frequency_Signature        Phase 14 -- NOT RUN (gated on 06-C, which did not run)"
+  GO_NO_GO                           Phase 17: NO-GO for frequency-derived student signal
+  Environment                        reproducibility record (checkpoint SHA256 matches TEST01-05.5)
+""
+REPRODUCE
+  cd test06/scripts && conda activate adair-distill
+  python write_environment.py
+  cd ../src
+"  taskset -c 0-7,12-31 python resolution_sweep.py                (~8 min, GPU, includes OOM handling)"
+"  python first_activation_analysis.py                             (~5s, CPU-only)"
+"  python build_06e_dataset.py                                     (~5s, CPU-only)"
+"  taskset -c 0-7,12-31 python verify_frequency_active.py           (~30s, GPU)"
+"  taskset -c 0-7,12-31 python causal_intervention_06e.py           (~13 min, GPU)"
+  cd ../scripts && python build_visualizations.py && python build_excel_local.py
+""

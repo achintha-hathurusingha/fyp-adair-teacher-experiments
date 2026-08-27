@@ -1,0 +1,32 @@
+checkpoint loaded
+[10/30] scene_010 elapsed=49s
+[20/30] scene_020 elapsed=98s
+[30/30] scene_030 elapsed=146s
+skipped 72 shape-mismatched cross-scene pairs
+
+wrote /home/minura/teacher-experiments/test05_5/results/intervention/normalized_intervention.csv (876 rows)
+     point                    condition    l2_raw  normalized_change  rms_change  psnr_change  ssim_change
+ aflb1_out cross_scene_same_degradation  7.809656           0.027517    0.011505     0.311717     0.000446
+ aflb1_out same_scene_cross_degradation 14.798784           0.053504    0.021801    -1.710765    -0.008810
+ aflb2_out cross_scene_same_degradation 16.074696           0.055599    0.023680    -1.528437    -0.011283
+ aflb2_out same_scene_cross_degradation 32.737669           0.116679    0.048227    -5.538351    -0.038819
+ aflb3_out cross_scene_same_degradation 28.033768           0.096936    0.041298    -4.924001    -0.044280
+ aflb3_out same_scene_cross_degradation 55.311816           0.194979    0.081482    -8.887000    -0.098826
+latent_pre cross_scene_same_degradation  7.810167           0.027518    0.011505     0.311040     0.000434
+latent_pre same_scene_cross_degradation 14.792925           0.053481    0.021792    -1.709615    -0.008799
+
+wrote /home/minura/teacher-experiments/test05_5/results/intervention/degradation_specificity_ratio.csv
+     point            metric  effect_A_same_scene_cross_deg  effect_B_cross_scene_same_deg  degradation_specificity_ratio
+latent_pre            l2_raw                      14.792925                       7.810167                       1.894060
+latent_pre normalized_change                       0.053481                       0.027518                       1.943472
+latent_pre        rms_change                       0.021792                       0.011505                       1.894060
+ aflb1_out            l2_raw                      14.798784                       7.809656                       1.894934
+ aflb1_out normalized_change                       0.053504                       0.027517                       1.944392
+ aflb1_out        rms_change                       0.021801                       0.011505                       1.894934
+ aflb2_out            l2_raw                      32.737669                      16.074696                       2.036596
+ aflb2_out normalized_change                       0.116679                       0.055599                       2.098583
+ aflb2_out        rms_change                       0.048227                       0.023680                       2.036596
+ aflb3_out            l2_raw                      55.311816                      28.033768                       1.973042
+ aflb3_out normalized_change                       0.194979                       0.096936                       2.011415
+ aflb3_out        rms_change                       0.081482                       0.041298                       1.973042
+DONE_EXIT_0

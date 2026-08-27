@@ -1,0 +1,50 @@
+[A_baseline] overall PSNR=28.572 SSIM=0.8048
+                      psnr      ssim
+degradation                         
+dehaze           26.105617  0.950315
+denoise_sigma15  31.007303  0.831549
+denoise_sigma25  28.495221  0.745298
+denoise_sigma50  25.061318  0.557269
+derain           32.188775  0.939418
+[B_fixed_mask] overall PSNR=28.738 SSIM=0.8051
+                      psnr      ssim
+degradation                         
+dehaze           26.317261  0.944134
+denoise_sigma15  31.306553  0.840335
+denoise_sigma25  28.711966  0.745851
+denoise_sigma50  24.972156  0.556856
+derain           32.382476  0.938195
+[C_learned_mask] overall PSNR=27.953 SSIM=0.7833
+                      psnr      ssim
+degradation                         
+dehaze           26.423204  0.948330
+denoise_sigma15  29.196927  0.778297
+denoise_sigma25  28.330110  0.726407
+denoise_sigma50  24.687681  0.540371
+derain           31.127986  0.923184
+[D_plus_lh] overall PSNR=28.542 SSIM=0.7951
+                      psnr      ssim
+degradation                         
+dehaze           26.723012  0.951602
+denoise_sigma15  30.672927  0.811001
+denoise_sigma25  28.264498  0.725231
+denoise_sigma50  24.892710  0.548250
+derain           32.154943  0.939454
+[E_full] overall PSNR=28.674 SSIM=0.7975
+                      psnr      ssim
+degradation                         
+dehaze           26.186844  0.942582
+denoise_sigma15  31.323005  0.830280
+denoise_sigma25  28.798773  0.743781
+denoise_sigma50  24.674968  0.533883
+derain           32.383927  0.936817
+
+=== OVERALL (matches Table 7's shape) ===
+       variant      psnr     ssim
+    A_baseline 28.571647 0.804770
+  B_fixed_mask 28.738082 0.805074
+C_learned_mask 27.953182 0.783318
+     D_plus_lh 28.541618 0.795108
+        E_full 28.673504 0.797469
+
+wrote eval_per_image.csv, eval_summary_by_degradation.csv, eval_summary_overall.csv

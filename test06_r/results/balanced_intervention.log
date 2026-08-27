@@ -1,0 +1,13 @@
+[baseline 5/25] elapsed=24s
+[baseline 10/25] elapsed=47s
+[baseline 15/25] elapsed=70s
+[baseline 20/25] elapsed=92s
+[baseline 25/25] elapsed=111s
+Traceback (most recent call last):
+  File "/home/minura/teacher-experiments/test06_r/src/balanced_intervention.py", line 346, in <module>
+    main()
+  File "/home/minura/teacher-experiments/test06_r/src/balanced_intervention.py", line 221, in main
+    all_high = torch.stack([normals[sid][deg]["raw_high"] for sid in scene_ids for deg in DEGS])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: stack expects each tensor to be equal size, but got [1, 96, 512, 512] at entry 0 and [1, 96, 52, 512] at entry 63
+DONE_EXIT_1

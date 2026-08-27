@@ -1,0 +1,55 @@
+300 images, 9 representative (deep-traced): ['H001', 'H002', 'H003', 'N001', 'N002', 'N003', 'R001', 'R002', 'R003']
+
+================================================================================
+VARIANT: released
+================================================================================
+checkpoint compatibility OK: 28,784,824 params, 0 missing/0 unexpected keys (see model_variants.py load_variant -> load_adair)
+  [50/300] R050 (Rain) psnr=43.71 ssim=0.9884 lat=135.5ms peak_mem=1721MB elapsed=10s
+  [100/300] R100 (Rain) psnr=33.52 ssim=0.9634 lat=135.6ms peak_mem=1721MB elapsed=18s
+  [150/300] H050 (Haze) psnr=29.74 ssim=0.9745 lat=382.2ms peak_mem=4294MB elapsed=32s
+  [200/300] H100 (Haze) psnr=40.89 ssim=0.9918 lat=363.0ms peak_mem=4201MB elapsed=47s
+  [250/300] N050 (Noise) psnr=29.30 ssim=0.8731 lat=135.6ms peak_mem=1721MB elapsed=55s
+  [300/300] N100 (Noise) psnr=25.62 ssim=0.7911 lat=135.7ms peak_mem=1721MB elapsed=63s
+
+================================================================================
+VARIANT: modified_mask
+================================================================================
+checkpoint compatibility OK: 28,784,824 params, 0 missing/0 unexpected keys (see model_variants.py load_variant -> load_adair)
+  [50/300] R050 (Rain) psnr=43.71 ssim=0.9884 lat=135.6ms peak_mem=1721MB elapsed=8s
+  [100/300] R100 (Rain) psnr=33.52 ssim=0.9634 lat=135.8ms peak_mem=1722MB elapsed=16s
+  [150/300] H050 (Haze) psnr=29.74 ssim=0.9745 lat=371.1ms peak_mem=4294MB elapsed=29s
+  [200/300] H100 (Haze) psnr=40.89 ssim=0.9918 lat=363.6ms peak_mem=4203MB elapsed=45s
+  [250/300] N050 (Noise) psnr=29.30 ssim=0.8731 lat=135.9ms peak_mem=1722MB elapsed=53s
+  [300/300] N100 (Noise) psnr=25.62 ssim=0.7911 lat=135.9ms peak_mem=1722MB elapsed=61s
+
+================================================================================
+VARIANT: no_frequency
+================================================================================
+checkpoint compatibility OK: 28,784,824 params, 0 missing/0 unexpected keys (see model_variants.py load_variant -> load_adair)
+  [50/300] R050 (Rain) psnr=43.62 ssim=0.9882 lat=134.5ms peak_mem=2173MB elapsed=8s
+  [100/300] R100 (Rain) psnr=33.54 ssim=0.9636 lat=134.5ms peak_mem=2173MB elapsed=16s
+  [150/300] H050 (Haze) psnr=29.62 ssim=0.9741 lat=366.0ms peak_mem=4707MB elapsed=29s
+  [200/300] H100 (Haze) psnr=40.91 ssim=0.9918 lat=358.9ms peak_mem=4615MB elapsed=44s
+  [250/300] N050 (Noise) psnr=29.30 ssim=0.8730 lat=134.6ms peak_mem=2172MB elapsed=52s
+  [300/300] N100 (Noise) psnr=25.62 ssim=0.7910 lat=134.5ms peak_mem=2172MB elapsed=60s
+
+wrote /home/minura/teacher-experiments/test01/results/baseline/results.csv (300 rows)
+wrote /home/minura/teacher-experiments/test01/results/comparison.csv
+        model degradation  num_images  mean_psnr  std_psnr  median_psnr  mean_ssim  std_ssim  mean_latency_ms  peak_memory_mb  parameters
+     released        Rain         100  38.615791  3.769562    38.775025   0.982839  0.010361       140.552554     1721.065430    28784824
+     released        Haze         100  30.392620  5.432500    31.394107   0.980417  0.013378       244.313116     4836.480957    28784824
+     released       Noise         100  31.275225  2.910827    31.405781   0.886597  0.048695       135.678013     1724.209961    28784824
+     released         ALL         300  33.427879  5.560063    33.500627   0.949951  0.053801       173.514561     4836.480957    28784824
+modified_mask        Rain         100  38.615791  3.769562    38.775025   0.982839  0.010361       135.689340     1721.871582    28784824
+modified_mask        Haze         100  30.392624  5.432497    31.394098   0.980417  0.013378       243.444777     4836.980957    28784824
+modified_mask       Noise         100  31.275225  2.910827    31.405781   0.886597  0.048695       135.888455     1724.945801    28784824
+modified_mask         ALL         300  33.427880  5.560061    33.500627   0.949951  0.053801       171.674190     4836.980957    28784824
+ no_frequency        Rain         100  38.618548  3.732262    38.782164   0.982889  0.010058       134.588221     2173.630371    28784824
+ no_frequency        Haze         100  30.384037  5.437700    31.375236   0.980372  0.013427       240.551942     5240.514160    28784824
+ no_frequency       Noise         100  31.271702  2.909893    31.401434   0.886362  0.048838       134.524111     2174.980957    28784824
+ no_frequency         ALL         300  33.424762  5.556137    33.542691   0.949875  0.053922       169.888092     5240.514160    28784824
+wrote representative-image internal traces -> /home/minura/teacher-experiments/test01/csv_export
+
+Git SHA (AdaIR source): ccb8b98e49614e07badd0641e5163fa7635c2f02
+Done.
+DONE_EXIT=0

@@ -1,0 +1,93 @@
+README
+README
+TEST05.5 -- Scientific Audit and F2S Hypothesis Validation
+"Research question: after actively trying to disprove it, is"
+Frequency-to-Spatial (F2S) Distillation still the best-supported hypothesis
+for transferring AdaIR's degradation-aware representation into a NAFNet
+student?
+Full report: report/test05_5_report.md
+Design doc: report/test05_5_design.md
+GO/NO-GO decision: report/GO_NO_GO.md
+""
+DIRECTORY RULE
+"Everything for this experiment lives under test05_5/. test01-05, the"
+"original AdaIR source, and the checkpoint are read-only references and were"
+NOT modified. test01's model_variants.py and test04's manual_forward /
+"metrics_utils are imported read-only, not modified."
+""
+HEADLINE RESULT -- H_F2S IS CONTRADICTED
+"Across four independent frequency-path interventions (T1 disabled, T2"
+"content-blind matched-random noise, T3 phase-scrambled, and a cross-image"
+"frequency-branch swap), degradation-classification accuracy, PCA-16"
+"compactness, degradation/scene ratio, and restoration output quality are"
+ALL unchanged relative to the real (T0) frequency processing. Swapping in a
+completely different image's frequency-branch content changes the final
+output by only L2=0.008 (SSIM=0.99999). This extends TEST01's original
+<0.004dB output-quality finding to the representation level: whatever
+"makes AdaIR's internal representation degradation-aware, it is not the"
+"frequency-domain computation specifically -- at this benchmark resolution,"
+"where the learned mask is degenerate (h_=w_=0, reconfirmed a 6th"
+independent time here).
+""
+WHAT SURVIVED THE AUDIT
+"- Degradation-discriminability of latent_pre/AFLB outputs: SUPPORTED,"
+  strengthened by severity-generalization testing (Phase 3-4).
+"- Compact PCA-16 representation: SUPPORTED, re-verified leakage-safe"
+  (Phase 2) and validated against negative controls (Phase 12-14) --
+  TEST05's original leaky number was NOT inflated (99.67% vs 99.7%).
+"- Causal relevance of the representation to output: SUPPORTED in general,"
+"  but TEST04's ""scene dominates degradation"" headline finding is now shown"
+  to have been an artifact of its Rain-only recipient subset -- the
+"  degradation-specificity ratio reverses (favors degradation, 1.89-2.10x)"
+  once generalized across all three degradations (Phase 5-6).
+""
+WHAT DID NOT SURVIVE
+"- TEST05's original ""Noise = 89.9-99.3% low-frequency feature energy"""
+  finding does NOT replicate under an independent re-measurement (Phase
+  11) -- feature-level frequency-band fractions are nearly identical
+  across Rain/Haze/Noise. Only INPUT-level frequency correctly differs as
+  expected.
+- The core F2S causal claim (frequency processing -> useful degradation
+"  representation) is CONTRADICTED (Phase 7-10), not merely unsupported."
+""
+FINAL DECISION: GO WITH MODIFICATIONS
+"Proceed with compact-embedding-based distillation into NAFNet, but"
+"abandon the frequency-causal ""F2S"" framing/mechanism. See GO_NO_GO.md"
+questions 9-10 for the specific TEST06 redesign.
+""
+SHEETS
+  README                        this sheet
+"  Claim_Audit                   8 claims (A-H), evidence, audit result, confidence"
+  Simple_Statistics              Phase 1: non-AdaIR baseline probe results
+  PCA_Leakage_Audit               Phase 2: leakage-safe PCA-4..128 vs TEST05 original
+  PCA_Dimensionality              Phase 12-14: PCA vs random/supervised-linear projection
+  Severity_Generalization          Phase 3-4: train-on-band-A/test-on-band-B results
+  Parameter_Robustness             Phase 3-4: family-probe (both bands pooled) accuracy
+  Normalized_Intervention          Phase 5-6: normalized causal-swap effect sizes
+  Content_vs_Degradation           Phase 5-6: degradation-specificity ratio
+  Frequency_Path_Audit             Phase 7-9: T0-T3 representation-quality summary
+  Frequency_Ablation                Phase 7-9: representation distance from T0
+  Frequency_Randomization           Phase 10: cross-image frequency-branch swap effect
+"  Input_vs_Feature_Frequency         Phase 11: radial-band FFT energy, re-verified"
+  Compact_Representation             Phase 12: PCA vs restoration-PSNR relevance (R^2)
+  Negative_Controls                  Phase 14: random/shuffled-label/shuffled-correspondence controls
+  Mathematical_Model_Audit            Phase 17: z_T/e_D/frequency-pathway/K_D component audit
+"  Alternative_Models                  Phase 18: 6 candidate TEST06 designs, theoretical only"
+  GO_NO_GO                            Phase 19: 10-question decision summary
+  Environment                         reproducibility record
+""
+REPRODUCE
+  cd test05_5/scripts && conda activate adair-distill
+  python write_environment.py
+  cd ../src
+"  taskset -c 0-7,12-31 python simple_statistics.py                    (~1 min, CPU-only)"
+"  taskset -c 0-7,12-31 python pca_leakage_audit.py                     (~5s, CPU-only)"
+"  taskset -c 0-7,12-31 python robustness_synthesis.py                   (~90s, CPU-only)"
+"  taskset -c 0-7,12-31 python extract_robustness_features.py             (~2.5 min, GPU)"
+"  taskset -c 0-7,12-31 python robustness_probes.py                       (~10s, CPU-only)"
+"  taskset -c 0-7,12-31 python normalized_intervention.py                  (~3 min, GPU)"
+"  taskset -c 0-7,12-31 python frequency_ablation.py                       (~5 min, GPU)"
+"  taskset -c 0-7,12-31 python frequency_randomization_and_bands.py         (~2 min, GPU)"
+"  taskset -c 0-7,12-31 python compact_representation_audit.py              (~1 min, CPU-only)"
+  cd ../scripts && python build_excel_local.py
+""

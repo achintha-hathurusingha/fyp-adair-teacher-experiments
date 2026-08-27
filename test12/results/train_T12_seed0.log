@@ -1,0 +1,14 @@
+Model T12 seed 0: 7,398,149 params, MACs=1033131584, train_examples=1920, val_examples=60
+[T12/s0] epoch 1/50: L1=0.0982 KD=29.3056 val_psnr=20.336 val_ssim=0.5963 elapsed=55s
+[T12/s0] epoch 5/50: L1=0.0595 KD=19.6856 val_psnr=22.290 val_ssim=0.6526 elapsed=267s
+[T12/s0] epoch 10/50: L1=0.0511 KD=9.7502 val_psnr=23.564 val_ssim=0.6837 elapsed=538s
+[T12/s0] epoch 15/50: L1=0.0456 KD=4.5928 val_psnr=24.670 val_ssim=0.7099 elapsed=811s
+[T12/s0] epoch 20/50: L1=0.0406 KD=1.7700 val_psnr=25.008 val_ssim=0.7337 elapsed=1087s
+[T12/s0] epoch 25/50: L1=0.0366 KD=0.7857 val_psnr=25.550 val_ssim=0.7637 elapsed=1354s
+[T12/s0] epoch 30/50: L1=0.0325 KD=0.5462 val_psnr=26.118 val_ssim=0.7836 elapsed=1624s
+[T12/s0] epoch 35/50: L1=0.0308 KD=0.8053 val_psnr=26.552 val_ssim=0.8073 elapsed=1896s
+[T12/s0] epoch 40/50: L1=0.0279 KD=0.3181 val_psnr=26.673 val_ssim=0.8211 elapsed=2172s
+[T12/s0] epoch 45/50: L1=0.0262 KD=0.3357 val_psnr=26.846 val_ssim=0.8208 elapsed=2446s
+[T12/s0] epoch 50/50: L1=0.0246 KD=0.2386 val_psnr=27.256 val_ssim=0.8335 elapsed=2707s
+
+[T12/s0] DONE. last5_mean_psnr=27.100 last5_mean_ssim=0.8292 best_psnr=27.256 (epoch 50)

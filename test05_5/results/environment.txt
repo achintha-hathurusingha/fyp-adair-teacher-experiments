@@ -1,0 +1,15 @@
+TEST05.5 -- Scientific Audit and F2S Hypothesis Validation -- Environment Record
+PURPOSE: adversarial re-audit of TEST01-05's conclusions; does NOT train NAFNet, does NOT modify checkpoint/AdaIR source/any prior test's files (read-only reference only), all outputs confined to test05_5/.
+AdaIR source git SHA: ccb8b98e49614e07badd0641e5163fa7635c2f02
+Checkpoint path: /home/minura/teacher-experiments/weights/adair3d.ckpt
+Checkpoint SHA256: f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb
+Expected checkpoint SHA256 (from TEST01-05 record): f3822d9c2eaf4a812f4122c5ec0082bc8eaf2bee9cb2b3a961d4984ed05937fb -- MUST match; any mismatch invalidates cross-experiment comparison.
+Python version: 3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]
+PyTorch version: 2.5.1+cu124
+CUDA version (torch): 12.4
+GPU: NVIDIA GeForce RTX 4090, 580.173.02, 24564 MiB
+Host: devon (192.248.10.68) -- KNOWN ISSUE: logical CPUs 8-11 are unreliable; every script invocation pinned: taskset -c 0-7,12-31 python <script>. Also known: devon has rebooted unexpectedly during TEST04 and TEST05 (confirmed via journalctl kernel-version bumps, not crashes); connectivity was intermittent during TEST05.5 setup.
+conda env: adair-distill
+Datasets used: (1) test03/data/{rain,haze,noise,clean} -- TEST03's exact 100 scenes, read-only, used for Phase 1-2/7-14; (2) test05_5/data/{rain,haze,noise} -- NEW parameter-randomized 2-severity-band dataset built in this experiment for Phase 3-4/10, does not replace or modify test03's dataset.
+Model: released, UNMODIFIED AdaIR (decoder=True) for all baseline analysis (Phase 1-6, 10-14); T0-T3 controlled variants (frequency_variants.py, new code in test05_5/src, NOT modifying test01/model_variants.py or the checkpoint) for the Phase 7-9 frequency-path ablation.
+No retraining, no fine-tuning, no weight modification anywhere in TEST05.5. All PCA/scaler fits are leakage-safe (fit on training folds only, per GroupKFold(scene_id)).

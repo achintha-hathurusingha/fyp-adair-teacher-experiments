@@ -1,0 +1,26 @@
+# Raw datasets (large, regenerable, never committed)
+**/data/
+**/dataset/
+**/datasets/
+
+# Model checkpoints & heavy tensor dumps
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npz
+*.joblib
+**/checkpoints/
+**/intermediates/
+
+# Vendored teacher code (upstream c-yn/AdaIR, already public; tracked separately in fyp-adair-distill/third_party)
+/AdaIR/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# misc
+*.zip
+.DS_Store

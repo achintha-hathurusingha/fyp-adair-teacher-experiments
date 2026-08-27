@@ -1,0 +1,50 @@
+[baseline 5/25] elapsed=22s
+[baseline 10/25] elapsed=44s
+[baseline 15/25] elapsed=66s
+Traceback (most recent call last):
+  File "/home/minura/teacher-experiments/test06/src/causal_intervention_06e.py", line 265, in <module>
+    main()
+  File "/home/minura/teacher-experiments/test06/src/causal_intervention_06e.py", line 148, in main
+    normals[scene_row["scene_id"]] = run_normal(model, recorder, set_override, scene_row, device)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/test06/src/causal_intervention_06e.py", line 110, in run_normal
+    out = model(img_t)
+          ^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/AdaIR/net/model.py", line 470, in forward
+    out_dec_level1 = self.refinement(out_dec_level1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/AdaIR/net/model.py", line 167, in forward
+    x = x + self.ffn(self.norm2(x))
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/miniforge3/envs/adair-distill/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/minura/teacher-experiments/AdaIR/net/model.py", line 90, in forward
+    x = F.gelu(x1) * x2
+        ~~~~~~~~~~~^~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1020.00 MiB. GPU 0 has a total capacity of 23.51 GiB of which 30.88 MiB is free. Including non-PyTorch memory, this process has 23.47 GiB memory in use. Of the allocated memory 19.69 GiB is allocated by PyTorch, and 3.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+DONE_EXIT_1

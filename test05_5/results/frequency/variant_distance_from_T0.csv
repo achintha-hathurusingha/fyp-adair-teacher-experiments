@@ -1,0 +1,13 @@
+variant,point,mean_normalized_distance_from_T0,n_pairs
+T1_no_frequency,latent_pre,0.0,300
+T2_matched_random,latent_pre,0.0,300
+T3_phase_shuffle,latent_pre,0.0,300
+T1_no_frequency,AFLB1_aflb_out,0.010489096865057945,300
+T2_matched_random,AFLB1_aflb_out,0.0022445041686296463,300
+T3_phase_shuffle,AFLB1_aflb_out,0.0022380510345101357,300
+T1_no_frequency,AFLB2_aflb_out,0.016402585431933403,300
+T2_matched_random,AFLB2_aflb_out,0.0016286158934235573,300
+T3_phase_shuffle,AFLB2_aflb_out,0.001627172576263547,300
+T1_no_frequency,AFLB3_aflb_out,0.013589276932179928,300
+T2_matched_random,AFLB3_aflb_out,0.0013107043923810124,300
+T3_phase_shuffle,AFLB3_aflb_out,0.0013110105646774173,300

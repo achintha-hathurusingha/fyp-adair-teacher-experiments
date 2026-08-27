@@ -1,0 +1,30 @@
+[
+  {
+    "name": "A",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp2e6okmp",
+    "profile_job_id": "jp06qozep",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "N",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp363ojzp",
+    "profile_job_id": "jgo80d2dp",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "F2",
+    "status": "SUBMITTED",
+    "compile_job_id": "jp16lo4l5",
+    "profile_job_id": "j579wo2rg",
+    "device": "Snapdragon 8 Elite QRD"
+  },
+  {
+    "name": "NF2",
+    "status": "SUBMITTED",
+    "compile_job_id": "jprwqx6e5",
+    "profile_job_id": "jp2e6oxmp",
+    "device": "Snapdragon 8 Elite QRD"
+  }
+]

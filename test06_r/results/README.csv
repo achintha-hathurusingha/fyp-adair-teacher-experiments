@@ -1,0 +1,62 @@
+README
+README
+TEST06-R -- Corrected Re-Run / Statistical + Internal Propagation Audit
+"Purpose: tighten TEST06's null result with balanced N, paired bootstrap/"
+permutation/Wilcoxon statistics and a pre-specified practical-equivalence
+threshold; trace the frequency intervention through AFLB3's internal
+FMiM/FMoM stages to find WHERE the signal disappears.
+Full report: report/test06_r_report.md
+Audit: report/rerun_audit.md
+GO/NO-GO: report/GO_NO_GO.md
+""
+DIRECTORY RULE
+"Everything lives under test06_r/. test06/ (including its 06-E dataset),"
+"test01-05.5, fyp-adair-distill, the AdaIR source, and the checkpoint are"
+READ-ONLY references and were NOT modified.
+""
+"HEADLINE RESULT -- NULL RESULT CONFIRMED, WITH A MECHANISM"
+Balanced primary vs. controls (N=144 each): all five conditions round to
+"0.000013 normalized L2. Paired statistics are technically ""significant"""
+(Wilcoxon p<1e-15) due to enormous statistical power from tight pairing --
+"but all differences are NEGATIVE (primary smaller than controls, the wrong"
+direction for a causal effect) and fall within a pre-specified practical-
+"equivalence threshold (epsilon=2.8e-7, defined from control-vs-control"
+"noise alone, before the primary comparison was examined). This is a"
+textbook statistical-vs-practical-significance case.
+""
+NEW: internal propagation tracing shows the frequency-swap signal DOES
+propagate through FMiM (mined_high/mined_low: 2-3% change) and FMoM (agg:
+"0.17%, cross_agg_out: 1.15%) -- it is NOT ignored by the cross-attention"
+machinery. The collapse happens in one discontinuous step at AFLB3's own
+"residual gate: aflb_out = out*para1 + y*para2, where the TRAINED para1"
+"(mean=-0.000155, std=0.0015) is ~200x smaller than para2 (mean=0.0297) --"
+"a learned, not architectural, near-total suppression."
+""
+DATA-QUALITY FINDING
+"scene_021 in the original TEST06 06-E dataset is 1024x104, not 1024x1024"
+"(a build_06e_dataset.py bug, discovered here, NOT fixed in test06/)."
+Excluded from TEST06-R; N=24 scenes used throughout.
+""
+SHEETS
+  README                    this sheet
+  Audit                     Phase 0 verification + data-quality finding
+  Self_Swap                 Phase 4: exact 0.0 (PASS)
+  Primary_Swap              Phase 2: 144 balanced primary swaps
+  Balanced_Controls          Phase 3: 576 rows (144 per control type)
+"  Paired_Statistics           Phase 6-7: bootstrap CI, permutation p, Wilcoxon p, equivalence classification"
+  Per_Degradation             Phase 8a: recipient-degradation breakdown
+  Per_Donor_Direction         Phase 8b: donor-direction breakdown
+"  Donor_Behavior               Phase 9: 0.0% moved toward donor, bootstrap CI"
+"  Internal_Propagation          Phase 10-11: compact stats, all 8 stages, 1152 rows"
+"  GO_NO_GO                      Phase 14/17: NO-GO, confirmed with mechanism"
+  Environment                    reproducibility record (checkpoint SHA256 matches)
+""
+REPRODUCE
+  cd test06_r/scripts && conda activate adair-distill
+  python write_environment.py
+  cd ../src
+"  taskset -c 0-7,12-31 python balanced_intervention.py     (~23 min, GPU)"
+"  python paired_statistics.py                                (~5s, CPU-only)"
+"  taskset -c 0-7,12-31 python propagation_heatmaps.py         (~2 min, GPU)"
+  cd ../scripts && python build_visualizations.py && python build_excel_local.py
+""
