@@ -41,6 +41,22 @@ variance explained). Two checks:
 | points closer to same-scene twin than nearest same-degradation point | 19/300 (6.3%) |
 | leave-scene-out classification accuracy | **99.0% +/- 1.3%** (chance 33.3%) |
 
+## Visualizations
+
+`test19/scripts/visualize.py` (`results/scatter_same_scene_triples.png`,
+`results/distance_distributions.png`).
+
+**Scatter** — PCA-16 projected to its own top-2 axes, points colored by
+degradation, each scene's 3 points connected by a thin line. Three visibly
+distinct clusters (Noise top-left, Rain bottom-right, Haze top-right); the
+connecting lines cross between clusters rather than staying inside one —
+the same finding the distance numbers show, made visible.
+
+**Distance distributions** — the two distributions from Check 1 overlaid.
+Same-degradation/different-scene distances cluster around 15-20;
+same-scene/different-degradation distances cluster around 40-45, with only
+modest overlap in between.
+
 ## Conclusion
 
 PCA-16(latent_pre) genuinely separates by degradation type, not by image
